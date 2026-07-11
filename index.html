@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Censo Oficinaz 2026 | Raio-X da Gestão</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="background-effects"></div>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="container">
+      <img src="assets/logo-oficinaz-color.png" alt="Oficinaz" class="logo">
+    </div>
+  </header>
+
+  <main>
+    <!-- VIEW 1: HERO -->
+    <section id="view-hero" class="view active">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <span class="badge">DIAGNÓSTICO OFICINAZ 2026</span>
+          <h1>Qual é o nível de maturidade de gestão da sua oficina?</h1>
+          <p>Responda nossa pesquisa e compare o seu desempenho com as outras oficinas do seu bairro. Um diagnóstico rápido e gratuito.</p>
+          <button id="btn-start" class="btn btn-primary btn-large">👉 RESPONDER AGORA</button>
+        </div>
+        <div class="hero-image">
+          <img src="assets/hero-mecanica-mulher.png" alt="Mecânica com tablet">
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 2: QUIZ -->
+    <section id="view-quiz" class="view">
+      <div class="container quiz-container">
+        <div class="quiz-header">
+          <p class="privacy-notice">🔒 Suas respostas são 100% confidenciais. Seja o mais preciso possível.</p>
+          <div class="progress-bar">
+            <div class="progress-fill" id="quiz-progress"></div>
+          </div>
+          <p class="progress-text">Pergunta <span id="current-q-num">1</span> de 10</p>
+        </div>
+        
+        <div class="question-card" id="question-card">
+          <h2 id="q-title"></h2>
+          <p id="q-text"></p>
+          <div class="options-container" id="options-container">
+            <!-- Options injected by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 3: FORM (LEAD) -->
+    <section id="view-form" class="view">
+      <div class="container form-container">
+        <div class="form-card">
+          <div class="form-header">
+            <h2>Diagnóstico concluído com sucesso.</h2>
+            <p>Preencha os dados abaixo para desbloquear o seu relatório detalhado e o comparativo regional.</p>
+          </div>
+          <form id="lead-form">
+            <div class="form-group">
+              <label for="lead-name">Seu nome ou da oficina</label>
+              <input type="text" id="lead-name" required placeholder="Ex: Auto Center Silva">
+            </div>
+            <div class="form-group">
+              <label for="lead-whatsapp">Telefone com DDD</label>
+              <input type="tel" id="lead-whatsapp" required placeholder="(00) 00000-0000" pattern="[\(\)\s\-0-9]{10,15}">
+            </div>
+            <div class="form-group">
+              <label for="lead-email">E-mail para envio do PDF</label>
+              <input type="email" id="lead-email" required placeholder="seuemail@oficina.com.br">
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="lead-cep">Seu CEP</label>
+                <input type="text" id="lead-cep" required placeholder="00000-000" maxlength="9">
+              </div>
+              <div class="form-group">
+                <label>Bairro/Região</label>
+                <input type="text" id="lead-bairro" disabled placeholder="Preenchido aut.">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="lead-porte">Quantidade média de carros atendidos por mês:</label>
+              <select id="lead-porte" required>
+                <option value="" disabled selected>Selecione uma faixa...</option>
+                <option value="Ate 30">Até 30 carros</option>
+                <option value="31 a 60">31 a 60 carros</option>
+                <option value="61 a 90">61 a 90 carros</option>
+                <option value="Acima de 90">Acima de 90 carros</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Desbloquear Meu Relatório 🔒</button>
+            <p id="form-error" class="error-msg"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 4: LOADING -->
+    <section id="view-loading" class="view">
+      <div class="container loading-container">
+        <div class="spinner"></div>
+        <h2 id="loading-text">Analisando os padrões de gestão da sua oficina...</h2>
+      </div>
+    </section>
+
+    <!-- VIEW 5: RESULTS (DASHBOARD) -->
+    <section id="view-results" class="view">
+      <div class="container results-container">
+        <div class="results-header">
+          <span class="badge">RESULTADO DO SEU DIAGNÓSTICO</span>
+          <h1 id="persona-title">O Mecânico Apagador de Incêndios</h1>
+        </div>
+
+        <div class="dashboard-grid">
+          <!-- Bloco 1: Perfil -->
+          <div class="dashboard-card card-persona">
+            <div class="persona-image-placeholder">
+              <!-- Placeholder for persona illustration -->
+              <span id="persona-icon">🛠️</span>
+            </div>
+            <div class="persona-text">
+              <h3 class="score-display">Sua pontuação: <span id="final-score">15</span>/30</h3>
+              <p id="persona-desc">Você tem muito talento técnico e os clientes confiam no seu trabalho...</p>
+            </div>
+          </div>
+
+          <!-- Bloco 3: Benchmarking (Moved up for better visual flow on desktop) -->
+          <div class="dashboard-card card-chart">
+            <h2>Como você se compara com a concorrência?</h2>
+            <p class="chart-subtitle" id="chart-subtitle">Comparativo na região: Mooca</p>
+            <div class="chart-wrapper">
+              <canvas id="benchmarkChart"></canvas>
+            </div>
+            <div class="chart-legend">
+              <span class="legend-item"><span class="color-box you"></span> Desempenho da sua oficina</span>
+              <span class="legend-item"><span class="color-box market"></span> Média na sua região</span>
+            </div>
+            <div class="insight-box" id="insight-text">
+              Atenção: Sua oficina está abaixo dos seus concorrentes diretos no seu bairro no quesito Fidelização.
+            </div>
+          </div>
+
+          <!-- Bloco 2: Raio-X -->
+          <div class="dashboard-card card-raiox">
+            <h2>Pontos de Atenção e Oportunidades</h2>
+            <div id="raiox-list" class="raiox-list">
+              <!-- Injected via JS -->
+            </div>
+          </div>
+
+          <!-- Bloco 4: Plano de Ação -->
+          <div class="dashboard-card card-action-plan">
+            <h2>O próximo passo para a sua gestão</h2>
+            <div id="action-plan-list" class="action-plan-list">
+              <!-- Injected via JS -->
+            </div>
+          </div>
+        </div>
+
+        <div class="results-actions">
+          <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-primary btn-large btn-pulse">💬 FALAR COM UM ESPECIALISTA NO WHATSAPP</a>
+          <button id="btn-share" class="btn btn-outline">🔗 Compartilhar este diagnóstico</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
