@@ -30,10 +30,11 @@
     <!-- VIEW 1: LANDING PAGE -->
     <section id="view-landing" class="view active">
       
-      <!-- HERO 2 COLUNAS -->
-      <section class="hero-split">
-        <div class="container hero-split-container">
-          <div class="hero-text-col">
+      <!-- HERO COM BACKGROUND -->
+      <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+          <div class="hero-content">
             <span class="badge">DIAGNÓSTICO OFICINAZ</span>
             <h1>A oficina não para.<br>Mas a gestão acompanha?</h1>
             <p>Peça faltando, cliente cobrando orçamento, serviço atrasado e o caixa da sua oficina com pouco controle. Responda 5 perguntas e descubra onde está sua maior ineficiência.</p>
@@ -49,13 +50,10 @@
               <span class="chip"><i data-lucide="bar-chart-2" class="icon-sm"></i> Resultado personalizado</span>
             </div>
           </div>
-          <div class="hero-img-col">
-            <img src="assets/hero-mecanica-mulher.png" alt="Mecânica Avaliando Veículo" class="hero-img">
-          </div>
         </div>
       </section>
 
-      <!-- NOVO: PREVIEW DO RESULTADO (EXEMPLO VISUAL) -->
+      <!-- PREVIEW DO RESULTADO (EXEMPLO VISUAL) -->
       <section class="preview-dashboard-section">
         <div class="container">
           <div class="preview-header">
@@ -78,7 +76,7 @@
                   <div class="mockup-radar-bg">
                     <!-- Fake Radar Lines -->
                     <svg viewBox="0 0 100 100" class="fake-radar">
-                      <polygon points="50,10 90,30 90,70 50,90 10,70 10,30" fill="rgba(0,194,169,0.1)" stroke="var(--teal)" stroke-width="2"/>
+                      <polygon points="50,10 90,30 90,70 50,90 10,70 10,30" fill="rgba(0,194,169,0.15)" stroke="var(--teal)" stroke-width="2"/>
                       <polygon points="50,20 80,35 80,65 50,80 20,65 20,35" fill="none" stroke="#e2e8f0" stroke-width="1"/>
                       <polygon points="50,40 60,50 65,70 50,75 35,60 40,45" fill="rgba(255,204,0,0.3)" stroke="var(--attention)" stroke-width="2"/>
                     </svg>
@@ -189,22 +187,22 @@
           <h2>Conheça os 3 perfis de gestão automotiva</h2>
           <div class="personas-grid">
             <div class="persona-card-light">
-              <div class="persona-icon-wrapper" style="background: rgba(255, 59, 48, 0.08); border: 1px solid rgba(255, 59, 48, 0.2); color: var(--critical);">
-                <i data-lucide="flame"></i>
+              <div class="persona-icon-wrapper" style="background: rgba(255, 59, 48, 0.05); border: 2px solid rgba(255, 59, 48, 0.3); color: var(--critical); box-shadow: 0 0 30px rgba(255,59,48,0.15);">
+                <i data-lucide="siren"></i>
               </div>
               <h4>Apagador de Incêndios</h4>
               <p>O talento técnico sobra, mas o controle financeiro falta. Vive resolvendo urgências e não vê o lucro no fim do mês.</p>
             </div>
             <div class="persona-card-light">
-              <div class="persona-icon-wrapper" style="background: rgba(255, 204, 0, 0.08); border: 1px solid rgba(255, 204, 0, 0.2); color: var(--attention);">
-                <i data-lucide="file-spreadsheet"></i>
+              <div class="persona-icon-wrapper" style="background: rgba(255, 204, 0, 0.05); border: 2px solid rgba(255, 204, 0, 0.3); color: var(--attention); box-shadow: 0 0 30px rgba(255,204,0,0.15);">
+                <i data-lucide="network"></i>
               </div>
               <h4>O Polvo das Planilhas</h4>
               <p>Tem controles, mas manuais e desconectados. Gasta tempo cruzando dados em vez de pensar na estratégia.</p>
             </div>
             <div class="persona-card-light">
-              <div class="persona-icon-wrapper" style="background: rgba(0, 194, 169, 0.08); border: 1px solid rgba(0, 194, 169, 0.2); color: var(--teal);">
-                <i data-lucide="rocket"></i>
+              <div class="persona-icon-wrapper" style="background: rgba(0, 194, 169, 0.05); border: 2px solid rgba(0, 194, 169, 0.3); color: var(--teal); box-shadow: 0 0 30px rgba(0,194,169,0.15);">
+                <i data-lucide="gauge"></i>
               </div>
               <h4>Piloto de Alta Performance</h4>
               <p>Processos integrados, indicadores claros e previsibilidade. A oficina roda redonda mesmo quando ele não está presente.</p>
@@ -366,7 +364,6 @@
     <!-- SECTION: PRODUTO (UPSALE) -->
     <section class="product-section">
       <div class="product-container">
-        <img src="assets/logo-oficinaz-color.png" alt="Oficinaz ERP" class="product-logo">
         <h2>Pronto para ser um Piloto de Alta Performance?</h2>
         <p>O Oficinaz é o Sistema de Gestão (ERP) feito exclusivamente para Centros Automotivos que querem crescer. Controle de caixa, emissão de NFe, ordens de serviço e catálogo de peças num só lugar.</p>
         <a href="https://oficinaz.com" target="_blank" class="btn btn-primary btn-large btn-pulse">Conhecer o sistema Oficinaz</a>

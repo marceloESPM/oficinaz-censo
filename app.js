@@ -149,25 +149,36 @@ if (previewCtx) {
         {
           label: 'Você',
           data: [40, 60, 20, 80, 50, 40],
-          backgroundColor: 'rgba(24, 183, 168, 0.2)',
-          borderColor: 'rgba(24, 183, 168, 1)',
-          pointBackgroundColor: 'rgba(24, 183, 168, 1)',
-          borderWidth: 2
+          backgroundColor: 'rgba(0, 194, 169, 0.15)',
+          borderColor: '#00C2A9',
+          pointBackgroundColor: '#00C2A9',
+          borderWidth: 3,
+          pointRadius: 4,
+          pointHoverRadius: 6
         },
         {
           label: 'Média',
           data: [60, 70, 50, 60, 70, 60],
-          backgroundColor: 'rgba(97, 115, 141, 0.1)',
-          borderColor: 'rgba(97, 115, 141, 0.5)',
-          pointBackgroundColor: 'rgba(97, 115, 141, 0.5)',
-          borderWidth: 1
+          backgroundColor: 'rgba(226, 232, 240, 0.3)',
+          borderColor: '#cbd5e1',
+          pointBackgroundColor: '#cbd5e1',
+          borderWidth: 2,
+          pointRadius: 0
         }
       ]
     },
     options: {
       responsive: true,
       maintainAspectRatio: false,
-      scales: { r: { min: 0, max: 100, ticks: { display: false } } },
+      scales: { 
+        r: { 
+          min: 0, max: 100, 
+          ticks: { display: false },
+          grid: { color: 'rgba(0,0,0,0.04)' },
+          angleLines: { color: 'rgba(0,0,0,0.04)' },
+          pointLabels: { font: { family: 'Inter', size: 11, weight: '600' }, color: '#64748b' }
+        } 
+      },
       plugins: { legend: { display: false } }
     }
   });
@@ -318,18 +329,21 @@ function generateResults(bairro) {
         {
           label: 'Sua Oficina',
           data: youData,
-          backgroundColor: 'rgba(24, 183, 168, 0.2)',
-          borderColor: 'rgba(24, 183, 168, 1)',
-          pointBackgroundColor: 'rgba(24, 183, 168, 1)',
-          borderWidth: 2
+          backgroundColor: 'rgba(0, 194, 169, 0.15)',
+          borderColor: '#00C2A9',
+          pointBackgroundColor: '#00C2A9',
+          borderWidth: 3,
+          pointRadius: 4,
+          pointHoverRadius: 6
         },
         {
           label: `Média ${bairro}`,
           data: marketData,
-          backgroundColor: 'rgba(97, 115, 141, 0.1)',
-          borderColor: 'rgba(97, 115, 141, 0.5)',
-          pointBackgroundColor: 'rgba(97, 115, 141, 0.5)',
-          borderWidth: 1
+          backgroundColor: 'rgba(226, 232, 240, 0.3)',
+          borderColor: '#cbd5e1',
+          pointBackgroundColor: '#cbd5e1',
+          borderWidth: 2,
+          pointRadius: 0
         }
       ]
     },
@@ -339,7 +353,10 @@ function generateResults(bairro) {
       scales: {
         r: {
           min: 0, max: 100,
-          ticks: { display: false }
+          ticks: { display: false },
+          grid: { color: 'rgba(0,0,0,0.04)' },
+          angleLines: { color: 'rgba(0,0,0,0.04)' },
+          pointLabels: { font: { family: 'Inter', size: 12, weight: '600' }, color: '#334155' }
         }
       },
       plugins: {
