@@ -13,7 +13,7 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: var(--bg-dark);
+  background-color: var(--bg-color);
   color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
@@ -21,14 +21,6 @@ body {
   flex-direction: column;
 }
 
-/* Background Image Overlay */
-.background-effects {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background-image: url('assets/hero-mecanica-mulher.png'); /* Premium dark image requested by user */
-  background-size: cover;
-  background-position: center;
 /* Background apagado - O site agora é totalmente clean Light Mode */
 .background-effects { display: none; }
 
