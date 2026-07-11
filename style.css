@@ -188,9 +188,8 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
 
 /* Hero */
 .hero-container {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 600px;
+  margin-left: 10%;
 }
 .hero-content {
   padding: 48px;
@@ -238,6 +237,13 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
   font-weight: 500;
 }
 .trust-signal .icon-sm { margin-right: 6px; }
+
+@media (max-width: 900px) {
+  .hero-container {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
 
 @media (max-width: 768px) {
   h1 { font-size: 2.5rem; }
