@@ -55,6 +55,59 @@
         </div>
       </section>
 
+      <!-- NOVO: PREVIEW DO RESULTADO (EXEMPLO VISUAL) -->
+      <section class="preview-dashboard-section">
+        <div class="container">
+          <div class="preview-header">
+            <h2>Veja o que você recebe no final do diagnóstico</h2>
+            <p>Um relatório completo, personalizado e gratuito apontando os gargalos exatos da sua oficina.</p>
+          </div>
+          
+          <div class="preview-dashboard-wrapper glass-panel">
+            <div class="preview-mockup">
+              <!-- Mockup Header -->
+              <div class="mockup-header">
+                <div class="mockup-score">Sua pontuação: <span>22/30</span></div>
+                <div class="mockup-profile">Perfil Identificado: <strong>O Polvo das Planilhas</strong></div>
+              </div>
+              
+              <div class="mockup-body">
+                <!-- Coluna Esquerda: Radar -->
+                <div class="mockup-col">
+                  <h5>Comparativo Regional</h5>
+                  <div class="mockup-radar-bg">
+                    <!-- Fake Radar Lines -->
+                    <svg viewBox="0 0 100 100" class="fake-radar">
+                      <polygon points="50,10 90,30 90,70 50,90 10,70 10,30" fill="rgba(0,194,169,0.1)" stroke="var(--teal)" stroke-width="2"/>
+                      <polygon points="50,20 80,35 80,65 50,80 20,65 20,35" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+                      <polygon points="50,40 60,50 65,70 50,75 35,60 40,45" fill="rgba(255,204,0,0.3)" stroke="var(--attention)" stroke-width="2"/>
+                    </svg>
+                  </div>
+                </div>
+                <!-- Coluna Direita: Barras -->
+                <div class="mockup-col">
+                  <h5>Raio-X da Gestão</h5>
+                  <div class="mockup-bars">
+                    <div class="mockup-bar-item">
+                      <div class="mockup-bar-labels"><span>Ordens de Serviço</span> <span style="color: var(--ok)">Forte</span></div>
+                      <div class="mockup-bar-track"><div class="mockup-bar-fill" style="width: 90%; background: var(--ok)"></div></div>
+                    </div>
+                    <div class="mockup-bar-item">
+                      <div class="mockup-bar-labels"><span>Fidelização</span> <span style="color: var(--critical)">Crítico</span></div>
+                      <div class="mockup-bar-track"><div class="mockup-bar-fill" style="width: 30%; background: var(--critical)"></div></div>
+                    </div>
+                    <div class="mockup-bar-item">
+                      <div class="mockup-bar-labels"><span>Financeiro</span> <span style="color: var(--attention)">Alerta</span></div>
+                      <div class="mockup-bar-track"><div class="mockup-bar-fill" style="width: 60%; background: var(--attention)"></div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- O QUE SERÁ AVALIADO -->
       <section class="metrics-section">
         <div class="container">
@@ -71,7 +124,7 @@
               <div class="metric-icon"><i data-lucide="file-text"></i></div> 
               <div class="metric-content">
                 <h4>Ordens de serviço</h4>
-                <p>Abra a OS rapidamente, integre peças e mão de obra com precisão e garanta que cada serviço executado seja faturado corretamente</p>
+                <p>Abra a OS rapidamente, integre peças e mão de obra com precisão e garanta que cada serviço executado seja faturado corretamente.</p>
               </div>
             </div>
             <div class="metric-card">
@@ -136,30 +189,30 @@
           <h2>Conheça os 3 perfis de gestão automotiva</h2>
           <div class="personas-grid">
             <div class="persona-card-light">
-              <div class="persona-icon-wrapper" style="background: rgba(255, 59, 48, 0.1); color: var(--critical);">
+              <div class="persona-icon-wrapper" style="background: rgba(255, 59, 48, 0.08); border: 1px solid rgba(255, 59, 48, 0.2); color: var(--critical);">
                 <i data-lucide="flame"></i>
               </div>
               <h4>Apagador de Incêndios</h4>
               <p>O talento técnico sobra, mas o controle financeiro falta. Vive resolvendo urgências e não vê o lucro no fim do mês.</p>
             </div>
             <div class="persona-card-light">
-              <div class="persona-icon-wrapper" style="background: rgba(255, 204, 0, 0.1); color: var(--attention);">
+              <div class="persona-icon-wrapper" style="background: rgba(255, 204, 0, 0.08); border: 1px solid rgba(255, 204, 0, 0.2); color: var(--attention);">
                 <i data-lucide="file-spreadsheet"></i>
               </div>
               <h4>O Polvo das Planilhas</h4>
               <p>Tem controles, mas manuais e desconectados. Gasta tempo cruzando dados em vez de pensar na estratégia.</p>
             </div>
             <div class="persona-card-light">
-              <div class="persona-icon-wrapper" style="background: rgba(0, 194, 169, 0.1); color: var(--teal);">
+              <div class="persona-icon-wrapper" style="background: rgba(0, 194, 169, 0.08); border: 1px solid rgba(0, 194, 169, 0.2); color: var(--teal);">
                 <i data-lucide="rocket"></i>
               </div>
               <h4>Piloto de Alta Performance</h4>
               <p>Processos integrados, indicadores claros e previsibilidade. A oficina roda redonda mesmo quando ele não está presente.</p>
             </div>
           </div>
-          <div style="text-align: center; margin-top: 48px;">
+          <div style="text-align: center; margin-top: 56px;">
             <button class="btn btn-primary btn-large btn-pulse btn-start-quiz">
-              DESCOBRIR O MEU PERFIL <i data-lucide="arrow-right" class="icon-sm"></i>
+              Realizar diagnóstico <i data-lucide="arrow-right" class="icon-sm"></i>
             </button>
           </div>
         </div>
@@ -299,9 +352,9 @@
         <div class="share-box glass-panel">
           <h3>Compartilhe ou refaça seu diagnóstico</h3>
           <div class="share-actions">
-            <a href="#" class="btn btn-primary" id="btn-share-email"><i data-lucide="mail" class="icon-sm"></i> Compartilhar por E-mail</a>
+            <a href="#" class="btn btn-outline" id="btn-share-email"><i data-lucide="mail" class="icon-sm"></i> Compartilhar por E-mail</a>
             <a href="https://api.whatsapp.com/send/?phone=551151073356&text=Fiz%20o%20diagnóstico%20Oficinaz%20e%20recomendo!" target="_blank" class="btn btn-whatsapp-solid"><i data-lucide="message-circle" class="icon-sm"></i> Compartilhar no WhatsApp</a>
-            <button class="btn btn-outline" onclick="resetToLanding(event)"><i data-lucide="rotate-ccw" class="icon-sm"></i> Refazer diagnóstico</button>
+            <button class="btn btn-outline btn-outline-gray" onclick="resetToLanding(event)"><i data-lucide="rotate-ccw" class="icon-sm"></i> Refazer diagnóstico</button>
           </div>
         </div>
       </div>
@@ -323,7 +376,7 @@
     <!-- FOOTER -->
     <footer class="main-footer">
       <div class="container footer-container">
-        <a href="https://oficinaz.com" target="_blank">
+        <a href="#" onclick="resetToLanding(event)">
           <img src="assets/logo-oficinaz-color.png" alt="Oficinaz" class="footer-logo">
         </a>
         <div class="footer-links">
