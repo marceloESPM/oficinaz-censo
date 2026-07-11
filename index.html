@@ -28,97 +28,61 @@
     </div>
   </header>
 
-  <main>
-    <!-- VIEW 1: LANDING PAGE FULL -->
-    <section id="view-landing" class="view active" style="display: block; padding-top: 100px; min-height: auto;">
-      
-      <!-- FOLD 1: HERO (SaaS Light Mode) -->
-      <div class="split-fold" style="padding-top: 40px;">
-        <div class="container split-container">
-          <div class="split-text">
-            <span class="badge">DIAGNÓSTICO OFICINAZ</span>
-            <h1>Qual é o nível de maturidade de gestão da sua oficina?</h1>
-            <p>Descubra onde sua oficina está perdendo dinheiro e compare seu desempenho com a concorrência do seu bairro.</p>
-            
-            <ul class="trust-list">
-              <li class="trust-item"><i data-lucide="check-circle-2" class="icon-ok"></i> <strong>Relatório personalizado</strong> e imediato.</li>
-              <li class="trust-item"><i data-lucide="check-circle-2" class="icon-ok"></i> <strong>Comparativo real</strong> contra concorrentes da região.</li>
-              <li class="trust-item"><i data-lucide="check-circle-2" class="icon-ok"></i> <strong>100% Gratuito.</strong></li>
-            </ul>
-
-            <button class="btn btn-primary btn-large btn-pulse btn-start-quiz" style="width: 100%; max-width: 400px;">
-              INICIAR DIAGNÓSTICO <i data-lucide="arrow-right" class="icon-sm" style="margin-left: 8px;"></i>
-            </button>
-            
-            <div class="trust-signals" style="justify-content: flex-start; max-width: 400px;">
-              <span class="trust-signal"><i data-lucide="timer" class="icon-sm"></i> Leva menos de 1 minuto</span>
-              <span class="trust-signal"><i data-lucide="shield-check" class="icon-sm"></i> Dados protegidos</span>
-            </div>
-          </div>
-          <div class="split-visual hero-image-box">
-             <img src="assets/hero-mecanica-mulher.png" alt="Mecânica com tablet" class="hero-image">
+  <main>    <!-- VIEW 1: LANDING PAGE (BENTO BOX) -->
+    <section id="view-landing" class="view active" style="display: block; padding-top: 80px; min-height: auto;">
+      <div class="landing-wrapper">
+        
+        <!-- Hero Minimalista Centralizado -->
+        <div class="hero-minimal">
+          <span class="badge">DIAGNÓSTICO OFICINAZ</span>
+          <h1>Qual é o nível de maturidade de gestão da sua oficina?</h1>
+          <p>Descubra onde sua oficina está perdendo dinheiro e compare seu desempenho com a concorrência do seu bairro através de um raio-x gratuito.</p>
+          
+          <button class="btn btn-primary btn-large btn-pulse btn-start-quiz" style="margin-top: 16px;">
+            INICIAR DIAGNÓSTICO AGORA <i data-lucide="arrow-right" class="icon-sm" style="margin-left: 8px;"></i>
+          </button>
+          
+          <div class="trust-signals" style="justify-content: center; margin-top: 20px;">
+            <span class="trust-signal"><i data-lucide="timer" class="icon-sm"></i> Leva menos de 1 minuto</span>
+            <span class="trust-signal"><i data-lucide="shield-check" class="icon-sm"></i> 100% Confidencial</span>
           </div>
         </div>
-      </div>
 
-      <!-- FOLD 2: BENCHMARKING (ZIG-ZAG) -->
-      <div class="split-fold">
-        <div class="container split-container">
-          <div class="split-text">
-            <h2>Benchmarking de Vizinhança</h2>
-            <p>Você é o líder local ou está ficando para trás? Descubra como a sua gestão se compara diretamente com as outras oficinas da sua região através de um gráfico de competitividade exclusivo.</p>
-          </div>
-          <div class="split-visual">
-            <div class="mockup-card">
-              <h3>Como você se compara com a concorrência?</h3>
-              <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 24px;">Comparativo com as oficinas em: Seu Bairro</p>
-              <div style="height: 280px; position: relative;">
-                <canvas id="previewChart"></canvas>
-              </div>
+        <!-- Bento Box Grid (Mockups) -->
+        <div class="bento-grid">
+          
+          <!-- Widget 1: Radar Chart (Esquerda, Ocupa 2 linhas) -->
+          <div class="bento-card bento-radar">
+            <h3 class="bento-title">Como você se compara com a concorrência?</h3>
+            <p class="bento-subtitle">Comparativo com as oficinas em: Seu Bairro</p>
+            <div class="bento-chart-container">
+              <canvas id="previewChart"></canvas>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- FOLD 3: RAIO X (ZIG-ZAG REVERSO) -->
-      <div class="split-fold reverse">
-        <div class="container split-container">
-          <div class="split-text">
-            <h2>Raio-X de Oportunidades</h2>
-            <p>Mapeamos os 10 pilares da gestão automotiva. Entregamos um termômetro visual mostrando exatamente onde a sua operação corre riscos e onde há lucro oculto.</p>
-          </div>
-          <div class="split-visual">
-            <div class="mockup-card">
-              <h3 style="color: #111827;">Pontos de Atenção e Oportunidades</h3>
-              <div class="raiox-list-mockup">
-                <div class="raiox-item"><div class="raiox-label"><span>Orçamento e Aprovação</span> <span style="color:var(--critical)">Crítico</span></div><div class="raiox-bar-bg"><div class="raiox-bar-fill fill-critical" style="width:20%"></div></div></div>
-                <div class="raiox-item"><div class="raiox-label"><span>Ordem de Serviço</span> <span style="color:var(--attention)">Alerta</span></div><div class="raiox-bar-bg"><div class="raiox-bar-fill fill-attention" style="width:60%"></div></div></div>
-                <div class="raiox-item"><div class="raiox-label"><span>Kits de Revisão</span> <span style="color:var(--attention)">Alerta</span></div><div class="raiox-bar-bg"><div class="raiox-bar-fill fill-attention" style="width:60%"></div></div></div>
-                <div class="raiox-item"><div class="raiox-label"><span>Peças, Margem e Nota Fiscal</span> <span style="color:var(--ok)">Oficinaz</span></div><div class="raiox-bar-bg"><div class="raiox-bar-fill fill-ok" style="width:100%"></div></div></div>
-              </div>
+          
+          <!-- Widget 2: Persona (Direita Topo) -->
+          <div class="bento-card bento-persona">
+            <h3 class="bento-title" style="color: var(--teal); margin-bottom: 16px;">Sua pontuação: 20/30</h3>
+            <div class="persona-content-box">
+              <div class="persona-icon-bento"><i data-lucide="activity"></i></div>
+              <p>Você sabe bem que uma boa gestão é fundamental. A sua oficina tem organização, mas o preço pago por isso é o seu próprio descanso. Talvez essa sobrecarga seja o freio do seu crescimento.</p>
             </div>
           </div>
-        </div>
-      </div>
 
-      <!-- FOLD 4: PERSONAS (ZIG-ZAG) -->
-      <div class="split-fold">
-        <div class="container split-container">
-          <div class="split-text">
-            <h2>Qual é o seu perfil de gestão?</h2>
-            <p>O diagnóstico revela em qual estágio a sua oficina está presa hoje. Você é o Apagador de Incêndios, o Polvo das Planilhas ou o Piloto de Alta Performance?</p>
-          </div>
-          <div class="split-visual">
-            <div class="mockup-card" style="display:flex; align-items:center; text-align:left; gap: 24px;">
-              <i data-lucide="activity" style="width:80px; height:80px; color:var(--teal); flex-shrink: 0;"></i>
-              <div>
-                <h3 class="persona-title">Sua pontuação: 20/30</h3>
-                <p style="font-size: 0.95rem; margin:0; line-height: 1.5; color: var(--text-secondary);">Você sabe bem que uma boa gestão é fundamental para a oficina prosperar. Para manter tudo sob controle você acabou adotando várias ferramentas como planilhas, ERP obsoletos e sites do governo. A sua oficina tem organização, mas o preço que você paga por isso é o seu próprio descanso...</p>
-              </div>
+          <!-- Widget 3: Raio X (Direita Base) -->
+          <div class="bento-card bento-raiox">
+            <h3 class="bento-title">Pontos de Atenção e Oportunidades</h3>
+            <div class="raiox-list-mockup">
+              <div class="raiox-item"><div class="raiox-label"><span>Ordem de Serviço</span> <span style="color:var(--attention)">Alerta</span></div><div class="raiox-bar-bg"><div class="raiox-bar-fill fill-attention" style="width:60%"></div></div></div>
+              <div class="raiox-item"><div class="raiox-label"><span>Orçamento e Aprovação</span> <span style="color:var(--critical)">Crítico</span></div><div class="raiox-bar-bg"><div class="raiox-bar-fill fill-critical" style="width:20%"></div></div></div>
+              <div class="raiox-item"><div class="raiox-label"><span>Peças, Margem e NFe</span> <span style="color:var(--ok)">Oficinaz</span></div><div class="raiox-bar-bg"><div class="raiox-bar-fill fill-ok" style="width:100%"></div></div></div>
             </div>
           </div>
+
         </div>
+
       </div>
+    </section>
 
       <!-- FOLD 4: CTA FINAL -->
       <div class="cta-fold">
