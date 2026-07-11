@@ -9,14 +9,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Lucide Icons para um visual premium (substituindo emojis) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
   <div class="background-effects"></div>
 
   <!-- Header -->
   <header class="main-header">
-    <div class="container">
-      <img src="assets/logo-oficinaz-negative-alt.png" alt="Oficinaz" class="logo">
+    <div class="container header-container">
+      <a href="https://oficinaz.com" target="_blank">
+        <!-- Logo completo em versão negativa/transparente -->
+        <img src="assets/logo-oficinaz-negative-alt.png" alt="Oficinaz" class="logo">
+      </a>
+      <nav>
+        <a href="https://oficinaz.com" target="_blank" class="nav-link">Visitar Oficinaz <i data-lucide="external-link" class="icon-sm"></i></a>
+      </nav>
     </div>
   </header>
 
@@ -30,9 +38,7 @@
           <p>Responda nossa pesquisa e compare o seu desempenho com as outras oficinas do seu bairro. Um diagnóstico rápido e gratuito.</p>
           <button id="btn-start" class="btn btn-primary btn-large">👉 RESPONDER AGORA</button>
         </div>
-        <div class="hero-image">
-          <img src="assets/hero-mecanica-mulher.png" alt="Mecânica com tablet">
-        </div>
+        <!-- Removida a foto duplicada. Agora apenas o background domina a tela -->
       </div>
     </section>
 
@@ -41,7 +47,7 @@
       <div class="container quiz-container">
         <div class="question-card glass-panel" id="question-card">
           <div class="quiz-header">
-            <p class="privacy-notice">🔒 Suas respostas são 100% confidenciais. Seja o mais preciso possível.</p>
+            <p class="privacy-notice"><i data-lucide="lock" class="icon-sm"></i> Suas respostas são 100% confidenciais. Seja o mais preciso possível.</p>
             <div class="progress-bar">
               <div class="progress-fill" id="quiz-progress"></div>
             </div>
@@ -97,7 +103,7 @@
                 <option value="Acima de 90">Acima de 90 carros</option>
               </select>
             </div>
-            <button type="submit" class="btn btn-primary btn-block btn-large">Desbloquear Meu Relatório 🔒</button>
+            <button type="submit" class="btn btn-primary btn-block btn-large"><i data-lucide="unlock" class="icon-sm"></i> Desbloquear Meu Relatório</button>
             <p id="form-error" class="error-msg"></p>
           </form>
         </div>
@@ -167,13 +173,17 @@
         </div>
 
         <div class="results-actions">
-          <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-primary btn-large btn-pulse">💬 FALAR COM UM ESPECIALISTA NO WHATSAPP</a>
-          <button id="btn-share" class="btn btn-outline btn-large">🔗 Compartilhar este diagnóstico</button>
+          <a href="https://api.whatsapp.com/send/?phone=551151073356&text&type=phone_number&app_absent=0" target="_blank" class="btn btn-primary btn-large btn-pulse"><i data-lucide="message-circle" class="icon-sm"></i> FALAR COM UM ESPECIALISTA</a>
+          <button id="btn-share" class="btn btn-outline btn-large"><i data-lucide="share-2" class="icon-sm"></i> Compartilhar este diagnóstico</button>
         </div>
       </div>
     </section>
   </main>
 
   <script src="app.js"></script>
+  <script>
+    // Inicia os ícones Lucide
+    lucide.createIcons();
+  </script>
 </body>
 </html>
