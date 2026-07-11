@@ -16,7 +16,7 @@
   <!-- Header -->
   <header class="main-header">
     <div class="container header-container">
-      <a href="https://oficinaz.com" target="_blank">
+      <a href="#" onclick="resetToLanding(event)" class="logo-link">
         <img src="assets/logo-oficinaz-color.png" alt="Oficinaz" class="logo">
       </a>
       <div class="header-links">
@@ -35,14 +35,17 @@
         <div class="container hero-split-container">
           <div class="hero-text-col">
             <span class="badge">DIAGNÓSTICO OFICINAZ</span>
-            <h1>Qual é o nível de maturidade de gestão da sua oficina?</h1>
-            <p>Descubra onde sua oficina está perdendo dinheiro e compare seu desempenho com a concorrência do seu bairro através de um raio-x gratuito.</p>
+            <h1>A oficina não para.<br>Mas a gestão acompanha?</h1>
+            <p>Peça faltando, cliente cobrando orçamento, serviço atrasado e o caixa da sua oficina com pouco controle. Responda 5 perguntas e descubra onde está sua maior ineficiência.</p>
+            
             <button class="btn btn-primary btn-large btn-pulse btn-start-quiz">
-              INICIAR DIAGNÓSTICO AGORA <i data-lucide="arrow-right" class="icon-sm"></i>
+              Realizar diagnóstico <i data-lucide="arrow-right" class="icon-sm"></i>
             </button>
+            <div class="micro-text">Leva menos de 1 minuto</div>
+
             <div class="trust-chips">
               <span class="chip"><i data-lucide="timer" class="icon-sm"></i> Leva menos de 1 minuto</span>
-              <span class="chip"><i data-lucide="shield-check" class="icon-sm"></i> 100% Confidencial</span>
+              <span class="chip"><i data-lucide="shield-check" class="icon-sm"></i> 100% confidencial</span>
               <span class="chip"><i data-lucide="bar-chart-2" class="icon-sm"></i> Resultado personalizado</span>
             </div>
           </div>
@@ -57,12 +60,48 @@
         <div class="container">
           <h2>O que será avaliado</h2>
           <div class="metrics-grid">
-            <div class="metric-card"><div class="metric-icon"><i data-lucide="users"></i></div> <span>Clientes e veículos</span></div>
-            <div class="metric-card"><div class="metric-icon"><i data-lucide="file-text"></i></div> <span>Ordens de serviço</span></div>
-            <div class="metric-card"><div class="metric-icon"><i data-lucide="line-chart"></i></div> <span>Financeiro e lucro</span></div>
-            <div class="metric-card"><div class="metric-icon"><i data-lucide="package"></i></div> <span>Peças e compras</span></div>
-            <div class="metric-card"><div class="metric-icon"><i data-lucide="heart-handshake"></i></div> <span>Fidelização de clientes</span></div>
-            <div class="metric-card"><div class="metric-icon"><i data-lucide="receipt"></i></div> <span>Emissão de nota fiscal</span></div>
+            <div class="metric-card">
+              <div class="metric-icon"><i data-lucide="users"></i></div> 
+              <div class="metric-content">
+                <h4>Clientes e veículos</h4>
+                <p>Encontre rápido o histórico do cliente, do veículo e dos serviços já feitos, sem depender da memória.</p>
+              </div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-icon"><i data-lucide="file-text"></i></div> 
+              <div class="metric-content">
+                <h4>Ordens de serviço</h4>
+                <p>Abra a OS rapidamente, integre peças e mão de obra com precisão e garanta que cada serviço executado seja faturado corretamente</p>
+              </div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-icon"><i data-lucide="line-chart"></i></div> 
+              <div class="metric-content">
+                <h4>Financeiro e lucro</h4>
+                <p>Veja o que entrou, o que saiu e quanto realmente sobrou no fim do mês.</p>
+              </div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-icon"><i data-lucide="package"></i></div> 
+              <div class="metric-content">
+                <h4>Peças e compras</h4>
+                <p>Evite falta de peça, compra no susto e atraso com o carro já no elevador.</p>
+              </div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-icon"><i data-lucide="heart-handshake"></i></div> 
+              <div class="metric-content">
+                <h4>Fidelização de clientes</h4>
+                <p>Atenda melhor hoje e aumente a chance do cliente voltar nas próximas revisões e manutenções.</p>
+              </div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-icon"><i data-lucide="receipt"></i></div> 
+              <div class="metric-content">
+                <h4>Emissão de nota fiscal</h4>
+                <p>Emissão de NF-e, NFS-e e NFC-e diretamente da OS. Separação correta de peças e serviços, evitando bitributação.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -152,8 +191,8 @@
       <div class="container form-container">
         <div class="form-card glass-panel">
           <div class="form-header">
-            <h2>Diagnóstico concluído.</h2>
-            <p>Preencha os dados abaixo para desbloquear o seu relatório detalhado e o comparativo regional.</p>
+            <h2>Seu diagnóstico está pronto</h2>
+            <p>Preencha seus dados para desbloquear o relatório detalhado e o comparativo regional.</p>
           </div>
           <form id="lead-form">
             <div class="form-group">
@@ -188,7 +227,7 @@
                 <option value="Acima de 90">Acima de 90 carros</option>
               </select>
             </div>
-            <button type="submit" class="btn btn-primary btn-block btn-large"><i data-lucide="unlock" class="icon-sm"></i> Desbloquear Meu Relatório</button>
+            <button type="submit" class="btn btn-primary btn-block btn-large"><i data-lucide="unlock" class="icon-sm"></i> Desbloquear meu relatório</button>
             <p id="form-error" class="error-msg"></p>
           </form>
         </div>
@@ -215,7 +254,7 @@
           <!-- Bloco 1: Perfil -->
           <div class="dashboard-card card-persona glass-panel">
             <div class="persona-image-placeholder">
-              <span id="persona-icon"><i data-lucide="user" style="width: 64px; height: 64px;"></i></span>
+              <span id="persona-icon"><i data-lucide="user"></i></span>
             </div>
             <div class="persona-text">
               <h3 class="score-display">Sua pontuação: <span id="final-score">15</span>/30</h3>
@@ -223,7 +262,7 @@
             </div>
           </div>
 
-          <!-- Bloco 3: Benchmarking -->
+          <!-- Bloco 2: Benchmarking -->
           <div class="dashboard-card card-chart glass-panel">
             <h2>Como você se compara com a concorrência?</h2>
             <p class="chart-subtitle" id="chart-subtitle">Comparativo na região: Mooca</p>
@@ -239,7 +278,7 @@
             </div>
           </div>
 
-          <!-- Bloco 2: Raio-X -->
+          <!-- Bloco 3: Raio-X -->
           <div class="dashboard-card card-raiox glass-panel">
             <h2>Pontos de Atenção e Oportunidades</h2>
             <div id="raiox-list" class="raiox-list">
@@ -256,8 +295,14 @@
           </div>
         </div>
 
-        <div class="results-actions">
-          <button id="btn-share" class="btn btn-outline btn-large"><i data-lucide="share-2" class="icon-sm"></i> Compartilhar este diagnóstico</button>
+        <!-- SHARE BOX -->
+        <div class="share-box glass-panel">
+          <h3>Compartilhe ou refaça seu diagnóstico</h3>
+          <div class="share-actions">
+            <a href="#" class="btn btn-primary" id="btn-share-email"><i data-lucide="mail" class="icon-sm"></i> Compartilhar por E-mail</a>
+            <a href="https://api.whatsapp.com/send/?phone=551151073356&text=Fiz%20o%20diagnóstico%20Oficinaz%20e%20recomendo!" target="_blank" class="btn btn-whatsapp-solid"><i data-lucide="message-circle" class="icon-sm"></i> Compartilhar no WhatsApp</a>
+            <button class="btn btn-outline" onclick="resetToLanding(event)"><i data-lucide="rotate-ccw" class="icon-sm"></i> Refazer diagnóstico</button>
+          </div>
         </div>
       </div>
     </section>
@@ -271,16 +316,19 @@
         <img src="assets/logo-oficinaz-color.png" alt="Oficinaz ERP" class="product-logo">
         <h2>Pronto para ser um Piloto de Alta Performance?</h2>
         <p>O Oficinaz é o Sistema de Gestão (ERP) feito exclusivamente para Centros Automotivos que querem crescer. Controle de caixa, emissão de NFe, ordens de serviço e catálogo de peças num só lugar.</p>
-        <a href="https://oficinaz.com" target="_blank" class="btn btn-primary btn-large btn-pulse">CONHECER O SISTEMA OFICINAZ</a>
+        <a href="https://oficinaz.com" target="_blank" class="btn btn-primary btn-large btn-pulse">Conhecer o sistema Oficinaz</a>
       </div>
     </section>
     
     <!-- FOOTER -->
     <footer class="main-footer">
-      <div class="container">
+      <div class="container footer-container">
+        <a href="https://oficinaz.com" target="_blank">
+          <img src="assets/logo-oficinaz-color.png" alt="Oficinaz" class="footer-logo">
+        </a>
         <div class="footer-links">
           <a href="https://oficinaz.com" target="_blank"><i data-lucide="globe" class="icon-sm"></i> Acessar Site Oficial</a>
-          <a href="https://api.whatsapp.com/send/?phone=551151073356&text&type=phone_number&app_absent=0" target="_blank" class="btn-whatsapp-footer"><i data-lucide="message-circle" class="icon-sm"></i> Falar no WhatsApp</a>
+          <a href="https://api.whatsapp.com/send/?phone=551151073356&text&type=phone_number&app_absent=0" target="_blank" class="btn btn-whatsapp-solid"><i data-lucide="message-circle" class="icon-sm"></i> Falar com a gente</a>
         </div>
         <p>&copy; 2026 Oficinaz. Todos os direitos reservados.</p>
       </div>
@@ -306,6 +354,19 @@
     document.querySelectorAll('.view').forEach(view => {
       observer.observe(view, { attributes: true, attributeFilter: ['class'] });
     });
+
+    function resetToLanding(e) {
+      if(e) e.preventDefault();
+      document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+      document.getElementById('view-landing').classList.add('active');
+      window.scrollTo(0, 0);
+      // Reset quiz state
+      if(typeof currentQuestion !== 'undefined') {
+        currentQuestion = 0;
+        userAnswers = [];
+        totalScore = 0;
+      }
+    }
   </script>
 </body>
 </html>
