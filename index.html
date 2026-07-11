@@ -58,48 +58,59 @@
         </div>
       </div>
 
-      <!-- FOLD 2: SNEAK PEEK -->
-      <div class="sneak-peek-fold">
-        <div class="container text-center">
-          <h2>O que você vai descobrir</h2>
-          <p class="section-subtitle">Um relatório visual, cirúrgico e feito para gestores que não têm tempo a perder.</p>
-          
-          <div class="features-grid">
-            <div class="feature-card glass-panel">
-              <div class="feature-icon"><i data-lucide="pie-chart"></i></div>
-              <h3>Benchmarking de Vizinhança</h3>
-              <p>Você é o líder local ou está ficando para trás? Compare o seu desempenho diretamente com a média das oficinas da sua cidade e bairro.</p>
-            </div>
-            <div class="feature-card glass-panel">
-              <div class="feature-icon"><i data-lucide="activity"></i></div>
-              <h3>Raio-X de Oportunidades</h3>
-              <p>Mapeamos os 10 pilares da gestão automotiva. Veja um termômetro visual mostrando exatamente onde a sua operação corre riscos.</p>
+      <!-- FOLD 2: BENCHMARKING (ZIG-ZAG) -->
+      <div class="split-fold">
+        <div class="container split-container">
+          <div class="split-text">
+            <h2>Benchmarking de Vizinhança</h2>
+            <p>Você é o líder local ou está ficando para trás? Descubra como a sua gestão se compara diretamente com as outras oficinas da sua região através de um gráfico de competitividade exclusivo.</p>
+          </div>
+          <div class="split-visual">
+            <div class="mockup-card glass-panel">
+              <h4>Como você se compara?</h4>
+              <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 16px;">Comparativo com oficinas em: Seu Bairro</p>
+              <div style="height: 250px; position: relative;">
+                <canvas id="previewChart"></canvas>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- FOLD 3: PERSONAS -->
-      <div class="personas-fold">
-        <div class="container text-center">
-          <h2>Qual é o seu perfil de gestão hoje?</h2>
-          <p class="section-subtitle">O diagnóstico revela em qual destes estágios a sua oficina está presa.</p>
-          
-          <div class="personas-grid">
-            <div class="persona-card glass-panel">
-              <i data-lucide="flame" class="persona-icon-lp attention"></i>
-              <h4>O Apagador de Incêndios</h4>
-              <p>Talento técnico que se perde na desorganização. Trabalha muito, mas não vê a cor do dinheiro no fim do mês.</p>
+      <!-- FOLD 3: RAIO X (ZIG-ZAG REVERSO) -->
+      <div class="split-fold reverse">
+        <div class="container split-container">
+          <div class="split-text">
+            <h2>Raio-X de Oportunidades</h2>
+            <p>Mapeamos os 10 pilares da gestão automotiva. Entregamos um termômetro visual mostrando exatamente onde a sua operação corre riscos e onde há lucro oculto.</p>
+          </div>
+          <div class="split-visual">
+            <div class="mockup-card glass-panel">
+              <h4>Pontos de Atenção</h4>
+              <div class="raiox-list-mockup">
+                <div class="raiox-item"><div class="raiox-label"><span>Orçamento e Aprovação</span> <span style="color:var(--critical)">Crítico</span></div><div class="raiox-bar-bg"><div class="raiox-bar-fill fill-critical" style="width:20%"></div></div></div>
+                <div class="raiox-item"><div class="raiox-label"><span>Ordem de Serviço</span> <span style="color:var(--attention)">Alerta</span></div><div class="raiox-bar-bg"><div class="raiox-bar-fill fill-attention" style="width:60%"></div></div></div>
+                <div class="raiox-item"><div class="raiox-label"><span>Kits de Revisão</span> <span style="color:var(--ok)">Oficinaz</span></div><div class="raiox-bar-bg"><div class="raiox-bar-fill fill-ok" style="width:100%"></div></div></div>
+              </div>
             </div>
-            <div class="persona-card glass-panel">
-              <i data-lucide="bar-chart-3" class="persona-icon-lp teal"></i>
-              <h4>O Polvo das Planilhas</h4>
-              <p>Tenta organizar tudo, mas perde horas preciosas de vida usando planilhas soltas e retrabalho contínuo.</p>
-            </div>
-            <div class="persona-card glass-panel">
-              <i data-lucide="zap" class="persona-icon-lp ok"></i>
-              <h4>O Piloto de Alta Performance</h4>
-              <p>Oficina rodando com processos maduros. Foco total em escalar, expandir e gerar lucro previsível.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOLD 4: PERSONAS (ZIG-ZAG) -->
+      <div class="split-fold">
+        <div class="container split-container">
+          <div class="split-text">
+            <h2>Qual é o seu perfil de gestão?</h2>
+            <p>O diagnóstico revela em qual estágio a sua oficina está presa hoje. Você é o Apagador de Incêndios, o Polvo das Planilhas ou o Piloto de Alta Performance?</p>
+          </div>
+          <div class="split-visual">
+            <div class="mockup-card glass-panel" style="display:flex; align-items:center; text-align:left;">
+              <i data-lucide="bar-chart-3" style="width:64px; height:64px; color:var(--teal); margin-right: 24px; flex-shrink: 0;"></i>
+              <div>
+                <h4 style="color: var(--teal); margin-bottom: 8px;">O Polvo das Planilhas</h4>
+                <p style="font-size: 0.9rem; margin:0; line-height: 1.4;">Tenta organizar tudo, mas perde horas preciosas usando ferramentas desconectadas. O preço pago é o seu tempo livre.</p>
+              </div>
             </div>
           </div>
         </div>

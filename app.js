@@ -138,6 +138,41 @@ const viewForm = document.getElementById('view-form');
 const viewLoading = document.getElementById('view-loading');
 const viewResults = document.getElementById('view-results');
 
+// Render Preview Chart on Landing Page
+const previewCtx = document.getElementById('previewChart');
+if (previewCtx) {
+  new Chart(previewCtx.getContext('2d'), {
+    type: 'radar',
+    data: {
+      labels: ['OS', 'Orçamento', 'Kits', 'Peças', 'Caixa', 'Comissão'],
+      datasets: [
+        {
+          label: 'Você',
+          data: [40, 60, 20, 80, 50, 40],
+          backgroundColor: 'rgba(24, 183, 168, 0.2)',
+          borderColor: 'rgba(24, 183, 168, 1)',
+          pointBackgroundColor: 'rgba(24, 183, 168, 1)',
+          borderWidth: 2
+        },
+        {
+          label: 'Média',
+          data: [60, 70, 50, 60, 70, 60],
+          backgroundColor: 'rgba(97, 115, 141, 0.1)',
+          borderColor: 'rgba(97, 115, 141, 0.5)',
+          pointBackgroundColor: 'rgba(97, 115, 141, 0.5)',
+          borderWidth: 1
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: { r: { min: 0, max: 100, ticks: { display: false } } },
+      plugins: { legend: { display: false } }
+    }
+  });
+}
+
 document.querySelectorAll('.btn-start-quiz').forEach(btn => {
   btn.addEventListener('click', () => {
     document.getElementById('view-landing').classList.remove('active');
