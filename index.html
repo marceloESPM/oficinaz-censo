@@ -16,7 +16,7 @@
   <!-- Header -->
   <header class="main-header">
     <div class="container">
-      <img src="assets/logo-oficinaz-color.png" alt="Oficinaz" class="logo">
+      <img src="assets/logo-oficinaz-negative-alt.png" alt="Oficinaz" class="logo">
     </div>
   </header>
 
@@ -39,15 +39,14 @@
     <!-- VIEW 2: QUIZ -->
     <section id="view-quiz" class="view">
       <div class="container quiz-container">
-        <div class="quiz-header">
-          <p class="privacy-notice">🔒 Suas respostas são 100% confidenciais. Seja o mais preciso possível.</p>
-          <div class="progress-bar">
-            <div class="progress-fill" id="quiz-progress"></div>
+        <div class="question-card glass-panel" id="question-card">
+          <div class="quiz-header">
+            <p class="privacy-notice">🔒 Suas respostas são 100% confidenciais. Seja o mais preciso possível.</p>
+            <div class="progress-bar">
+              <div class="progress-fill" id="quiz-progress"></div>
+            </div>
+            <p class="progress-text">Pergunta <span id="current-q-num">1</span> de 10</p>
           </div>
-          <p class="progress-text">Pergunta <span id="current-q-num">1</span> de 10</p>
-        </div>
-        
-        <div class="question-card" id="question-card">
           <h2 id="q-title"></h2>
           <p id="q-text"></p>
           <div class="options-container" id="options-container">
@@ -60,9 +59,9 @@
     <!-- VIEW 3: FORM (LEAD) -->
     <section id="view-form" class="view">
       <div class="container form-container">
-        <div class="form-card">
+        <div class="form-card glass-panel">
           <div class="form-header">
-            <h2>Diagnóstico concluído com sucesso.</h2>
+            <h2>Diagnóstico concluído.</h2>
             <p>Preencha os dados abaixo para desbloquear o seu relatório detalhado e o comparativo regional.</p>
           </div>
           <form id="lead-form">
@@ -98,7 +97,7 @@
                 <option value="Acima de 90">Acima de 90 carros</option>
               </select>
             </div>
-            <button type="submit" class="btn btn-primary btn-block">Desbloquear Meu Relatório 🔒</button>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Desbloquear Meu Relatório 🔒</button>
             <p id="form-error" class="error-msg"></p>
           </form>
         </div>
@@ -123,7 +122,7 @@
 
         <div class="dashboard-grid">
           <!-- Bloco 1: Perfil -->
-          <div class="dashboard-card card-persona">
+          <div class="dashboard-card card-persona glass-panel">
             <div class="persona-image-placeholder">
               <!-- Placeholder for persona illustration -->
               <span id="persona-icon">🛠️</span>
@@ -134,8 +133,8 @@
             </div>
           </div>
 
-          <!-- Bloco 3: Benchmarking (Moved up for better visual flow on desktop) -->
-          <div class="dashboard-card card-chart">
+          <!-- Bloco 3: Benchmarking -->
+          <div class="dashboard-card card-chart glass-panel">
             <h2>Como você se compara com a concorrência?</h2>
             <p class="chart-subtitle" id="chart-subtitle">Comparativo na região: Mooca</p>
             <div class="chart-wrapper">
@@ -151,7 +150,7 @@
           </div>
 
           <!-- Bloco 2: Raio-X -->
-          <div class="dashboard-card card-raiox">
+          <div class="dashboard-card card-raiox glass-panel">
             <h2>Pontos de Atenção e Oportunidades</h2>
             <div id="raiox-list" class="raiox-list">
               <!-- Injected via JS -->
@@ -159,7 +158,7 @@
           </div>
 
           <!-- Bloco 4: Plano de Ação -->
-          <div class="dashboard-card card-action-plan">
+          <div class="dashboard-card card-action-plan glass-panel">
             <h2>O próximo passo para a sua gestão</h2>
             <div id="action-plan-list" class="action-plan-list">
               <!-- Injected via JS -->
@@ -169,7 +168,7 @@
 
         <div class="results-actions">
           <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-primary btn-large btn-pulse">💬 FALAR COM UM ESPECIALISTA NO WHATSAPP</a>
-          <button id="btn-share" class="btn btn-outline">🔗 Compartilhar este diagnóstico</button>
+          <button id="btn-share" class="btn btn-outline btn-large">🔗 Compartilhar este diagnóstico</button>
         </div>
       </div>
     </section>
