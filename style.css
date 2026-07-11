@@ -50,7 +50,7 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
   position: fixed;
   top: 0;
   width: 100%;
-  height: 120px; /* Aumentado para suportar o logo gigante */
+  height: 180px; /* Expandido massivamente para o logo gigante */
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -71,7 +71,7 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
   align-items: center;
 }
 .logo {
-  height: 96px; /* O dobro do original solicitado (original era 48, agora 96) */
+  height: 154px; /* Aumentado em 60% do original 96px */
   width: auto;
   display: block;
 }
@@ -188,14 +188,14 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
 }
 
 /* ========================================================================= */
-/* HERO COM BACKGROUND IMAGE */
+/* HERO COM BACKGROUND IMAGE (DARK & BLUR) */
 /* ========================================================================= */
 #view-landing {
-  padding-top: 120px;
+  padding-top: 180px; /* Ajuste para o novo header de 180px */
 }
 .hero-section {
   position: relative;
-  background: url('assets/hero-mecanica-mulher.png') no-repeat right center;
+  background: url('assets/hero-mecanica-mulher.png') no-repeat center center;
   background-size: cover;
   padding: 120px 0;
   min-height: 80vh;
@@ -205,7 +205,9 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
 .hero-overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0) 100%);
+  background: rgba(17, 24, 39, 0.7); /* Fundo muito escuro */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   z-index: 1;
 }
 .hero-container {
@@ -213,11 +215,18 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
   width: 100%;
 }
 .hero-content {
-  max-width: 600px;
+  max-width: 700px;
+}
+.hero-content h1 {
+  color: #ffffff; /* Letras brancas */
+}
+.hero-content p {
+  color: rgba(255, 255, 255, 0.9); /* Letras brancas com leve transparencia */
+  font-size: 1.25rem;
 }
 .micro-text {
   font-size: 0.95rem;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.7);
   margin-top: 12px;
   font-weight: 500;
 }
@@ -231,23 +240,23 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: #ffffff;
-  border: 1px solid rgba(0,0,0,0.08);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 12px 24px;
   border-radius: 100px;
   font-size: 0.95rem;
   font-weight: 600;
-  color: var(--dark-blue);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+  color: #ffffff;
+  backdrop-filter: blur(4px);
 }
-.chip i { color: var(--teal); stroke-width: 1.5; }
+.chip i { color: var(--teal); stroke-width: 2; }
 
 @media (max-width: 900px) {
   .hero-section {
     background-position: center;
   }
   .hero-overlay {
-    background: linear-gradient(180deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,1) 100%);
+    background: rgba(17, 24, 39, 0.75);
   }
   .hero-content {
     margin: 0 auto;
@@ -733,7 +742,7 @@ input:disabled { opacity: 0.8; cursor: not-allowed; background: #e2e8f0; border-
 .main-footer {
   background: #111827;
   color: rgba(255,255,255,0.7);
-  padding: 100px 0 80px 0;
+  padding: 40px 0 32px 0; /* Altura drasticamente reduzida */
   text-align: center;
 }
 .footer-container {
@@ -742,15 +751,15 @@ input:disabled { opacity: 0.8; cursor: not-allowed; background: #e2e8f0; border-
   align-items: center;
 }
 .footer-logo {
-  height: 200px; /* Triplicado para garantir o maximo de destaque no dark background */
-  margin-bottom: 48px;
-  filter: brightness(0) invert(1); /* Deixa a logo completamente branca caso nao esteja em PNG white */
+  height: 200px; /* Mantido triplicado para destaque máximo */
+  margin-bottom: 24px; /* Margem reduzida */
+  filter: brightness(0) invert(1);
 }
 .footer-links {
   display: flex;
   justify-content: center;
   gap: 40px;
-  margin-bottom: 48px;
+  margin-bottom: 32px; /* Margem reduzida */
   flex-wrap: wrap;
 }
 .footer-links a {

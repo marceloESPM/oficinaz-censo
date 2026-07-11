@@ -174,7 +174,7 @@ if (previewCtx) {
         r: { 
           min: 0, max: 100, 
           ticks: { display: false },
-          grid: { color: 'rgba(0,0,0,0.04)' },
+          grid: { color: 'rgba(0,0,0,0.04)', circular: true },
           angleLines: { color: 'rgba(0,0,0,0.04)' },
           pointLabels: { font: { family: 'Inter', size: 11, weight: '600' }, color: '#64748b' }
         } 
@@ -354,7 +354,7 @@ function generateResults(bairro) {
         r: {
           min: 0, max: 100,
           ticks: { display: false },
-          grid: { color: 'rgba(0,0,0,0.04)' },
+          grid: { color: 'rgba(0,0,0,0.04)', circular: true },
           angleLines: { color: 'rgba(0,0,0,0.04)' },
           pointLabels: { font: { family: 'Inter', size: 12, weight: '600' }, color: '#334155' }
         }
