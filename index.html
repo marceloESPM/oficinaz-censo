@@ -19,8 +19,8 @@
   <header class="main-header">
     <div class="container header-container">
       <a href="https://oficinaz.com" target="_blank">
-        <!-- Logo completo do Oficinaz -->
-        <img src="assets/logo-oficinaz-negative.png" alt="Oficinaz" class="logo">
+        <!-- Logo tratada por CSS para branco absoluto e perfeito -->
+        <img src="assets/logo-oficinaz-transparent-clean.png" alt="Oficinaz" class="logo logo-white-filter">
       </a>
       <nav>
         <a href="https://oficinaz.com" target="_blank" class="nav-link">Visitar Oficinaz <i data-lucide="external-link" class="icon-sm"></i></a>
@@ -29,30 +29,96 @@
   </header>
 
   <main>
-    <!-- VIEW 1: HERO -->
-    <section id="view-hero" class="view active">
-      <div class="container hero-container">
-        <div class="hero-content glass-panel">
-          <span class="badge">DIAGNÓSTICO OFICINAZ</span>
-          <h1>Qual é o nível de maturidade de gestão da sua oficina?</h1>
-          <p>Descubra onde sua oficina está perdendo dinheiro e compare seu desempenho com a concorrência do seu bairro.</p>
-          
-          <ul class="trust-list">
-            <li class="trust-item"><i data-lucide="check-circle-2" class="icon-ok"></i> <strong>Relatório personalizado</strong> e imediato.</li>
-            <li class="trust-item"><i data-lucide="check-circle-2" class="icon-ok"></i> <strong>Comparativo real</strong> contra concorrentes da sua região.</li>
-            <li class="trust-item"><i data-lucide="check-circle-2" class="icon-ok"></i> <strong>100% Gratuito.</strong></li>
-          </ul>
+    <!-- VIEW 1: LANDING PAGE FULL -->
+    <section id="view-landing" class="view active" style="display: block; padding-top: 0; min-height: auto;">
+      
+      <!-- FOLD 1: HERO -->
+      <div class="hero-fold">
+        <div class="container hero-container">
+          <div class="hero-content glass-panel">
+            <span class="badge">DIAGNÓSTICO OFICINAZ</span>
+            <h1>Qual é o nível de maturidade de gestão da sua oficina?</h1>
+            <p>Descubra onde sua oficina está perdendo dinheiro e compare seu desempenho com a concorrência do seu bairro.</p>
+            
+            <ul class="trust-list">
+              <li class="trust-item"><i data-lucide="check-circle-2" class="icon-ok"></i> <strong>Relatório personalizado</strong> e imediato.</li>
+              <li class="trust-item"><i data-lucide="check-circle-2" class="icon-ok"></i> <strong>Comparativo real</strong> contra concorrentes da região.</li>
+              <li class="trust-item"><i data-lucide="check-circle-2" class="icon-ok"></i> <strong>100% Gratuito.</strong></li>
+            </ul>
 
-          <button id="btn-start" class="btn btn-primary btn-large btn-block btn-pulse">
-            INICIAR DIAGNÓSTICO <i data-lucide="arrow-right" class="icon-sm" style="margin-left: 8px; margin-right: 0;"></i>
-          </button>
-          
-          <div class="trust-signals">
-            <span class="trust-signal"><i data-lucide="timer" class="icon-sm"></i> Leva menos de 1 minuto</span>
-            <span class="trust-signal"><i data-lucide="shield-check" class="icon-sm"></i> Dados protegidos</span>
+            <button class="btn btn-primary btn-large btn-block btn-pulse btn-start-quiz">
+              INICIAR DIAGNÓSTICO <i data-lucide="arrow-right" class="icon-sm" style="margin-left: 8px; margin-right: 0;"></i>
+            </button>
+            
+            <div class="trust-signals">
+              <span class="trust-signal"><i data-lucide="timer" class="icon-sm"></i> Leva menos de 1 minuto</span>
+              <span class="trust-signal"><i data-lucide="shield-check" class="icon-sm"></i> Dados protegidos</span>
+            </div>
           </div>
         </div>
       </div>
+
+      <!-- FOLD 2: SNEAK PEEK -->
+      <div class="sneak-peek-fold">
+        <div class="container text-center">
+          <h2>O que você vai descobrir</h2>
+          <p class="section-subtitle">Um relatório visual, cirúrgico e feito para gestores que não têm tempo a perder.</p>
+          
+          <div class="features-grid">
+            <div class="feature-card glass-panel">
+              <div class="feature-icon"><i data-lucide="pie-chart"></i></div>
+              <h3>Benchmarking de Vizinhança</h3>
+              <p>Você é o líder local ou está ficando para trás? Compare o seu desempenho diretamente com a média das oficinas da sua cidade e bairro.</p>
+            </div>
+            <div class="feature-card glass-panel">
+              <div class="feature-icon"><i data-lucide="activity"></i></div>
+              <h3>Raio-X de Oportunidades</h3>
+              <p>Mapeamos os 10 pilares da gestão automotiva. Veja um termômetro visual mostrando exatamente onde a sua operação corre riscos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOLD 3: PERSONAS -->
+      <div class="personas-fold">
+        <div class="container text-center">
+          <h2>Qual é o seu perfil de gestão hoje?</h2>
+          <p class="section-subtitle">O diagnóstico revela em qual destes estágios a sua oficina está presa.</p>
+          
+          <div class="personas-grid">
+            <div class="persona-card glass-panel">
+              <i data-lucide="flame" class="persona-icon-lp attention"></i>
+              <h4>O Apagador de Incêndios</h4>
+              <p>Talento técnico que se perde na desorganização. Trabalha muito, mas não vê a cor do dinheiro no fim do mês.</p>
+            </div>
+            <div class="persona-card glass-panel">
+              <i data-lucide="bar-chart-3" class="persona-icon-lp teal"></i>
+              <h4>O Polvo das Planilhas</h4>
+              <p>Tenta organizar tudo, mas perde horas preciosas de vida usando planilhas soltas e retrabalho contínuo.</p>
+            </div>
+            <div class="persona-card glass-panel">
+              <i data-lucide="zap" class="persona-icon-lp ok"></i>
+              <h4>O Piloto de Alta Performance</h4>
+              <p>Oficina rodando com processos maduros. Foco total em escalar, expandir e gerar lucro previsível.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOLD 4: CTA FINAL -->
+      <div class="cta-fold">
+        <div class="container text-center">
+          <h2>A mudança começa com a visão certa.</h2>
+          <button class="btn btn-primary btn-large btn-pulse btn-start-quiz" style="margin-top: 24px; display: inline-block;">
+            INICIAR DIAGNÓSTICO AGORA <i data-lucide="arrow-right" class="icon-sm" style="margin-left: 8px;"></i>
+          </button>
+          <div class="trust-signals" style="margin-top: 24px;">
+            <span class="trust-signal"><i data-lucide="timer" class="icon-sm"></i> Menos de 1 minuto</span>
+            <span class="trust-signal"><i data-lucide="shield-check" class="icon-sm"></i> 100% Gratuito</span>
+          </div>
+        </div>
+      </div>
+
     </section>
 
     <!-- VIEW 2: QUIZ -->

@@ -251,6 +251,74 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
   .hero-content { padding: 32px 24px; }
 }
 
+/* Landing Page Folds */
+.hero-fold {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+.sneak-peek-fold, .personas-fold, .cta-fold {
+  padding: 100px 0;
+  background: rgba(10, 10, 12, 0.7); /* Darkens the background further for reading */
+  backdrop-filter: blur(10px);
+}
+.personas-fold {
+  background: rgba(10, 10, 12, 0.85);
+}
+.text-center { text-align: center; }
+.section-subtitle { max-width: 600px; margin: 0 auto 60px auto; font-size: 1.25rem; }
+
+.features-grid, .personas-grid {
+  display: grid;
+  gap: 32px;
+  margin-top: 40px;
+}
+.features-grid { grid-template-columns: 1fr 1fr; }
+.personas-grid { grid-template-columns: 1fr 1fr 1fr; }
+
+@media (max-width: 900px) {
+  .features-grid, .personas-grid { grid-template-columns: 1fr; }
+}
+
+.feature-card, .persona-card {
+  padding: 48px 32px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.feature-card:hover, .persona-card:hover {
+  transform: translateY(-5px);
+}
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  background: var(--surface-glass-light);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  color: var(--teal);
+}
+.feature-icon svg { width: 32px; height: 32px; }
+.persona-icon-lp { width: 64px; height: 64px; margin-bottom: 24px; }
+.persona-icon-lp.attention { color: var(--attention); }
+.persona-icon-lp.teal { color: var(--teal); }
+.persona-icon-lp.ok { color: var(--ok); }
+
+.feature-card h3, .persona-card h4 { margin-bottom: 16px; font-size: 1.5rem; }
+.persona-card h4 { font-size: 1.3rem; }
+.feature-card p, .persona-card p { font-size: 1.05rem; margin-bottom: 0; }
+
+.logo-white-filter {
+  filter: brightness(0) invert(1) drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+}
+
 /* Quiz */
 .quiz-container { max-width: 700px; margin: 0 auto; width: 100%; }
 .quiz-header { margin-bottom: 40px; text-align: center; }

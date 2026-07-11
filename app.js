@@ -138,17 +138,20 @@ const viewForm = document.getElementById('view-form');
 const viewLoading = document.getElementById('view-loading');
 const viewResults = document.getElementById('view-results');
 
+document.querySelectorAll('.btn-start-quiz').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.getElementById('view-landing').classList.remove('active');
+    document.getElementById('view-quiz').classList.add('active');
+    loadQuestion();
+  });
+});
+
 const qTitle = document.getElementById('q-title');
 const qText = document.getElementById('q-text');
 const optionsContainer = document.getElementById('options-container');
 const progressFill = document.getElementById('quiz-progress');
 const currentQNum = document.getElementById('current-q-num');
 
-// Start
-document.getElementById('btn-start').addEventListener('click', () => {
-  switchView(viewQuiz);
-  loadQuestion();
-});
 
 function switchView(view) {
   document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
