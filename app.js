@@ -175,8 +175,7 @@ if (previewCtx) {
 
 document.querySelectorAll('.btn-start-quiz').forEach(btn => {
   btn.addEventListener('click', () => {
-    document.getElementById('view-landing').classList.remove('active');
-    document.getElementById('view-quiz').classList.add('active');
+    switchView(document.getElementById('view-quiz'));
     loadQuestion();
   });
 });

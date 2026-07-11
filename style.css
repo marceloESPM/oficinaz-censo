@@ -29,8 +29,8 @@ body {
   background-image: url('assets/hero-mecanica-mulher.png');
   background-size: cover;
   background-position: center top;
-  opacity: 0.08; /* Quase uma marca d'água elegante */
-  filter: grayscale(100%);
+  opacity: 0.25; /* Bem mais visível agora */
+  filter: grayscale(40%); /* Um toque de cor mantido */
   pointer-events: none;
 }
 
@@ -86,7 +86,7 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
   align-items: center;
 }
 .logo {
-  height: 56px; /* Aumentado conforme solicitado */
+  height: 80px; /* Logo 100% visível e imponente */
   width: auto;
   display: block;
 }
@@ -167,7 +167,7 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
 .view {
   display: none;
   min-height: 100vh;
-  padding-top: 120px; 
+  padding-top: 160px; /* Aumentado para não cortar o título sob o header */
   padding-bottom: 80px;
 }
 .view.active {
