@@ -19,8 +19,8 @@
   <header class="main-header">
     <div class="container header-container">
       <a href="https://oficinaz.com" target="_blank">
-        <!-- Logo tratada por CSS para branco absoluto e perfeito -->
-        <img src="assets/logo-oficinaz-transparent-clean.png" alt="Oficinaz" class="logo logo-white-filter">
+        <!-- Logo original colorida do Oficinaz -->
+        <img src="assets/logo-oficinaz-color.png" alt="Oficinaz" class="logo">
       </a>
       <nav>
         <a href="https://oficinaz.com" target="_blank" class="nav-link">Visitar Oficinaz <i data-lucide="external-link" class="icon-sm"></i></a>
@@ -30,12 +30,12 @@
 
   <main>
     <!-- VIEW 1: LANDING PAGE FULL -->
-    <section id="view-landing" class="view active" style="display: block; padding-top: 0; min-height: auto;">
+    <section id="view-landing" class="view active" style="display: block; padding-top: 100px; min-height: auto;">
       
-      <!-- FOLD 1: HERO -->
-      <div class="hero-fold">
-        <div class="container hero-container">
-          <div class="hero-content glass-panel">
+      <!-- FOLD 1: HERO (SaaS Light Mode) -->
+      <div class="split-fold" style="padding-top: 40px;">
+        <div class="container split-container">
+          <div class="split-text">
             <span class="badge">DIAGNÓSTICO OFICINAZ</span>
             <h1>Qual é o nível de maturidade de gestão da sua oficina?</h1>
             <p>Descubra onde sua oficina está perdendo dinheiro e compare seu desempenho com a concorrência do seu bairro.</p>
@@ -46,14 +46,17 @@
               <li class="trust-item"><i data-lucide="check-circle-2" class="icon-ok"></i> <strong>100% Gratuito.</strong></li>
             </ul>
 
-            <button class="btn btn-primary btn-large btn-block btn-pulse btn-start-quiz">
-              INICIAR DIAGNÓSTICO <i data-lucide="arrow-right" class="icon-sm" style="margin-left: 8px; margin-right: 0;"></i>
+            <button class="btn btn-primary btn-large btn-pulse btn-start-quiz" style="width: 100%; max-width: 400px;">
+              INICIAR DIAGNÓSTICO <i data-lucide="arrow-right" class="icon-sm" style="margin-left: 8px;"></i>
             </button>
             
-            <div class="trust-signals">
+            <div class="trust-signals" style="justify-content: flex-start; max-width: 400px;">
               <span class="trust-signal"><i data-lucide="timer" class="icon-sm"></i> Leva menos de 1 minuto</span>
               <span class="trust-signal"><i data-lucide="shield-check" class="icon-sm"></i> Dados protegidos</span>
             </div>
+          </div>
+          <div class="split-visual hero-image-box">
+             <img src="assets/hero-mecanica-mulher.png" alt="Mecânica com tablet" class="hero-image">
           </div>
         </div>
       </div>
@@ -66,10 +69,10 @@
             <p>Você é o líder local ou está ficando para trás? Descubra como a sua gestão se compara diretamente com as outras oficinas da sua região através de um gráfico de competitividade exclusivo.</p>
           </div>
           <div class="split-visual">
-            <div class="mockup-card glass-panel">
-              <h4>Como você se compara?</h4>
-              <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 16px;">Comparativo com oficinas em: Seu Bairro</p>
-              <div style="height: 250px; position: relative;">
+            <div class="mockup-card">
+              <h3>Como você se compara com a concorrência?</h3>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 24px;">Comparativo com as oficinas em: Seu Bairro</p>
+              <div style="height: 280px; position: relative;">
                 <canvas id="previewChart"></canvas>
               </div>
             </div>
@@ -85,12 +88,13 @@
             <p>Mapeamos os 10 pilares da gestão automotiva. Entregamos um termômetro visual mostrando exatamente onde a sua operação corre riscos e onde há lucro oculto.</p>
           </div>
           <div class="split-visual">
-            <div class="mockup-card glass-panel">
-              <h4>Pontos de Atenção</h4>
+            <div class="mockup-card">
+              <h3 style="color: #111827;">Pontos de Atenção e Oportunidades</h3>
               <div class="raiox-list-mockup">
                 <div class="raiox-item"><div class="raiox-label"><span>Orçamento e Aprovação</span> <span style="color:var(--critical)">Crítico</span></div><div class="raiox-bar-bg"><div class="raiox-bar-fill fill-critical" style="width:20%"></div></div></div>
                 <div class="raiox-item"><div class="raiox-label"><span>Ordem de Serviço</span> <span style="color:var(--attention)">Alerta</span></div><div class="raiox-bar-bg"><div class="raiox-bar-fill fill-attention" style="width:60%"></div></div></div>
-                <div class="raiox-item"><div class="raiox-label"><span>Kits de Revisão</span> <span style="color:var(--ok)">Oficinaz</span></div><div class="raiox-bar-bg"><div class="raiox-bar-fill fill-ok" style="width:100%"></div></div></div>
+                <div class="raiox-item"><div class="raiox-label"><span>Kits de Revisão</span> <span style="color:var(--attention)">Alerta</span></div><div class="raiox-bar-bg"><div class="raiox-bar-fill fill-attention" style="width:60%"></div></div></div>
+                <div class="raiox-item"><div class="raiox-label"><span>Peças, Margem e Nota Fiscal</span> <span style="color:var(--ok)">Oficinaz</span></div><div class="raiox-bar-bg"><div class="raiox-bar-fill fill-ok" style="width:100%"></div></div></div>
               </div>
             </div>
           </div>
@@ -105,11 +109,11 @@
             <p>O diagnóstico revela em qual estágio a sua oficina está presa hoje. Você é o Apagador de Incêndios, o Polvo das Planilhas ou o Piloto de Alta Performance?</p>
           </div>
           <div class="split-visual">
-            <div class="mockup-card glass-panel" style="display:flex; align-items:center; text-align:left;">
-              <i data-lucide="bar-chart-3" style="width:64px; height:64px; color:var(--teal); margin-right: 24px; flex-shrink: 0;"></i>
+            <div class="mockup-card" style="display:flex; align-items:center; text-align:left; gap: 24px;">
+              <i data-lucide="activity" style="width:80px; height:80px; color:var(--teal); flex-shrink: 0;"></i>
               <div>
-                <h4 style="color: var(--teal); margin-bottom: 8px;">O Polvo das Planilhas</h4>
-                <p style="font-size: 0.9rem; margin:0; line-height: 1.4;">Tenta organizar tudo, mas perde horas preciosas usando ferramentas desconectadas. O preço pago é o seu tempo livre.</p>
+                <h3 class="persona-title">Sua pontuação: 20/30</h3>
+                <p style="font-size: 0.95rem; margin:0; line-height: 1.5; color: var(--text-secondary);">Você sabe bem que uma boa gestão é fundamental para a oficina prosperar. Para manter tudo sob controle você acabou adotando várias ferramentas como planilhas, ERP obsoletos e sites do governo. A sua oficina tem organização, mas o preço que você paga por isso é o seu próprio descanso...</p>
               </div>
             </div>
           </div>
