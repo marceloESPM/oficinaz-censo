@@ -9,124 +9,122 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <!-- Lucide Icons para um visual premium (substituindo emojis) -->
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-  <div class="bg-hero-light"></div>
 
   <!-- Header -->
   <header class="main-header">
     <div class="container header-container">
       <a href="https://oficinaz.com" target="_blank">
-        <!-- Logo original colorida do Oficinaz -->
         <img src="assets/logo-oficinaz-color.png" alt="Oficinaz" class="logo">
       </a>
-      <nav>
-        <a href="https://oficinaz.com" target="_blank" class="nav-link">Visitar Oficinaz <i data-lucide="external-link" class="icon-sm"></i></a>
-      </nav>
+      <div class="header-links">
+        <a href="https://oficinaz.com" target="_blank" class="nav-link"><i data-lucide="globe" class="icon-sm"></i> Site Oficial</a>
+        <a href="https://api.whatsapp.com/send/?phone=551151073356&text&type=phone_number&app_absent=0" target="_blank" class="nav-link btn-whatsapp-header"><i data-lucide="message-circle" class="icon-sm"></i> WhatsApp</a>
+      </div>
     </div>
   </header>
 
-  <main>    <!-- VIEW 1: LANDING PAGE (BENTO BOX) -->
+  <main>
+    <!-- VIEW 1: LANDING PAGE -->
     <section id="view-landing" class="view active">
-      <div class="landing-wrapper">
-        
-        <!-- Hero Minimalista Centralizado -->
-        <div class="hero-minimal">
-          <span class="badge">DIAGNÓSTICO OFICINAZ</span>
-          <h1>Qual é o nível de maturidade de gestão da sua oficina?</h1>
-          <p>Descubra onde sua oficina está perdendo dinheiro e compare seu desempenho com a concorrência do seu bairro através de um raio-x gratuito.</p>
-          
-          <button class="btn btn-primary btn-large btn-pulse btn-start-quiz" style="margin-top: 16px;">
-            INICIAR DIAGNÓSTICO AGORA <i data-lucide="arrow-right" class="icon-sm" style="margin-left: 8px;"></i>
-          </button>
-          
-          <div class="trust-signals" style="justify-content: center; margin-top: 20px;">
-            <span class="trust-signal"><i data-lucide="timer" class="icon-sm"></i> Leva menos de 1 minuto</span>
-            <span class="trust-signal"><i data-lucide="shield-check" class="icon-sm"></i> 100% Confidencial</span>
-          </div>
-        </div>
-
-        <!-- Bento Box Grid (Mockups) -->
-        <div class="bento-grid">
-          
-          <!-- Widget 1: Radar Chart (Esquerda, Ocupa 2 linhas) -->
-          <div class="bento-card bento-radar">
-            <h3 class="bento-title">Como você se compara com a concorrência?</h3>
-            <p class="bento-subtitle">Comparativo com as oficinas em: Seu Bairro</p>
-            <div class="bento-chart-container">
-              <canvas id="previewChart"></canvas>
-            </div>
-          </div>
-          
-          <!-- Widget 2: Persona (Direita Topo) -->
-          <div class="bento-card bento-persona">
-            <h3 class="bento-title" style="color: var(--teal); margin-bottom: 16px;">Sua pontuação: 20/30</h3>
-            <div class="persona-content-box">
-              <div class="persona-icon-bento"><i data-lucide="activity"></i></div>
-              <p>Você sabe bem que uma boa gestão é fundamental. A sua oficina tem organização, mas o preço pago por isso é o seu próprio descanso. Talvez essa sobrecarga seja o freio do seu crescimento.</p>
-            </div>
-          </div>
-
-          <!-- Widget 3: Raio X (Direita Base) -->
-          <div class="bento-card bento-raiox">
-            <h3 class="bento-title">Pontos de Atenção e Oportunidades</h3>
-            <div class="raiox-list-mockup">
-              <div class="raiox-item"><div class="raiox-label"><span>Ordem de Serviço</span> <span style="color:var(--attention)">Alerta</span></div><div class="raiox-bar-bg"><div class="raiox-bar-fill fill-attention" style="width:60%"></div></div></div>
-              <div class="raiox-item"><div class="raiox-label"><span>Orçamento e Aprovação</span> <span style="color:var(--critical)">Crítico</span></div><div class="raiox-bar-bg"><div class="raiox-bar-fill fill-critical" style="width:20%"></div></div></div>
-              <div class="raiox-item"><div class="raiox-label"><span>Peças, Margem e NFe</span> <span style="color:var(--ok)">Oficinaz</span></div><div class="raiox-bar-bg"><div class="raiox-bar-fill fill-ok" style="width:100%"></div></div></div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
       
-      <!-- SECTION: PERSONAS -->
+      <!-- HERO 2 COLUNAS -->
+      <section class="hero-split">
+        <div class="container hero-split-container">
+          <div class="hero-text-col">
+            <span class="badge">DIAGNÓSTICO OFICINAZ</span>
+            <h1>Qual é o nível de maturidade de gestão da sua oficina?</h1>
+            <p>Descubra onde sua oficina está perdendo dinheiro e compare seu desempenho com a concorrência do seu bairro através de um raio-x gratuito.</p>
+            <button class="btn btn-primary btn-large btn-pulse btn-start-quiz">
+              INICIAR DIAGNÓSTICO AGORA <i data-lucide="arrow-right" class="icon-sm"></i>
+            </button>
+            <div class="trust-chips">
+              <span class="chip"><i data-lucide="timer" class="icon-sm"></i> Leva menos de 1 minuto</span>
+              <span class="chip"><i data-lucide="shield-check" class="icon-sm"></i> 100% Confidencial</span>
+              <span class="chip"><i data-lucide="bar-chart-2" class="icon-sm"></i> Resultado personalizado</span>
+            </div>
+          </div>
+          <div class="hero-img-col">
+            <img src="assets/hero-mecanica-mulher.png" alt="Mecânica Avaliando Veículo" class="hero-img">
+          </div>
+        </div>
+      </section>
+
+      <!-- O QUE SERÁ AVALIADO -->
+      <section class="metrics-section">
+        <div class="container">
+          <h2>O que será avaliado</h2>
+          <div class="metrics-grid">
+            <div class="metric-card"><div class="metric-icon"><i data-lucide="users"></i></div> <span>Clientes e veículos</span></div>
+            <div class="metric-card"><div class="metric-icon"><i data-lucide="file-text"></i></div> <span>Ordens de serviço</span></div>
+            <div class="metric-card"><div class="metric-icon"><i data-lucide="line-chart"></i></div> <span>Financeiro e lucro</span></div>
+            <div class="metric-card"><div class="metric-icon"><i data-lucide="package"></i></div> <span>Peças e compras</span></div>
+            <div class="metric-card"><div class="metric-icon"><i data-lucide="heart-handshake"></i></div> <span>Fidelização de clientes</span></div>
+            <div class="metric-card"><div class="metric-icon"><i data-lucide="receipt"></i></div> <span>Emissão de nota fiscal</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- APOIO VISUAL (2 COLUNAS) -->
+      <section class="visual-support-section">
+        <div class="container support-grid">
+          <div class="support-card">
+            <div class="support-img-wrapper">
+              <img src="assets/mecanico-cliente.png" alt="Atendimento e orçamento" class="support-img">
+            </div>
+            <div class="support-text">
+              <h3>Atendimento e Orçamento</h3>
+              <p>Descubra se a sua forma de passar orçamentos está gerando confiança ou afastando os clientes.</p>
+            </div>
+          </div>
+          <div class="support-card">
+            <div class="support-img-wrapper">
+              <img src="assets/mecanico-tablet.png" alt="Controle e histórico" class="support-img">
+            </div>
+            <div class="support-text">
+              <h3>Controle e Histórico</h3>
+              <p>Avalie como você gerencia o pátio e o histórico dos veículos para nunca mais esquecer de cobrar por um serviço.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- SECTION: PERSONAS (TEASER) -->
       <section class="personas-section">
         <div class="container">
           <h2>Conheça os 3 perfis de gestão automotiva</h2>
           <div class="personas-grid">
             <div class="persona-card-light">
-              <i data-lucide="flame" style="color: var(--critical);"></i>
+              <div class="persona-icon-wrapper" style="background: rgba(255, 59, 48, 0.1); color: var(--critical);">
+                <i data-lucide="flame"></i>
+              </div>
               <h4>Apagador de Incêndios</h4>
               <p>O talento técnico sobra, mas o controle financeiro falta. Vive resolvendo urgências e não vê o lucro no fim do mês.</p>
             </div>
             <div class="persona-card-light">
-              <i data-lucide="file-spreadsheet" style="color: var(--attention);"></i>
+              <div class="persona-icon-wrapper" style="background: rgba(255, 204, 0, 0.1); color: var(--attention);">
+                <i data-lucide="file-spreadsheet"></i>
+              </div>
               <h4>O Polvo das Planilhas</h4>
-              <p>Tem controles, mas todos manuais e desconectados. Gasta muito tempo cruzando dados em vez de pensar na estratégia.</p>
+              <p>Tem controles, mas manuais e desconectados. Gasta tempo cruzando dados em vez de pensar na estratégia.</p>
             </div>
             <div class="persona-card-light">
-              <i data-lucide="rocket" style="color: var(--teal);"></i>
+              <div class="persona-icon-wrapper" style="background: rgba(0, 194, 169, 0.1); color: var(--teal);">
+                <i data-lucide="rocket"></i>
+              </div>
               <h4>Piloto de Alta Performance</h4>
               <p>Processos integrados, indicadores claros e previsibilidade. A oficina roda redonda mesmo quando ele não está presente.</p>
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- SECTION: PRODUTO (UPSALE) -->
-      <section class="product-section">
-        <div class="product-container">
-          <img src="assets/logo-oficinaz-color.png" alt="Oficinaz ERP" class="product-logo">
-          <h2>Pronto para ser um Piloto de Alta Performance?</h2>
-          <p>O Oficinaz é o Sistema de Gestão (ERP) feito exclusivamente para Centros Automotivos que querem crescer. Controle de caixa, emissão de NFe, ordens de serviço e catálogo de peças num só lugar.</p>
-          <a href="https://oficinaz.com" target="_blank" class="btn btn-primary btn-large btn-pulse">CONHECER O SISTEMA OFICINAZ</a>
-        </div>
-      </section>
-      
-      <!-- FOOTER -->
-      <footer class="main-footer">
-        <div class="container">
-          <div class="footer-links">
-            <a href="https://oficinaz.com" target="_blank"><i data-lucide="globe" class="icon-sm"></i> Acessar Site Oficial</a>
-            <a href="https://api.whatsapp.com/send/?phone=551151073356&text&type=phone_number&app_absent=0" target="_blank"><i data-lucide="message-circle" class="icon-sm"></i> Falar no WhatsApp</a>
+          <div style="text-align: center; margin-top: 48px;">
+            <button class="btn btn-primary btn-large btn-pulse btn-start-quiz">
+              DESCOBRIR O MEU PERFIL <i data-lucide="arrow-right" class="icon-sm"></i>
+            </button>
           </div>
-          <p>&copy; 2026 Oficinaz. Todos os direitos reservados.</p>
         </div>
-      </footer>
+      </section>
     </section>
 
     <!-- VIEW 2: QUIZ -->
@@ -259,17 +257,55 @@
         </div>
 
         <div class="results-actions">
-          <a href="https://api.whatsapp.com/send/?phone=551151073356&text&type=phone_number&app_absent=0" target="_blank" class="btn btn-primary btn-large btn-pulse"><i data-lucide="message-circle" class="icon-sm"></i> FALAR COM UM ESPECIALISTA</a>
           <button id="btn-share" class="btn btn-outline btn-large"><i data-lucide="share-2" class="icon-sm"></i> Compartilhar este diagnóstico</button>
         </div>
       </div>
     </section>
   </main>
+  
+  <!-- GLOBAL BOTTOM (PRODUTO + FOOTER) -->
+  <div id="global-bottom">
+    <!-- SECTION: PRODUTO (UPSALE) -->
+    <section class="product-section">
+      <div class="product-container">
+        <img src="assets/logo-oficinaz-color.png" alt="Oficinaz ERP" class="product-logo">
+        <h2>Pronto para ser um Piloto de Alta Performance?</h2>
+        <p>O Oficinaz é o Sistema de Gestão (ERP) feito exclusivamente para Centros Automotivos que querem crescer. Controle de caixa, emissão de NFe, ordens de serviço e catálogo de peças num só lugar.</p>
+        <a href="https://oficinaz.com" target="_blank" class="btn btn-primary btn-large btn-pulse">CONHECER O SISTEMA OFICINAZ</a>
+      </div>
+    </section>
+    
+    <!-- FOOTER -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-links">
+          <a href="https://oficinaz.com" target="_blank"><i data-lucide="globe" class="icon-sm"></i> Acessar Site Oficial</a>
+          <a href="https://api.whatsapp.com/send/?phone=551151073356&text&type=phone_number&app_absent=0" target="_blank" class="btn-whatsapp-footer"><i data-lucide="message-circle" class="icon-sm"></i> Falar no WhatsApp</a>
+        </div>
+        <p>&copy; 2026 Oficinaz. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+  </div>
 
   <script src="app.js"></script>
   <script>
-    // Inicia os ícones Lucide
     lucide.createIcons();
+    
+    // Hide Global Bottom when Quiz or Form is active
+    const globalBottom = document.getElementById('global-bottom');
+    const observer = new MutationObserver(() => {
+      const viewLanding = document.getElementById('view-landing').classList.contains('active');
+      const viewResults = document.getElementById('view-results').classList.contains('active');
+      if (viewLanding || viewResults) {
+        globalBottom.style.display = 'block';
+      } else {
+        globalBottom.style.display = 'none';
+      }
+    });
+    
+    document.querySelectorAll('.view').forEach(view => {
+      observer.observe(view, { attributes: true, attributeFilter: ['class'] });
+    });
   </script>
 </body>
 </html>
