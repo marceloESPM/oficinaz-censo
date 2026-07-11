@@ -21,8 +21,18 @@ body {
   flex-direction: column;
 }
 
-/* Background apagado - O site agora é totalmente clean Light Mode */
-.background-effects { display: none; }
+/* Background com Overlay Leve (Light Mode) */
+.bg-hero-light {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: url('assets/hero-mecanica-mulher.png');
+  background-size: cover;
+  background-position: center top;
+  opacity: 0.08; /* Quase uma marca d'água elegante */
+  filter: grayscale(100%);
+  pointer-events: none;
+}
 
 .container {
   max-width: 1100px;
@@ -76,7 +86,7 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
   align-items: center;
 }
 .logo {
-  height: 32px;
+  height: 56px; /* Aumentado conforme solicitado */
   width: auto;
   display: block;
 }
@@ -226,20 +236,25 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
 
 .hero-minimal {
   text-align: center;
-  max-width: 760px;
+  max-width: 800px;
   margin: 0 auto 60px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .hero-minimal h1 {
-  font-size: 2.8rem;
+  font-size: 3.2rem;
   font-weight: 800;
-  letter-spacing: -1px;
+  letter-spacing: -1.5px;
   color: var(--text-primary);
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+  line-height: 1.1;
 }
 .hero-minimal p {
   font-size: 1.15rem;
   color: var(--text-secondary);
   line-height: 1.6;
+  margin-bottom: 32px;
 }
 
 /* Bento Grid */
@@ -335,7 +350,97 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
   .bento-grid {
     grid-template-columns: 1fr;
   }
-  .hero-minimal h1 { font-size: 2.2rem; }
+  .hero-minimal h1 { font-size: 2.5rem; }
+}
+
+/* ------------------------------------- */
+/* NOVAS SEÇÕES (Personas, Produto, Footer) */
+/* ------------------------------------- */
+.personas-section {
+  padding: 80px 0;
+  background: transparent;
+  text-align: center;
+}
+.personas-section h2 { margin-bottom: 48px; font-size: 2.2rem; }
+.personas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  .personas-grid { grid-template-columns: 1fr; }
+}
+.persona-card-light {
+  background: #ffffff;
+  padding: 40px 32px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.persona-card-light i {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 24px;
+}
+.persona-card-light h4 {
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+.persona-card-light p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.product-section {
+  padding: 80px 0;
+  background: var(--surface);
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: center;
+}
+.product-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.product-logo {
+  height: 64px;
+  margin-bottom: 32px;
+}
+.product-section h2 { font-size: 2.2rem; margin-bottom: 24px; }
+.product-section p { font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 40px; }
+
+.main-footer {
+  background: #111827;
+  color: rgba(255,255,255,0.7);
+  padding: 60px 0 40px 0;
+  text-align: center;
+}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.footer-links a:hover { color: var(--teal); }
+.main-footer p {
+  font-size: 0.9rem;
+  margin: 0;
+  color: rgba(255,255,255,0.5);
 }
 
 .logo-white-filter {
