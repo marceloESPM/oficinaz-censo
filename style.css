@@ -50,7 +50,7 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
   position: fixed;
   top: 0;
   width: 100%;
-  height: 180px; /* Expandido massivamente para o logo gigante */
+  height: 90px; /* Reduzido para padroes normais (boas praticas) */
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -71,7 +71,7 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
   align-items: center;
 }
 .logo {
-  height: 154px; /* Aumentado em 60% do original 96px */
+  height: 120px; /* Mantido grande, mas overflowando sutilmente o header */
   width: auto;
   display: block;
 }
@@ -191,7 +191,7 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
 /* HERO COM BACKGROUND IMAGE (DARK & BLUR) */
 /* ========================================================================= */
 #view-landing {
-  padding-top: 180px; /* Ajuste para o novo header de 180px */
+  padding-top: 140px; /* Ajustado para acompanhar o novo header */
 }
 .hero-section {
   position: relative;
@@ -205,9 +205,9 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
 .hero-overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(17, 24, 39, 0.7); /* Fundo muito escuro */
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(17, 24, 39, 0.4); /* Escurecimento sutil para nitidez */
+  backdrop-filter: blur(2px); /* Blur super leve */
+  -webkit-backdrop-filter: blur(2px);
   z-index: 1;
 }
 .hero-container {
@@ -256,7 +256,7 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
     background-position: center;
   }
   .hero-overlay {
-    background: rgba(17, 24, 39, 0.75);
+    background: rgba(17, 24, 39, 0.5);
   }
   .hero-content {
     margin: 0 auto;
@@ -339,6 +339,17 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
   max-width: 250px;
   margin: 0 auto;
 }
+.mockup-comparative-bars { display: flex; flex-direction: column; gap: 20px; padding-top: 10px;}
+.mockup-comp-item { display: flex; flex-direction: column; gap: 8px;}
+.comp-label { font-size: 0.95rem; font-weight: 600; color: var(--dark-blue); }
+.comp-track { height: 12px; background: #f1f5f9; border-radius: 100px; position: relative; }
+.comp-fill { height: 100%; border-radius: 100px; background: var(--teal); position: absolute; left: 0; box-shadow: 0 0 10px rgba(0,194,169,0.3); }
+.comp-marker { width: 4px; height: 16px; background: #64748b; position: absolute; top: -2px; border-radius: 2px; }
+.comp-legend { display: flex; gap: 16px; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); margin-top: 10px; }
+.comp-legend .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; }
+.comp-legend .you-dot { background: var(--teal); }
+.comp-legend .market-dot { background: #64748b; }
+
 .mockup-bars {
   display: flex;
   flex-direction: column;
@@ -742,7 +753,7 @@ input:disabled { opacity: 0.8; cursor: not-allowed; background: #e2e8f0; border-
 .main-footer {
   background: #111827;
   color: rgba(255,255,255,0.7);
-  padding: 40px 0 32px 0; /* Altura drasticamente reduzida */
+  padding: 20px 0 16px 0; /* Altura drasticamente reduzida pela metade */
   text-align: center;
 }
 .footer-container {
@@ -751,15 +762,15 @@ input:disabled { opacity: 0.8; cursor: not-allowed; background: #e2e8f0; border-
   align-items: center;
 }
 .footer-logo {
-  height: 200px; /* Mantido triplicado para destaque máximo */
-  margin-bottom: 24px; /* Margem reduzida */
+  height: 120px; /* Mantido destacado mas proporcional ao footer curto */
+  margin-bottom: 12px;
   filter: brightness(0) invert(1);
 }
 .footer-links {
   display: flex;
   justify-content: center;
   gap: 40px;
-  margin-bottom: 32px; /* Margem reduzida */
+  margin-bottom: 16px;
   flex-wrap: wrap;
 }
 .footer-links a {

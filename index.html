@@ -70,18 +70,40 @@
               </div>
               
               <div class="mockup-body">
-                <!-- Coluna Esquerda: Radar -->
+                <!-- Coluna Esquerda: Comparativo -->
                 <div class="mockup-col">
-                  <h5>Comparativo Regional</h5>
-                  <div class="mockup-radar-bg">
-                    <!-- Fake Radar Lines (Radial) -->
-                    <svg viewBox="0 0 100 100" class="fake-radar">
-                      <circle cx="50" cy="50" r="40" fill="none" stroke="#e2e8f0" stroke-width="1"/>
-                      <circle cx="50" cy="50" r="25" fill="none" stroke="#e2e8f0" stroke-width="1"/>
-                      <circle cx="50" cy="50" r="10" fill="none" stroke="#e2e8f0" stroke-width="1"/>
-                      <polygon points="50,15 85,35 75,70 50,85 15,60 25,30" fill="rgba(0,194,169,0.2)" stroke="var(--teal)" stroke-width="2"/>
-                      <polygon points="50,30 65,45 60,65 50,70 30,55 40,40" fill="rgba(255,204,0,0.3)" stroke="var(--attention)" stroke-width="2"/>
-                    </svg>
+                  <h5>Comparativo de Mercado</h5>
+                  <div class="mockup-comparative-bars">
+                    
+                    <div class="mockup-comp-item">
+                      <div class="comp-label">Eficiência (OS)</div>
+                      <div class="comp-track">
+                        <div class="comp-fill you" style="width: 85%;"></div>
+                        <div class="comp-marker market" style="left: 60%;"></div>
+                      </div>
+                    </div>
+                    
+                    <div class="mockup-comp-item">
+                      <div class="comp-label">Saúde Financeira</div>
+                      <div class="comp-track">
+                        <div class="comp-fill you" style="width: 45%;"></div>
+                        <div class="comp-marker market" style="left: 70%;"></div>
+                      </div>
+                    </div>
+                    
+                    <div class="mockup-comp-item">
+                      <div class="comp-label">Retenção de Clientes</div>
+                      <div class="comp-track">
+                        <div class="comp-fill you" style="width: 30%;"></div>
+                        <div class="comp-marker market" style="left: 55%;"></div>
+                      </div>
+                    </div>
+
+                    <div class="comp-legend">
+                      <span><span class="dot you-dot"></span> Sua Oficina</span>
+                      <span><span class="dot market-dot"></span> Concorrentes</span>
+                    </div>
+
                   </div>
                 </div>
                 <!-- Coluna Direita: Barras -->
@@ -189,22 +211,22 @@
           <h2>Conheça os 3 perfis de gestão automotiva</h2>
           <div class="personas-grid">
             <div class="persona-card-light">
-              <div class="persona-icon-wrapper" style="background: rgba(255, 59, 48, 0.05); border: 2px solid rgba(255, 59, 48, 0.3); box-shadow: 0 0 30px rgba(255,59,48,0.15);">
-                <span style="font-size: 52px; line-height: 1;">👨‍🚒</span>
+              <div class="persona-icon-wrapper" style="background: rgba(255, 59, 48, 0.05); border: 2px solid rgba(255, 59, 48, 0.3); color: var(--critical); box-shadow: 0 0 30px rgba(255,59,48,0.15);">
+                <i data-lucide="zap"></i>
               </div>
               <h4>Apagador de Incêndios</h4>
               <p>O talento técnico sobra, mas o controle financeiro falta. Vive resolvendo urgências e não vê o lucro no fim do mês.</p>
             </div>
             <div class="persona-card-light">
-              <div class="persona-icon-wrapper" style="background: rgba(255, 204, 0, 0.05); border: 2px solid rgba(255, 204, 0, 0.3); box-shadow: 0 0 30px rgba(255,204,0,0.15);">
-                <span style="font-size: 52px; line-height: 1;">🐙</span>
+              <div class="persona-icon-wrapper" style="background: rgba(255, 204, 0, 0.05); border: 2px solid rgba(255, 204, 0, 0.3); color: var(--attention); box-shadow: 0 0 30px rgba(255,204,0,0.15);">
+                <i data-lucide="layers"></i>
               </div>
               <h4>O Polvo das Planilhas</h4>
               <p>Tem controles, mas manuais e desconectados. Gasta tempo cruzando dados em vez de pensar na estratégia.</p>
             </div>
             <div class="persona-card-light">
-              <div class="persona-icon-wrapper" style="background: rgba(0, 194, 169, 0.05); border: 2px solid rgba(0, 194, 169, 0.3); box-shadow: 0 0 30px rgba(0,194,169,0.15);">
-                <span style="font-size: 52px; line-height: 1;">🏎️</span>
+              <div class="persona-icon-wrapper" style="background: rgba(0, 194, 169, 0.05); border: 2px solid rgba(0, 194, 169, 0.3); color: var(--teal); box-shadow: 0 0 30px rgba(0,194,169,0.15);">
+                <i data-lucide="trending-up"></i>
               </div>
               <h4>Piloto de Alta Performance</h4>
               <p>Processos integrados, indicadores claros e previsibilidade. A oficina roda redonda mesmo quando ele não está presente.</p>

@@ -95,7 +95,7 @@ const personas = [
   {
     max: 16,
     title: 'O Mecânico Apagador de Incêndios',
-    icon: '<i data-lucide="flame" style="width:64px; height:64px; color:var(--attention)"></i>',
+    icon: '<i data-lucide="zap" style="width:64px; height:64px; color:var(--critical)"></i>',
     desc: 'Você tem muito talento técnico e os clientes confiam no seu trabalho. O problema é que a rotina da oficina exige que você esteja em todos lugares ao mesmo tempo. Como grande parte das informações ainda fica no papel ou na sua memória, o controle financeiro acaba ficando em segundo plano. Reflita se na correria de entregar os carros você não está perdendo dinheiro sem perceber.',
     actions: [
       { title: 'Agilidade no Balcão', desc: 'Esqueça os longos cadastros de papel. Digitando apenas a placa, o sistema preenche os dados do carro para você.' },
@@ -106,7 +106,7 @@ const personas = [
   {
     max: 24,
     title: 'O Polvo das Planilhas',
-    icon: '<i data-lucide="activity" style="width:64px; height:64px; color:var(--teal)"></i>',
+    icon: '<i data-lucide="layers" style="width:64px; height:64px; color:var(--attention)"></i>',
     desc: 'Você sabe bem que uma boa gestão é fundamental para a oficina prosperar. Para manter tudo sob controle você acabou adotando várias ferramentas como planilhas, ERP obsoletos e sites do governo. A sua oficina tem organização, mas o preço que você paga por isso é o seu próprio descanso e tempo livre. Talvez essa sobrecarga administrativa seja exatamente o freio que impede o seu negócio de crescer mais.',
     actions: [
       { title: 'Fim do Retrabalho', desc: 'A mesma OS que você usa para orçar já alimenta o caixa e calcula a comissão do mecânico automaticamente. Tudo em um só lugar.' },
@@ -117,7 +117,7 @@ const personas = [
   {
     max: 30,
     title: 'O Piloto de Alta Performance',
-    icon: '<i data-lucide="zap" style="width:64px; height:64px; color:var(--ok)"></i>',
+    icon: '<i data-lucide="trending-up" style="width:64px; height:64px; color:var(--teal)"></i>',
     desc: 'Sua oficina já superou a fase do improviso e hoje funciona como uma empresa estruturada. Você conhece os seus números e tem processos bem definidos. O seu verdadeiro desafio agora não é mais a sobrevivência e sim a expansão do negócio. Com o lado operacional rodando perfeitamente a sua meta deve ser usar a tecnologia para antecipar vendas e trazer o cliente de volta automaticamente.',
     actions: [
       { title: 'Retorno Preditivo', desc: 'Use nosso painel de histórico para identificar exatamente quais veículos estão próximos de atingir a quilometragem de revisão e chame-os antes de irem para a concorrência.' },
