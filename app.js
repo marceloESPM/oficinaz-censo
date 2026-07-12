@@ -385,6 +385,39 @@ document.getElementById('lead-cep').addEventListener('blur', async (e) => {
 });
 
 // Form Submission
+document.getElementById('btn-share-wpp').addEventListener('click', (e) => {
+  e.preventDefault();
+  const url = window.location.href;
+  const text = `Dá uma olhada no diagnóstico da minha oficina: ${url}`;
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank');
+});
+
+// Mobile Menu Toggle
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const headerLinks = document.getElementById('header-links');
+
+if (mobileMenuBtn && headerLinks) {
+  mobileMenuBtn.addEventListener('click', () => {
+    headerLinks.classList.toggle('menu-open');
+    const icon = mobileMenuBtn.querySelector('i');
+    if (headerLinks.classList.contains('menu-open')) {
+      icon.setAttribute('data-lucide', 'x');
+    } else {
+      icon.setAttribute('data-lucide', 'menu');
+    }
+    lucide.createIcons();
+  });
+  
+  // Close menu when clicking a link
+  headerLinks.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      headerLinks.classList.remove('menu-open');
+      mobileMenuBtn.querySelector('i').setAttribute('data-lucide', 'menu');
+      lucide.createIcons();
+    });
+  });
+}
+
 document.getElementById('lead-form').addEventListener('submit', async (e) => {
   e.preventDefault();
   

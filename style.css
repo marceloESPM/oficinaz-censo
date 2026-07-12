@@ -63,16 +63,43 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
   z-index: 100;
   transition: all 0.3s ease;
 }
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--dark-blue);
+  padding: 8px;
+}
+.mobile-menu-btn i { width: 28px; height: 28px; }
+
 @media (max-width: 768px) {
   .main-header { height: 64px; }
   .header-container { height: 64px; }
   .logo-link { height: 64px; }
   .logo { height: 100px; }
+  
+  .mobile-menu-btn { display: flex; align-items: center; justify-content: center; }
+  
+  .header-links {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    gap: 16px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border-top: 1px solid #f1f5f9;
+  }
+  .header-links.menu-open { display: flex; }
+  
+  .nav-link { font-size: 1.1rem; }
   .btn-whatsapp-header {
-    padding: 6px 12px; 
-    border-radius: 30px;
-    width: auto; 
-    height: auto; 
+    width: 100%; 
     justify-content: center;
   }
   .btn-whatsapp-header .icon-sm { margin-right: 6px; margin-top: 0; }
@@ -419,14 +446,18 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
 }
 
 @media (max-width: 768px) {
-  .report-doc-header { padding: 0 0 16px 0; flex-direction: column; gap: 8px; text-align: center; }
+  .report-doc-header { padding: 0 16px 16px 16px; flex-direction: column; gap: 8px; text-align: center; }
   .report-doc-header img { height: 64px !important; }
   .doc-meta { font-size: 0.55rem; letter-spacing: 1px; }
-  .report-doc-title { padding: 0 0 16px 0; }
+  .report-doc-title { padding: 0 16px 16px 16px; }
   .report-doc-title h3 { font-size: 1.25rem; }
   .report-doc-title p { font-size: 0.9rem; }
+  
+  /* MAXIMIZE CHART SPACE ON MOBILE */
+  .results-container { padding: 0; }
   .report-doc-grid { padding: 0; grid-template-columns: 1fr; gap: 16px; }
-  .report-block { padding: 16px; }
+  .report-block { padding: 8px; border-radius: 0; border-left: none; border-right: none; }
+  
   .block-header h4 { font-size: 0.9rem; }
 }
 
