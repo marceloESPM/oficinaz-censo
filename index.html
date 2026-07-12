@@ -262,7 +262,12 @@
             </div>
             <div class="form-row">
               <div class="form-group">
-                <label for="lead-cep">Seu CEP</label>
+                <label for="lead-cep" style="display:flex; justify-content:space-between; align-items:center;">
+                  Seu CEP
+                  <a href="#" id="btn-geo" style="color:var(--teal); font-size:0.85rem; text-decoration:none; display:flex; align-items:center; gap:4px;">
+                    <i data-lucide="map-pin" class="icon-sm" style="width:14px; height:14px;"></i> Usar localização
+                  </a>
+                </label>
                 <input type="text" id="lead-cep" required placeholder="00000-000" maxlength="9">
               </div>
               <div class="form-group">

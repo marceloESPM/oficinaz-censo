@@ -387,6 +387,64 @@ document.getElementById('lead-cep').addEventListener('blur', async (e) => {
   }
 });
 
+// Geolocation Auto-fill
+const btnGeo = document.getElementById('btn-geo');
+if (btnGeo) {
+  btnGeo.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (!navigator.geolocation) {
+      alert('Geolocalização não suportada neste navegador.');
+      return;
+    }
+    btnGeo.innerHTML = '<i data-lucide="loader" class="icon-sm" style="width:14px; height:14px; animation: spin 1s linear infinite;"></i> Buscando...';
+    if (window.lucide) window.lucide.createIcons();
+    
+    navigator.geolocation.getCurrentPosition(async (position) => {
+      const lat = position.coords.latitude;
+      const lon = position.coords.longitude;
+      
+      try {
+        const res = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`);
+        const data = await res.json();
+        
+        if (data && data.address) {
+          const address = data.address;
+          const bairro = address.suburb || address.neighbourhood || address.city_district || address.town || address.city || 'Sua Região';
+          const uf = address.state_code || address.state || '';
+          
+          document.getElementById('lead-bairro').value = `${bairro} - ${uf}`;
+          
+          const cepInput = document.getElementById('lead-cep');
+          cepInput.removeAttribute('required');
+          if (address.postcode) {
+            cepInput.value = address.postcode;
+          } else {
+            cepInput.placeholder = "Via GPS";
+            cepInput.value = "";
+          }
+          
+          btnGeo.innerHTML = '<i data-lucide="check" class="icon-sm" style="width:14px; height:14px;"></i> Localizado';
+          btnGeo.style.color = 'var(--ok)';
+        } else {
+          throw new Error("No address");
+        }
+      } catch (err) {
+        btnGeo.innerHTML = '<i data-lucide="map-pin" class="icon-sm" style="width:14px; height:14px;"></i> Tentar novamente';
+        alert('Não foi possível identificar o bairro exato. Por favor, digite o CEP.');
+      }
+      if (window.lucide) window.lucide.createIcons();
+    }, (error) => {
+      btnGeo.innerHTML = '<i data-lucide="map-pin" class="icon-sm" style="width:14px; height:14px;"></i> Usar localização';
+      if (window.lucide) window.lucide.createIcons();
+      if (error.code === error.PERMISSION_DENIED) {
+        alert('Você não autorizou o uso do GPS. Por favor, digite seu CEP.');
+      } else {
+        alert('Erro ao buscar localização. Por favor, digite o CEP.');
+      }
+    });
+  });
+}
+
 // Form Submission
 const btnShareWpp = document.getElementById('btn-share-wpp');
 if (btnShareWpp) {
