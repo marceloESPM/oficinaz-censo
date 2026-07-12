@@ -531,7 +531,7 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
 @media (max-width: 768px) {
   .mockup-body { flex-direction: column; }
   .mockup-header { flex-direction: column; gap: 16px; text-align: center; }
-  .preview-dashboard-wrapper { padding: 16px 8px; }
+  .preview-dashboard-wrapper { padding: 0; }
   .preview-mockup { animation: none; }
   .radar-canvas-wrap, .bar-canvas-wrap { height: 220px; }
 }
