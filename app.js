@@ -189,6 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
   switchView(document.getElementById('view-landing'));
   lucide.createIcons();
   initPreviewRadarChart();
+  initPreviewBarChart();
 });
 
 // INIT PREVIEW RADAR CHART
@@ -230,6 +231,41 @@ function initPreviewRadarChart() {
             color: 'var(--dark-blue)'
           }
         }
+      }
+    }
+  });
+}
+
+// INIT PREVIEW BAR CHART
+function initPreviewBarChart() {
+  const ctx = document.getElementById('previewBarCanvas');
+  if (!ctx) return;
+  
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Serviços', 'Marketing', 'Finanças', 'Gestão'],
+      datasets: [{
+        label: 'Sua Oficina',
+        data: [85, 30, 55, 40],
+        backgroundColor: '#00c2a9',
+        borderRadius: 4
+      }, {
+        label: 'Mercado',
+        data: [75, 60, 70, 65],
+        backgroundColor: '#cbd5e1',
+        borderRadius: 4
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 8, font: { family: "'Inter', sans-serif" } } }
+      },
+      scales: {
+        y: { display: false, beginAtZero: true },
+        x: { grid: { display: false }, ticks: { font: { family: "'Inter', sans-serif" } } }
       }
     }
   });
@@ -351,7 +387,7 @@ function generateResults(bairro) {
     `;
   });
 
-  // Action Plan
+  // Atualizar contadores
   const actionList = document.getElementById('action-plan-list');
   actionList.innerHTML = '';
   matchedPersona.actions.forEach(act => {

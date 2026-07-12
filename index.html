@@ -72,38 +72,37 @@
           </div>
           
           <div class="report-doc-title">
-            <h3>Relatório de Diagnóstico Estratégico</h3>
-            <p>Análise detalhada de maturidade em gestão, operações e finanças.</p>
+            <h3>Diagnóstico de Maturidade e Gestão</h3>
+            <p>Avaliação executiva da performance da sua oficina mecânica, comparada aos benchmarks de mercado.</p>
           </div>
 
-          <div class="report-doc-body">
-            <div class="doc-col-left">
+          <div class="report-doc-grid">
+            <!-- Bloco 1: Radar -->
+            <div class="report-block">
+              <div class="block-header">
+                <h4><i data-lucide="activity"></i> Distribuição de Esforço</h4>
+              </div>
               <div class="radar-canvas-wrap">
                 <canvas id="previewRadarCanvas"></canvas>
               </div>
             </div>
-            <div class="doc-col-right">
-              <h4 class="doc-section-title"><i data-lucide="target"></i> Raio-X da Operação</h4>
-              
-              <div class="doc-bar-item">
-                <div class="doc-bar-header"><span>Ordens de Serviço</span><span style="color:var(--teal)">Forte (85%)</span></div>
-                <div class="doc-bar-track"><div class="doc-bar-fill" style="width: 85%; background: var(--teal);"></div></div>
-              </div>
-              
-              <div class="doc-bar-item">
-                <div class="doc-bar-header"><span>Fidelização</span><span style="color:var(--critical)">Crítico (30%)</span></div>
-                <div class="doc-bar-track"><div class="doc-bar-fill" style="width: 30%; background: var(--critical);"></div></div>
-              </div>
-              
-              <div class="doc-bar-item">
-                <div class="doc-bar-header"><span>Controle Financeiro</span><span style="color:var(--attention)">Alerta (55%)</span></div>
-                <div class="doc-bar-track"><div class="doc-bar-fill" style="width: 55%; background: var(--attention);"></div></div>
-              </div>
 
-              <div class="doc-conclusion">
-                <i data-lucide="alert-triangle" class="icon-sm"></i>
-                <p>O foco excessivo no operacional está limitando o crescimento financeiro.</p>
+            <!-- Bloco 2: Bar Chart -->
+            <div class="report-block">
+              <div class="block-header">
+                <h4><i data-lucide="bar-chart-2"></i> Desempenho vs. Mercado</h4>
               </div>
+              <div class="bar-canvas-wrap">
+                <canvas id="previewBarCanvas"></canvas>
+              </div>
+            </div>
+
+            <!-- Bloco 3: Resumo Executivo -->
+            <div class="report-block full-width executive-summary">
+              <div class="block-header">
+                <h4><i data-lucide="file-text"></i> Resumo Executivo</h4>
+              </div>
+              <p>A análise identificou um perfil dominante: <strong>O Polvo das Planilhas</strong>. Sua oficina opera com forte dependência centralizada no proprietário, limitando a escalabilidade. O gargalo financeiro custa, em média, 22% da sua margem de lucro frente aos líderes do setor.</p>
             </div>
           </div>
         </div>
