@@ -94,35 +94,35 @@ const questions = [
 const personas = [
   {
     max: 16,
-    title: 'Operação Reativa',
+    title: 'Foco no Operacional',
     icon: '<i data-lucide="alert-triangle" style="width:80px; height:80px; color:var(--critical)"></i>',
-    desc: 'O diagnóstico indica forte concentração técnica e lacunas nos processos de controle. A ausência de padronização na entrada e saída de veículos compromete a precisão financeira e a previsibilidade do fluxo de caixa.',
+    desc: 'Você manda muito bem na mecânica, mas a correria do dia a dia está sugando o seu lucro. A falta de organização no escritório faz o esforço da sua equipe escorrer pelo ralo. É hora de arrumar a casa e ver a cor do dinheiro.',
     actions: [
-      { title: 'Padronização de Cadastro', desc: 'A adoção de tecnologias de busca por placa reduz o tempo médio de recepção e mitiga erros de digitação de dados veiculares.' },
-      { title: 'Precificação Parametrizada', desc: 'A automatização do cálculo de margem sobre peças aplicadas previne descontos não autorizados e preserva o lucro bruto da operação.' },
-      { title: 'Conciliação em Tempo Real', desc: 'Vincular o recebimento do cliente diretamente ao fechamento da Ordem de Serviço garante rastreabilidade e consistência ao caixa diário.' }
+      { title: 'Recepção Rápida', desc: 'Chega de anotar em papel. Pela placa do carro, o sistema já preenche tudo pra você. Menos tempo no balcão e mais tempo produzindo.' },
+      { title: 'Garantir o Lucro das Peças', desc: 'Lançou a peça na OS, o sistema já calcula o preço certo. Assim, você nunca mais esquece de cobrar sua margem de lucro.' },
+      { title: 'Caixa sem Dor de Cabeça', desc: 'Ao fechar uma OS, o dinheiro cai direto no fluxo do sistema. Acabou o sofrimento de não saber quem pagou e quem ficou devendo.' }
     ]
   },
   {
     max: 24,
-    title: 'O Polvo das Planilhas',
+    title: 'O Escravo do Controle',
     icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="80" height="80" fill="currentColor" style="color:var(--attention)"><path d="M12 2a6 6 0 0 0-6 6v3a2 2 0 0 0-1 1.73V18a1 1 0 0 0 2 0v-4h1v5a1 1 0 0 0 2 0v-5h1v6a1 1 0 0 0 2 0v-6h1v6a1 1 0 0 0 2 0v-6h1v5a1 1 0 0 0 2 0v-5h1v4a1 1 0 0 0 2 0v-5.27A2 2 0 0 0 19 11V8a6 6 0 0 0-6-6Zm-2 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2Zm4 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg>',
-    desc: 'O diagnóstico aponta uma gestão descentralizada. O uso de múltiplas planilhas e anotações gera redundância de dados. O excesso de carga administrativa sobre a liderança é o principal limitador para o ganho de escala.',
+    desc: 'Você tem controle de tudo, mas trabalha muito lançando coisas em planilhas ou cadernos. O excesso de burocracia está impedindo você de focar em crescer a sua oficina.',
     actions: [
-      { title: 'Unificação de Dados (ERP)', desc: 'Centralizar Orçamento, Estoque e Financeiro em um único ambiente sistêmico elimina o retrabalho e reduz o tempo gasto em conciliações manuais.' },
-      { title: 'Conformidade Fiscal Integrada', desc: 'A automação da separação entre produtos (NF-e) e serviços (NFS-e) diretamente na OS reduz a exposição a passivos tributários e bitributação.' },
-      { title: 'Aprovação Rastreada', desc: 'A transição para orçamentos digitais via link eleva a transparência do processo e formaliza a autorização do cliente, diminuindo atritos pós-venda.' }
+      { title: 'Tudo em Um Só Lugar', desc: 'Faça o orçamento, controle o estoque e feche o financeiro em uma única tela. Pare de redigitar informações de um lado pro outro.' },
+      { title: 'Nota Fiscal Descomplicada', desc: 'Emita a nota de serviço e a nota de peças com um clique direto da OS, sem precisar entrar em sites confusos do governo.' },
+      { title: 'Aprovação pelo WhatsApp', desc: 'Mande orçamentos com a cara da sua oficina pelo WhatsApp. O cliente confia mais, aprova rápido e você ganha credibilidade.' }
     ]
   },
   {
     max: 30,
-    title: 'Gestão Orientada a Dados',
+    title: 'Visão de Dono',
     icon: '<i data-lucide="pie-chart" style="width:80px; height:80px; color:var(--teal)"></i>',
-    desc: 'Sua operação apresenta alto nível de maturidade em processos e integração sistêmica. O cenário atual suporta tração em escala, dependendo agora de estratégias ativas de previsibilidade de demanda e fidelização avançada.',
+    desc: 'Parabéns! Sua oficina já roda super bem. O seu próximo desafio é usar ferramentas práticas para fazer o cliente voltar sempre e sua equipe produzir com ainda mais agilidade.',
     actions: [
-      { title: 'Retenção Preditiva', desc: 'O uso de dados de quilometragem e intervalo de troca permite estabelecer fluxos automatizados de recompra (CRM), antecipando a necessidade do cliente.' },
-      { title: 'Produtização do Pátio', desc: 'A estruturação de "Kits de Serviço" padronizados agiliza a orçamentação e facilita o controle de tempo padrão (TMA) da equipe técnica.' },
-      { title: 'Governança e DRE', desc: 'A análise periódica do Demonstrativo de Resultados do Exercício isolando as margens de peças vs. serviços é a base estatística para a expansão sustentável.' }
+      { title: 'Trazer o Cliente de Volta', desc: 'O sistema avisa quando o carro precisa voltar para trocar óleo ou revisar freios. Você avisa o cliente pelo WhatsApp e ganha um serviço que iria pro concorrente.' },
+      { title: 'Kits Prontos de Serviço', desc: 'Crie "Kits" prontos (Ex: Kit Revisão 10.000km). O orçamento sai na hora, e sua equipe não esquece de cobrar pecinhas pequenas como desengripantes.' },
+      { title: 'De Olho no Lucro (DRE)', desc: 'Acompanhe de jeito fácil se a oficina deu lucro ou prejuízo no mês. Saiba exatamente o que você ganhou vendendo serviço e o que ganhou vendendo peças.' }
     ]
   }
 ];
@@ -414,7 +414,7 @@ function generateResults(bairro) {
           pointRadius: 4
         },
         {
-          label: `Média de Mercado`,
+          label: `Seus Concorrentes`,
           data: baselineMarketRadar,
           backgroundColor: 'rgba(226, 232, 240, 0.3)',
           borderColor: '#cbd5e1',
@@ -471,7 +471,7 @@ function generateResults(bairro) {
         backgroundColor: '#00c2a9',
         borderRadius: 4
       }, {
-        label: `Média de Mercado`,
+        label: `Seus Concorrentes`,
         data: marketBarData,
         backgroundColor: '#cbd5e1',
         borderRadius: 4
@@ -500,17 +500,17 @@ function generateResults(bairro) {
   const insightBox = document.getElementById('insight-text');
   
   if (lowestScoreValue <= 33) {
-    insightBox.innerHTML = `Identificamos uma <strong>vulnerabilidade crítica na área de ${weakestCategory}</strong>. Oficinas do mesmo porte na região de ${bairro} que automatizam essa etapa apresentam maior capacidade de absorção de demanda.`;
+    insightBox.innerHTML = `Identificamos que a área de <strong>${weakestCategory}</strong> é o grande ponto fraco da sua oficina hoje. Oficinas da região de ${bairro} que organizam essa parte conseguem atender mais carros no mesmo dia e ter uma margem de lucro muito melhor.`;
     insightBox.style.borderColor = 'var(--critical)';
     insightBox.style.backgroundColor = 'rgba(255, 59, 48, 0.05)';
     insightBox.style.color = 'var(--critical)';
   } else if (lowestScoreValue <= 67) {
-    insightBox.innerHTML = `O diagnóstico demonstra conformidade operacional geral na região de ${bairro}, sendo <strong>${weakestCategory}</strong> o principal gargalo estatístico a ser resolvido para atingir a maturidade máxima.`;
+    insightBox.innerHTML = `Sua oficina está no caminho certo em ${bairro}, mas a parte de <strong>${weakestCategory}</strong> ainda pode melhorar. É organizando essa área que estão os seus lucros escondidos.`;
     insightBox.style.borderColor = 'var(--attention)';
     insightBox.style.backgroundColor = 'rgba(255, 204, 0, 0.05)';
     insightBox.style.color = '#b45309';
   } else {
-    insightBox.innerHTML = `O índice de maturidade da sua oficina aponta <strong>excelência operacional superior à base de mercado</strong> em ${bairro}. Os processos estabelecidos minimizam inconsistências e suportam crescimento estruturado.`;
+    insightBox.innerHTML = `Excelente! Sua gestão é destaque em ${bairro}. Seus processos em <strong>${weakestCategory}</strong> e demais áreas estão alinhados, deixando sua oficina pronta para atender mais carros sem dor de cabeça e sem perder a qualidade.`;
     insightBox.style.borderColor = 'var(--teal)';
     insightBox.style.backgroundColor = 'rgba(0, 194, 169, 0.05)';
     insightBox.style.color = 'var(--teal)';
