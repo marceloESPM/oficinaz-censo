@@ -1114,7 +1114,7 @@ input:disabled { opacity: 0.8; cursor: not-allowed; background: #e2e8f0; border-
   min-height: 650px;
   display: flex;
   align-items: center;
-  background: url('assets/mecanico-carro.png') no-repeat center top;
+  background: url('assets/mecanico-carro.png') no-repeat center 20%;
   background-size: cover;
   color: #ffffff;
   text-align: center;
