@@ -1122,7 +1122,7 @@ input:disabled { opacity: 0.8; cursor: not-allowed; background: #e2e8f0; border-
   background: transparent;
 }
 @media (max-width: 768px) {
-  .product-section { min-height: 400px; }
+  .product-section { min-height: 550px; }
   .product-container { padding: 32px 16px; }
 }
 .product-container h2 {
