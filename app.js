@@ -222,17 +222,17 @@ function initPreviewRadarChart() {
       labels: ['OS', 'Orçamento', 'Kits', 'Peças/Margem', 'Fechamento', 'Comissão', 'Retorno', 'Cadastro', 'Estoque', 'Checklist'],
       datasets: [
         {
-          label: 'Sua Oficina',
+          label: '   Sua Oficina',
           data: [80, 70, 90, 60, 85, 95, 75, 80, 60, 90],
           backgroundColor: 'rgba(0, 194, 169, 0.2)',
           borderColor: 'rgba(0, 194, 169, 1)',
           borderWidth: 2,
           pointBackgroundColor: 'rgba(0, 194, 169, 1)',
-          pointRadius: 4,
-          pointHoverRadius: 6
+          pointRadius: 2,
+          pointHoverRadius: 4
         },
         {
-          label: `Seus Concorrentes`,
+          label: '   Seus Concorrentes',
           data: [67, 67, 33, 67, 33, 33, 33, 67, 33, 33],
           backgroundColor: 'rgba(226, 232, 240, 0.3)',
           borderColor: '#cbd5e1',
@@ -246,7 +246,7 @@ function initPreviewRadarChart() {
       responsive: true,
       maintainAspectRatio: false,
       plugins: {
-        legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 4, padding: 24, font: { family: "'Inter', sans-serif" } } },
+        legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 4, pointStyleWidth: 4, padding: 24, font: { family: "'Inter', sans-serif" } } },
         tooltip: { enabled: false }
       },
       scales: {
@@ -276,12 +276,12 @@ function initPreviewBarChart() {
     data: {
       labels: ['Serviços', 'Marketing', 'Finanças', 'Gestão'],
       datasets: [{
-        label: 'Sua Oficina',
+        label: '   Sua Oficina',
         data: [85, 30, 55, 40],
         backgroundColor: '#00c2a9',
         borderRadius: 4
       }, {
-        label: 'Mercado',
+        label: '   Mercado',
         data: [75, 60, 70, 65],
         backgroundColor: '#cbd5e1',
         borderRadius: 4
@@ -291,7 +291,7 @@ function initPreviewBarChart() {
       responsive: true,
       maintainAspectRatio: false,
       plugins: {
-        legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 4, padding: 24, font: { family: "'Inter', sans-serif" } } }
+        legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 4, pointStyleWidth: 4, padding: 24, font: { family: "'Inter', sans-serif" } } }
       },
       scales: {
         y: { display: false, beginAtZero: true },
@@ -510,7 +510,7 @@ function generateResults(bairro) {
       labels: ['OS', 'Orçamento', 'Kits', 'Peças/Margem', 'Fechamento', 'Comissão', 'Retorno', 'Cadastro', 'Estoque', 'Checklist'],
       datasets: [
         {
-          label: 'Sua Oficina',
+          label: '   Sua Oficina',
           data: radarScores,
           backgroundColor: 'rgba(0, 194, 169, 0.2)',
           borderColor: 'rgba(0, 194, 169, 1)',
@@ -519,7 +519,7 @@ function generateResults(bairro) {
           pointRadius: 4
         },
         {
-          label: `Seus Concorrentes`,
+          label: `   Seus Concorrentes`,
           data: baselineMarketRadar,
           backgroundColor: 'rgba(226, 232, 240, 0.3)',
           borderColor: '#cbd5e1',
@@ -542,7 +542,7 @@ function generateResults(bairro) {
         }
       },
       plugins: {
-        legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 4, padding: 24, font: { family: "'Inter', sans-serif" } } }
+        legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 4, pointStyleWidth: 4, padding: 24, font: { family: "'Inter', sans-serif" } } }
       }
     }
   });
@@ -573,12 +573,12 @@ function generateResults(bairro) {
     data: {
       labels: ['Atendimento', 'Fidelização', 'Financeiro', 'Controle'],
       datasets: [{
-        label: 'Sua Oficina',
+        label: '   Sua Oficina',
         data: userBarData,
         backgroundColor: '#00c2a9',
         borderRadius: 4
       }, {
-        label: `Seus Concorrentes`,
+        label: `   Seus Concorrentes`,
         data: marketBarData,
         backgroundColor: '#cbd5e1',
         borderRadius: 4
@@ -588,7 +588,7 @@ function generateResults(bairro) {
       responsive: true,
       maintainAspectRatio: false,
       plugins: {
-        legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 4, padding: 24, font: { family: "'Inter', sans-serif" } } }
+        legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 4, pointStyleWidth: 4, padding: 24, font: { family: "'Inter', sans-serif" } } }
       },
       scales: {
         y: { display: false, beginAtZero: true, max: 105 },
