@@ -294,6 +294,16 @@ const qText = document.getElementById('q-text');
 const optionsContainer = document.getElementById('options-container');
 const progressFill = document.getElementById('quiz-progress');
 const currentQNum = document.getElementById('current-q-num');
+const btnBackQuiz = document.getElementById('btn-back-quiz');
+
+btnBackQuiz.addEventListener('click', () => {
+  if (currentQuestion > 0) {
+    currentQuestion--;
+    const lastAns = userAnswers.pop();
+    totalScore -= lastAns;
+    loadQuestion();
+  }
+});
 
 
 function switchView(view) {
@@ -306,6 +316,12 @@ function loadQuestion() {
   const q = questions[currentQuestion];
   qTitle.innerText = `${currentQuestion + 1}. ${q.title}`;
   qText.innerText = q.text;
+  
+  if (currentQuestion > 0) {
+    btnBackQuiz.style.display = 'flex';
+  } else {
+    btnBackQuiz.style.display = 'none';
+  }
   
   optionsContainer.innerHTML = '';
   q.options.forEach((opt) => {

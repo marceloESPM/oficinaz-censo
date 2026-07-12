@@ -20,7 +20,7 @@
         <img src="assets/logo-oficinaz-color.png" alt="Oficinaz" class="logo">
       </a>
       <div class="header-links">
-        <a href="https://oficinaz.com" target="_blank" class="nav-link">www.oficinaz.com</a>
+        <a href="https://oficinaz.com" target="_blank" class="nav-link hide-mobile">www.oficinaz.com</a>
         <a href="https://api.whatsapp.com/send/?phone=551151073356&text&type=phone_number&app_absent=0" target="_blank" class="nav-link btn-whatsapp-header"><i data-lucide="message-circle" class="icon-sm"></i> WhatsApp</a>
       </div>
     </div>
@@ -44,8 +44,8 @@
             </button>
 
             <div class="trust-chips">
-              <span class="chip"><i data-lucide="timer" class="icon-sm"></i> Menos de 1 minuto</span>
-              <span class="chip"><i data-lucide="bar-chart-2" class="icon-sm"></i> Referência regional</span>
+              <div class="chip"><i data-lucide="timer"></i> Menos de 1 minuto</div>
+              <div class="chip"><i data-lucide="bar-chart-2"></i> Análise de concorrência</div>
             </div>
           </div>
         </div>
@@ -221,8 +221,9 @@
     <section id="view-quiz" class="view">
       <div class="container quiz-container">
         <div class="question-card glass-panel" id="question-card">
-          <div class="quiz-header">
-            <p class="privacy-notice"><i data-lucide="lock" class="icon-sm"></i> Suas respostas são 100% confidenciais. Seja o mais preciso possível.</p>
+          <div class="quiz-header" style="position: relative;">
+            <button id="btn-back-quiz" style="position: absolute; left: 0; top: 0; background: none; border: none; cursor: pointer; color: var(--text-secondary); display: none; align-items: center; gap: 8px; font-weight: 600; font-size: 1rem; padding: 0;"><i data-lucide="arrow-left" class="icon-sm"></i> Voltar</button>
+            <p class="privacy-notice"><i data-lucide="lock" class="icon-sm"></i> Suas respostas são 100% confidenciais.</p>
             <div class="progress-bar">
               <div class="progress-fill" id="quiz-progress"></div>
             </div>
