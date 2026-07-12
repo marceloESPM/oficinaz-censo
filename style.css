@@ -195,13 +195,13 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
 /* HERO COM BACKGROUND IMAGE (DARK & BLUR) */
 /* ========================================================================= */
 #view-landing {
-  padding-top: 140px; /* Ajustado para acompanhar o novo header */
+  padding-top: 0; /* Remove padding para a imagem subir ate o topo (atras do header) */
 }
 .hero-section {
   position: relative;
   background: url('assets/hero-mecanica-mulher.png') no-repeat center center;
   background-size: cover;
-  padding: 120px 0;
+  padding: 200px 0 120px 0; /* Espaço interno para não encostar no header */
   min-height: 80vh;
   display: flex;
   align-items: center;
@@ -326,7 +326,9 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
 }
 .mockup-body {
   display: flex;
-  gap: 48px;
+  gap: 80px; /* Mais espaço entre os gráficos */
+  align-items: center; /* Alinha verticalmente no centro */
+  justify-content: center;
 }
 .mockup-col {
   flex: 1;
@@ -338,7 +340,7 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
 }
 .mockup-radar-bg {
   width: 100%;
-  max-width: 250px;
+  max-width: 400px; /* Aumentado consideravelmente */
   margin: 0 auto;
 }
 .mockup-comparative-bars { display: flex; flex-direction: column; gap: 20px; padding-top: 10px;}
@@ -401,19 +403,19 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
   gap: 32px;
 }
 .metric-card {
-  background: var(--surface);
-  border-radius: var(--radius-xl);
-  padding: 40px;
+  background: transparent; /* Removendo peso visual */
+  padding: 32px 24px;
+  border-radius: var(--radius-lg);
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  border: 1px solid rgba(0,0,0,0.04);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.02);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  align-items: flex-start;
 }
-.metric-card:hover { 
-  transform: translateY(-4px); 
-  box-shadow: 0 16px 40px rgba(0,0,0,0.06); 
+.metric-card:hover {
+  background: #f8fafc;
+  border: 1px solid rgba(0,0,0,0.03);
+  transform: translateY(-2px);
 }
 .metric-icon {
   width: 64px;
@@ -764,8 +766,8 @@ input:disabled { opacity: 0.8; cursor: not-allowed; background: #e2e8f0; border-
   align-items: center;
 }
 .footer-logo {
-  height: 156px; /* Aumentado em 30% */
-  margin: -30px 0 -15px 0; /* Margens negativas para não aumentar o footer */
+  height: 200px; /* Super aumentado a pedido */
+  margin: -60px 0 -40px 0; /* Margens altamente negativas para não explodir a altura do footer */
   filter: brightness(0) invert(1);
 }
 .footer-links {

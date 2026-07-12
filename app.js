@@ -96,7 +96,7 @@ const personas = [
     max: 16,
     title: 'O Mecânico Apagador de Incêndios',
     icon: '<i data-lucide="flame" style="width:80px; height:80px; color:var(--critical)"></i>',
-    desc: 'Você tem muito talento técnico e os clientes confiam no seu trabalho. O problema é que a rotina da oficina exige que você esteja em todos lugares ao mesmo tempo. Como grande parte das informações ainda fica no papel ou na sua memória, o controle financeiro acaba ficando em segundo plano. Reflita se na correria de entregar os carros você não está perdendo dinheiro sem perceber.',
+    desc: 'Mão na massa, mas cego nos números. Você resolve urgências com excelência, mas o esforço não se reflete no caixa. O lucro escorre por falhas no controle.',
     actions: [
       { title: 'Agilidade no Balcão', desc: 'Esqueça os longos cadastros de papel. Digitando apenas a placa, o sistema preenche os dados do carro para você.' },
       { title: 'Margem Garantida', desc: 'Ao lançar uma peça na OS, o sistema já calcula o preço final, garantindo que você nunca mais repasse peças sem a margem de lucro correta.' },
@@ -107,7 +107,7 @@ const personas = [
     max: 24,
     title: 'O Polvo das Planilhas',
     icon: '<i data-lucide="table-properties" style="width:80px; height:80px; color:var(--attention)"></i>',
-    desc: 'Você sabe bem que uma boa gestão é fundamental para a oficina prosperar. Para manter tudo sob controle você acabou adotando várias ferramentas como planilhas, ERP obsoletos e sites do governo. A sua oficina tem organização, mas o preço que você paga por isso é o seu próprio descanso e tempo livre. Talvez essa sobrecarga administrativa seja exatamente o freio que impede o seu negócio de crescer mais.',
+    desc: 'Organizado, mas refém do operacional. Você cruza dados em planilhas e sistemas antigos, sacrificando seu tempo livre e engessando o crescimento da oficina.',
     actions: [
       { title: 'Fim do Retrabalho', desc: 'A mesma OS que você usa para orçar já alimenta o caixa e calcula a comissão do mecânico automaticamente. Tudo em um só lugar.' },
       { title: 'Emissão Inteligente', desc: 'Pare de redigitar dados em sites do governo. O sistema já separa a mão de obra (NFS-e) das peças (NF-e) e emite tudo a partir da OS.' },
@@ -118,7 +118,7 @@ const personas = [
     max: 30,
     title: 'O Piloto de Alta Performance',
     icon: '<i data-lucide="rocket" style="width:80px; height:80px; color:var(--teal)"></i>',
-    desc: 'Sua oficina já superou a fase do improviso e hoje funciona como uma empresa estruturada. Você conhece os seus números e tem processos bem definidos. O seu verdadeiro desafio agora não é mais a sobrevivência e sim a expansão do negócio. Com o lado operacional rodando perfeitamente a sua meta deve ser usar a tecnologia para antecipar vendas e trazer o cliente de volta automaticamente.',
+    desc: 'Gestão no piloto automático. Com processos integrados e indicadores claros, a sua oficina lucra e cresce mesmo quando você não está presente.',
     actions: [
       { title: 'Retorno Preditivo', desc: 'Use nosso painel de histórico para identificar exatamente quais veículos estão próximos de atingir a quilometragem de revisão e chame-os antes de irem para a concorrência.' },
       { title: 'Kits Estratégicos', desc: 'Ganhe velocidade no pátio cadastrando seus próprios "Kits de Serviço". Monte orçamentos em segundos, padronizando o tempo técnico e as margens da sua equipe.' },
