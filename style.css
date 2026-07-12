@@ -132,7 +132,7 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
   .main-header { height: 64px; }
   .header-container { height: 64px; }
   .logo-link { height: 64px; }
-  .logo { height: 100px; }
+  .logo { height: 120px; }
   
   .mobile-menu-btn { display: flex; align-items: center; justify-content: center; }
   
