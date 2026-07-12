@@ -385,12 +385,15 @@ document.getElementById('lead-cep').addEventListener('blur', async (e) => {
 });
 
 // Form Submission
-document.getElementById('btn-share-wpp').addEventListener('click', (e) => {
-  e.preventDefault();
-  const url = window.location.href;
-  const text = `Dá uma olhada no diagnóstico da minha oficina: ${url}`;
-  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank');
-});
+const btnShareWpp = document.getElementById('btn-share-wpp');
+if (btnShareWpp) {
+  btnShareWpp.addEventListener('click', (e) => {
+    e.preventDefault();
+    const url = window.location.href;
+    const text = `Dá uma olhada no diagnóstico da minha oficina: ${url}`;
+    window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank');
+  });
+}
 
 // Mobile Menu Toggle
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
