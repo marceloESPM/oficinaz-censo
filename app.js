@@ -186,10 +186,29 @@ if (previewCtx) {
 
 // INICIALIZAÇÃO
 document.addEventListener('DOMContentLoaded', () => {
-  switchView(document.getElementById('view-landing'));
   lucide.createIcons();
   initPreviewRadarChart();
   initPreviewBarChart();
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const ansParam = urlParams.get('ans');
+  const bairroParam = urlParams.get('b');
+
+  if (ansParam && ansParam.length === 10) {
+    userAnswers = ansParam.split('').map(Number);
+    totalScore = userAnswers.reduce((a, b) => a + b, 0);
+    
+    // Hide refazer and share box
+    const btnRefazer = document.getElementById('btn-refazer');
+    if (btnRefazer) btnRefazer.style.display = 'none';
+    const shareBox = document.querySelector('.share-box');
+    if (shareBox) shareBox.style.display = 'none';
+
+    generateResults(bairroParam || 'Sua Região');
+    switchView(document.getElementById('view-results'));
+  } else {
+    switchView(document.getElementById('view-landing'));
+  }
 });
 
 // INIT PREVIEW RADAR CHART
@@ -399,14 +418,28 @@ function generateResults(bairro) {
   document.getElementById('final-score').innerText = totalScore;
   document.getElementById('persona-desc').innerText = matchedPersona.desc;
 
-  // Set Share Links
-  const shareText = encodeURIComponent(`Fiz o diagnóstico Oficinaz e meu perfil de gestão é: ${matchedPersona.title}! 🚀 Descubra o nível de maturidade da sua oficina em: https://pesquisa-oficinaz.netlify.app`);
+  // Set Share Links (Recover Result)
+  const recoverUrl = window.location.origin + window.location.pathname + '?ans=' + userAnswers.join('') + '&b=' + encodeURIComponent(bairro);
+  const shareText = encodeURIComponent(`Aqui está o resultado do seu Diagnóstico de Gestão Oficinaz! Seu perfil é: ${matchedPersona.title}. Acesse o relatório completo aqui: ${recoverUrl}`);
   
+  const leadWhatsappInput = document.getElementById('lead-whatsapp');
+  const leadWhatsapp = leadWhatsappInput ? leadWhatsappInput.value.replace(/\D/g, '') : '';
+  const leadEmailInput = document.getElementById('lead-email');
+  const leadEmail = leadEmailInput ? leadEmailInput.value : '';
+
   const btnWhatsapp = document.getElementById('btn-share-whatsapp');
-  if (btnWhatsapp) btnWhatsapp.href = `https://api.whatsapp.com/send/?text=${shareText}`;
+  if (btnWhatsapp) {
+    btnWhatsapp.href = leadWhatsapp 
+      ? `https://api.whatsapp.com/send/?phone=55${leadWhatsapp}&text=${shareText}`
+      : `https://api.whatsapp.com/send/?text=${shareText}`;
+  }
   
   const btnEmail = document.getElementById('btn-share-email');
-  if (btnEmail) btnEmail.href = `mailto:?subject=Meu diagnóstico de gestão automotiva&body=${shareText}`;
+  if (btnEmail) {
+    btnEmail.href = leadEmail
+      ? `mailto:${leadEmail}?subject=Seu diagnóstico Oficinaz&body=${shareText}`
+      : `mailto:?subject=Seu diagnóstico Oficinaz&body=${shareText}`;
+  }
 
   // Action Plan
   const actionList = document.getElementById('action-plan-list');
