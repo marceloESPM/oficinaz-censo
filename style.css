@@ -274,7 +274,23 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
 /* ========================================================================= */
 .preview-dashboard-section {
   padding: 100px 0;
-  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%); /* Fundo suave */
+  background: radial-gradient(circle at 10% 20%, rgba(0, 194, 169, 0.08) 0%, transparent 40%),
+              radial-gradient(circle at 90% 80%, rgba(17, 24, 39, 0.08) 0%, transparent 40%),
+              linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+.preview-dashboard-section::before {
+  content: '';
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(0, 194, 169, 0.05) 0%, transparent 60%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
 }
 .preview-header {
   text-align: center;
@@ -294,15 +310,27 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
 }
 
 /* Documento de Relatório */
+@keyframes floatArtistic {
+  0% { transform: translateY(0px) rotateX(1deg) rotateY(-1deg); }
+  50% { transform: translateY(-15px) rotateX(2deg) rotateY(1deg); }
+  100% { transform: translateY(0px) rotateX(1deg) rotateY(-1deg); }
+}
+.preview-dashboard-wrapper {
+  position: relative;
+  z-index: 1;
+  perspective: 1200px;
+}
 .consulting-report-wrapper {
   background: #ffffff;
-  border-radius: 4px; /* Formato clássico de página/documento */
-  box-shadow: 0 40px 100px -20px rgba(0, 29, 61, 0.15), 0 0 0 1px rgba(0,0,0,0.03);
+  border-radius: 8px; /* Borda um pouco mais suave no preview */
+  box-shadow: 0 50px 100px -20px rgba(0, 29, 61, 0.25), 0 0 40px rgba(0, 194, 169, 0.1), 0 0 0 1px rgba(0,0,0,0.03);
   max-width: 1000px;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
   border-top: 6px solid var(--teal);
+  animation: floatArtistic 6s ease-in-out infinite;
+  transform-style: preserve-3d;
 }
 
 .report-doc-header {
