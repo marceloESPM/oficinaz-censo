@@ -227,7 +227,7 @@ function initPreviewRadarChart() {
       responsive: true,
       maintainAspectRatio: false,
       plugins: {
-        legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 8, font: { family: "'Inter', sans-serif" } } },
+        legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 6, font: { family: "'Inter', sans-serif" } } },
         tooltip: { enabled: false }
       },
       scales: {
@@ -448,7 +448,7 @@ function generateResults(bairro) {
         }
       },
       plugins: {
-        legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 8, font: { family: "'Inter', sans-serif" } } }
+        legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 6, font: { family: "'Inter', sans-serif" } } }
       }
     }
   });
