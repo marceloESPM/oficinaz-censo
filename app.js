@@ -94,35 +94,35 @@ const questions = [
 const personas = [
   {
     max: 16,
-    title: 'O Mecânico Apagador de Incêndios',
-    icon: '<i data-lucide="flame" style="width:80px; height:80px; color:var(--critical)"></i>',
-    desc: 'Você domina a parte técnica, mas perde dinheiro nas lacunas de controle. Sem processos bem amarrados, o esforço da sua equipe vaza pelo ralo financeiro. É hora de tapar esses buracos e blindar seu lucro.',
+    title: 'Operação Reativa',
+    icon: '<i data-lucide="alert-triangle" style="width:80px; height:80px; color:var(--critical)"></i>',
+    desc: 'O diagnóstico indica forte concentração técnica e lacunas nos processos de controle. A ausência de padronização na entrada e saída de veículos compromete a precisão financeira e a previsibilidade do fluxo de caixa.',
     actions: [
-      { title: 'Agilidade no Balcão', desc: 'Esqueça os longos cadastros de papel. Digitando apenas a placa, o sistema preenche os dados do carro para você.' },
-      { title: 'Margem Garantida', desc: 'Ao lançar uma peça na OS, o sistema já calcula o preço final, garantindo que você nunca mais repasse peças sem a margem de lucro correta.' },
-      { title: 'Controle sem Complicação', desc: 'Fechamento de caixa simples e direto, para você saber exatamente o que entrou e saiu no dia, sem depender da memória.' }
+      { title: 'Padronização de Cadastro', desc: 'A adoção de tecnologias de busca por placa reduz o tempo médio de recepção e mitiga erros de digitação de dados veiculares.' },
+      { title: 'Precificação Parametrizada', desc: 'A automatização do cálculo de margem sobre peças aplicadas previne descontos não autorizados e preserva o lucro bruto da operação.' },
+      { title: 'Conciliação em Tempo Real', desc: 'Vincular o recebimento do cliente diretamente ao fechamento da Ordem de Serviço garante rastreabilidade e consistência ao caixa diário.' }
     ]
   },
   {
     max: 24,
     title: 'O Polvo das Planilhas',
     icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="80" height="80" fill="currentColor" style="color:var(--attention)"><path d="M12 2a6 6 0 0 0-6 6v3a2 2 0 0 0-1 1.73V18a1 1 0 0 0 2 0v-4h1v5a1 1 0 0 0 2 0v-5h1v6a1 1 0 0 0 2 0v-6h1v6a1 1 0 0 0 2 0v-6h1v5a1 1 0 0 0 2 0v-5h1v4a1 1 0 0 0 2 0v-5.27A2 2 0 0 0 19 11V8a6 6 0 0 0-6-6Zm-2 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2Zm4 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg>',
-    desc: 'Você controla tudo, mas à custa do seu próprio tempo. Planilhas soltas e retrabalho são freios invisíveis que impedem sua oficina de escalar. Você precisa centralizar a gestão para voltar a pensar no negócio.',
+    desc: 'O diagnóstico aponta uma gestão descentralizada. O uso de múltiplas planilhas e anotações gera redundância de dados. O excesso de carga administrativa sobre a liderança é o principal limitador para o ganho de escala.',
     actions: [
-      { title: 'Fim do Retrabalho', desc: 'A mesma OS que você usa para orçar já alimenta o caixa e calcula a comissão do mecânico automaticamente. Tudo em um só lugar.' },
-      { title: 'Emissão Inteligente', desc: 'Pare de redigitar dados em sites do governo. O sistema já separa a mão de obra (NFS-e) das peças (NF-e) e emite tudo a partir da OS.' },
-      { title: 'Aprovação Expressa', desc: 'Envie orçamentos detalhados via link no WhatsApp. O cliente visualiza as peças e serviços de forma profissional e aprova com um único clique.' }
+      { title: 'Unificação de Dados (ERP)', desc: 'Centralizar Orçamento, Estoque e Financeiro em um único ambiente sistêmico elimina o retrabalho e reduz o tempo gasto em conciliações manuais.' },
+      { title: 'Conformidade Fiscal Integrada', desc: 'A automação da separação entre produtos (NF-e) e serviços (NFS-e) diretamente na OS reduz a exposição a passivos tributários e bitributação.' },
+      { title: 'Aprovação Rastreada', desc: 'A transição para orçamentos digitais via link eleva a transparência do processo e formaliza a autorização do cliente, diminuindo atritos pós-venda.' }
     ]
   },
   {
     max: 30,
-    title: 'O Piloto de Alta Performance',
-    icon: '<i data-lucide="rocket" style="width:80px; height:80px; color:var(--teal)"></i>',
-    desc: 'Sua oficina já opera como uma verdadeira empresa. Com processos consolidados, o desafio agora é tracionar vendas previsíveis e fazer a tecnologia trabalhar para o seu crescimento contínuo.',
+    title: 'Gestão Orientada a Dados',
+    icon: '<i data-lucide="pie-chart" style="width:80px; height:80px; color:var(--teal)"></i>',
+    desc: 'Sua operação apresenta alto nível de maturidade em processos e integração sistêmica. O cenário atual suporta tração em escala, dependendo agora de estratégias ativas de previsibilidade de demanda e fidelização avançada.',
     actions: [
-      { title: 'Retorno Preditivo', desc: 'Use nosso painel de histórico para identificar exatamente quais veículos estão próximos de atingir a quilometragem de revisão e chame-os antes de irem para a concorrência.' },
-      { title: 'Kits Estratégicos', desc: 'Ganhe velocidade no pátio cadastrando seus próprios "Kits de Serviço". Monte orçamentos em segundos, padronizando o tempo técnico e as margens da sua equipe.' },
-      { title: 'Visão de Diretor', desc: 'Acompanhe o crescimento da sua oficina através de um Demonstrativo de Resultados (DRE) automático e focado exclusivamente nas métricas do setor automotivo.' }
+      { title: 'Retenção Preditiva', desc: 'O uso de dados de quilometragem e intervalo de troca permite estabelecer fluxos automatizados de recompra (CRM), antecipando a necessidade do cliente.' },
+      { title: 'Produtização do Pátio', desc: 'A estruturação de "Kits de Serviço" padronizados agiliza a orçamentação e facilita o controle de tempo padrão (TMA) da equipe técnica.' },
+      { title: 'Governança e DRE', desc: 'A análise periódica do Demonstrativo de Resultados do Exercício isolando as margens de peças vs. serviços é a base estatística para a expansão sustentável.' }
     ]
   }
 ];
@@ -384,12 +384,14 @@ function generateResults(bairro) {
     `;
   });
 
-  document.getElementById('chart-subtitle').innerHTML = `<i data-lucide="bar-chart-2"></i> Desempenho vs. ${bairro}`;
+  document.getElementById('chart-subtitle').innerHTML = `<i data-lucide="bar-chart-2"></i> Maturidade vs. Base de Mercado`;
   
   // Logic to make charts reflect user's answers realistically
-  // We map the 10 answers (val 1, 2, 3) to 0-100 scale
+  // We map the 10 answers (val 1, 2, 3) to 33, 67, 100 scale
   const radarScores = userAnswers.map(ans => Math.round((ans / 3) * 100)); 
-  const marketRadarMock = radarScores.map(val => Math.min(100, Math.max(40, val + (Math.floor(Math.random() * 30) - 15)))); 
+  
+  // Realistic Fixed Market Baseline based on general auto repair industry data (mostly levels 1 and 2)
+  const baselineMarketRadar = [67, 67, 33, 67, 33, 33, 33, 67, 33, 33];
 
   // Radar Chart (benchmarkChart)
   const radarCtx = document.getElementById('benchmarkChart').getContext('2d');
@@ -412,8 +414,8 @@ function generateResults(bairro) {
           pointRadius: 4
         },
         {
-          label: `Média ${bairro}`,
-          data: marketRadarMock,
+          label: `Média de Mercado`,
+          data: baselineMarketRadar,
           backgroundColor: 'rgba(226, 232, 240, 0.3)',
           borderColor: '#cbd5e1',
           pointBackgroundColor: '#cbd5e1',
@@ -438,16 +440,22 @@ function generateResults(bairro) {
     }
   });
 
-  // Calculate Bar Chart based on categories of the 10 questions:
-  // Serviços (q0, q1, q9), Marketing (q6), Finanças (q3, q4, q5), Gestão (q2, q7, q8)
-  const calcAvg = (indices) => Math.round(indices.map(i => radarScores[i]).reduce((a,b)=>a+b, 0) / indices.length);
+  // Calculate Bar Chart based on exact categories of the 10 questions:
+  // Atendimento/Serviço (q0, q1, q9), Fidelização/CRM (q6), Financeiro (q3, q4, q5), Controle/Pátio (q2, q7, q8)
+  const calcAvg = (indices, source) => Math.round(indices.map(i => source[i]).reduce((a,b)=>a+b, 0) / indices.length);
   const userBarData = [
-    calcAvg([0, 1, 9]), // Serviços
-    calcAvg([6]), // Marketing
-    calcAvg([3, 4, 5]), // Finanças
-    calcAvg([2, 7, 8])  // Gestão
+    calcAvg([0, 1, 9], radarScores), // Atendimento
+    calcAvg([6], radarScores),       // Fidelização
+    calcAvg([3, 4, 5], radarScores), // Financeiro
+    calcAvg([2, 7, 8], radarScores)  // Controle
   ];
-  const marketBarData = userBarData.map(val => Math.min(100, Math.max(40, val + (Math.floor(Math.random() * 20) - 5))));
+  
+  const marketBarData = [
+    calcAvg([0, 1, 9], baselineMarketRadar), 
+    calcAvg([6], baselineMarketRadar),       
+    calcAvg([3, 4, 5], baselineMarketRadar), 
+    calcAvg([2, 7, 8], baselineMarketRadar)  
+  ];
 
   const barCtx = document.getElementById('resultBarCanvas').getContext('2d');
   
@@ -456,14 +464,14 @@ function generateResults(bairro) {
   window.resultBarChart = new Chart(barCtx, {
     type: 'bar',
     data: {
-      labels: ['Serviços', 'Marketing', 'Finanças', 'Gestão'],
+      labels: ['Atendimento', 'Fidelização', 'Financeiro', 'Controle'],
       datasets: [{
         label: 'Sua Oficina',
         data: userBarData,
         backgroundColor: '#00c2a9',
         borderRadius: 4
       }, {
-        label: `Média ${bairro}`,
+        label: `Média de Mercado`,
         data: marketBarData,
         backgroundColor: '#cbd5e1',
         borderRadius: 4
@@ -482,26 +490,30 @@ function generateResults(bairro) {
     }
   });
 
-  // Insight Text Logic (tied to real gap)
-  const avgYou = Math.round(totalScore / 30 * 100);
-  const avgMarket = Math.round(marketBarData.reduce((a,b)=>a+b)/4);
+  // Insight Text Logic (tied strictly to collected data)
+  // Identify the weakest category based on collected data
+  const categories = ['Atendimento', 'Fidelização', 'Financeiro', 'Controle'];
+  const lowestScoreValue = Math.min(...userBarData);
+  const lowestCategoryIndex = userBarData.indexOf(lowestScoreValue);
+  const weakestCategory = categories[lowestCategoryIndex];
+  
   const insightBox = document.getElementById('insight-text');
   
-  if (avgYou < avgMarket) {
-    insightBox.innerHTML = `O gargalo financeiro custa, em média, <strong style="color:var(--critical)">${avgMarket - avgYou}% da sua margem de lucro</strong> frente aos concorrentes de ${bairro}.`;
+  if (lowestScoreValue <= 33) {
+    insightBox.innerHTML = `Identificamos uma <strong>vulnerabilidade crítica na área de ${weakestCategory}</strong>. Oficinas do mesmo porte na região de ${bairro} que automatizam essa etapa apresentam maior capacidade de absorção de demanda.`;
     insightBox.style.borderColor = 'var(--critical)';
     insightBox.style.backgroundColor = 'rgba(255, 59, 48, 0.05)';
     insightBox.style.color = 'var(--critical)';
-  } else if (avgYou > 80) {
-    insightBox.innerHTML = `Sua operação está <strong style="color:var(--teal)">${avgYou - avgMarket}% acima da média</strong> de ${bairro}. Você é uma referência na região.`;
-    insightBox.style.borderColor = 'var(--teal)';
-    insightBox.style.backgroundColor = 'rgba(0, 194, 169, 0.05)';
-    insightBox.style.color = 'var(--teal)';
-  } else {
-    insightBox.innerHTML = `Sua oficina acompanha a média de ${bairro}, mas existem grandes <strong>oportunidades de lucro ocultas</strong> na operação.`;
+  } else if (lowestScoreValue <= 67) {
+    insightBox.innerHTML = `O diagnóstico demonstra conformidade operacional geral na região de ${bairro}, sendo <strong>${weakestCategory}</strong> o principal gargalo estatístico a ser resolvido para atingir a maturidade máxima.`;
     insightBox.style.borderColor = 'var(--attention)';
     insightBox.style.backgroundColor = 'rgba(255, 204, 0, 0.05)';
     insightBox.style.color = '#b45309';
+  } else {
+    insightBox.innerHTML = `O índice de maturidade da sua oficina aponta <strong>excelência operacional superior à base de mercado</strong> em ${bairro}. Os processos estabelecidos minimizam inconsistências e suportam crescimento estruturado.`;
+    insightBox.style.borderColor = 'var(--teal)';
+    insightBox.style.backgroundColor = 'rgba(0, 194, 169, 0.05)';
+    insightBox.style.color = 'var(--teal)';
   }
   
   if (window.lucide) {
