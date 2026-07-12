@@ -201,6 +201,7 @@ function initPreviewRadarChart() {
     type: 'radar',
     data: {
       labels: ['OS', 'Orçamento', 'Kits', 'Peças/Margem', 'Fechamento', 'Comissão', 'Retorno', 'Cadastro', 'Estoque', 'Checklist'],
+      datasets: [
         {
           label: 'Sua Oficina',
           data: [80, 70, 90, 60, 85, 95, 75, 80, 60, 90],
