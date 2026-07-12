@@ -873,8 +873,9 @@ input:disabled { opacity: 0.8; cursor: not-allowed; background: #e2e8f0; border-
 /* PRODUTO & FOOTER */
 /* ========================================================================= */
 .product-section {
-  padding: 100px 0; 
-  background: var(--dark-blue);
+  padding: 120px 0; 
+  background: url('assets/hero-mecanica-mulher.png') no-repeat center center;
+  background-size: cover;
   color: #ffffff;
   text-align: center;
   position: relative;
@@ -883,12 +884,11 @@ input:disabled { opacity: 0.8; cursor: not-allowed; background: #e2e8f0; border-
 .product-section::before {
   content: '';
   position: absolute;
-  top: -50%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 800px;
-  height: 800px;
-  background: radial-gradient(circle, rgba(0, 194, 169, 0.15) 0%, transparent 70%);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, #0f172a 0%, rgba(15, 23, 42, 0.85) 40%, rgba(15, 23, 42, 0.95) 100%);
   pointer-events: none;
 }
 .product-container {
