@@ -54,7 +54,7 @@ const questions = [
     ]
   },
   {
-    title: "Histórico e Retorno Predivito",
+    title: "Histórico e Retorno Preventivo",
     text: "Como você sabe que está na hora do cliente voltar para trocar o óleo?",
     options: [
       { text: "Coloco o adesivo no vidro e rezo para ele voltar.", value: 1 },
@@ -530,13 +530,17 @@ document.getElementById('lead-form').addEventListener('submit', async (e) => {
   setTimeout(() => loadingText.innerText = `Cruzando informações com as oficinas de ${bairro}...`, 300);
   setTimeout(() => loadingText.innerText = `Relatório regional liberado!`, 700);
   
+  const nomeFull = document.getElementById('lead-name').value || '';
+  const nome = nomeFull.split(' ')[0];
+  const telefone = document.getElementById('lead-whatsapp').value || '';
+  
   setTimeout(() => {
-    generateResults(bairro);
+    generateResults(bairro, nome, telefone);
     switchView(viewResults);
   }, 1000);
 });
 
-function generateResults(bairro) {
+function generateResults(bairro, nome = '', telefone = '') {
   // Determine Persona
   let matchedPersona = personas[2]; // Default alta
   if (totalScore <= 16) matchedPersona = personas[0];
@@ -548,8 +552,17 @@ function generateResults(bairro) {
   document.getElementById('persona-desc').innerText = matchedPersona.desc;
 
   // Set Share Links (Recover Result)
-  const recoverUrl = window.location.origin + window.location.pathname + '?ans=' + userAnswers.join('') + '&b=' + encodeURIComponent(bairro);
-  const shareText = encodeURIComponent(`Aqui está o resultado do seu Diagnóstico de Gestão Oficinaz! Seu perfil é: ${matchedPersona.title}. Acesse o relatório completo aqui: ${recoverUrl}`);
+  const queryNome = nome ? '&n=' + encodeURIComponent(nome) : '';
+  const queryPhone = telefone ? '&p=' + encodeURIComponent(telefone.replace(/\D/g, '')) : '';
+  const queryBairro = '&b=' + encodeURIComponent(bairro);
+  
+  const recoverUrl = window.location.origin + window.location.pathname + '?ans=' + userAnswers.join('') + queryBairro + queryNome + queryPhone;
+  
+  let msg = `Aqui está o resultado do Diagnóstico de Gestão Oficinaz! Seu perfil é: ${matchedPersona.title}. Acesse o relatório completo aqui: ${recoverUrl}`;
+  if (nome) {
+    msg = `Veja o resultado do Diagnóstico Oficinaz da oficina do(a) ${nome} (${bairro})! Perfil: ${matchedPersona.title}. Confira o relatório completo: ${recoverUrl}`;
+  }
+  const shareText = encodeURIComponent(msg);
   
   const leadWhatsappInput = document.getElementById('lead-whatsapp');
   const leadWhatsapp = leadWhatsappInput ? leadWhatsappInput.value.replace(/\D/g, '') : '';
