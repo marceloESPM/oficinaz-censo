@@ -68,17 +68,14 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
   .header-container { height: 64px; }
   .logo-link { height: 64px; }
   .logo { height: 100px; }
-  .nav-link.hide-mobile, .hide-mobile { display: none !important; }
-  .header-links { gap: 12px; }
-  .nav-link { font-size: 0.85rem; }
   .btn-whatsapp-header {
-    padding: 8px; 
-    border-radius: 50%;
-    width: 36px; 
-    height: 36px; 
+    padding: 6px 12px; 
+    border-radius: 30px;
+    width: auto; 
+    height: auto; 
     justify-content: center;
   }
-  .btn-whatsapp-header .icon-sm { margin-right: 0; margin-top: 0; }
+  .btn-whatsapp-header .icon-sm { margin-right: 6px; margin-top: 0; }
 }
 .header-container {
   display: flex;
@@ -118,17 +115,19 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
 }
 .nav-link:hover { color: var(--dark-blue); }
 .btn-whatsapp-header { 
-  background: #25D366; 
-  color: #ffffff !important; 
-  padding: 10px 20px; 
+  background: transparent; 
+  color: var(--dark-blue) !important; 
+  padding: 8px 16px; 
   border-radius: 30px; 
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
+  border: 1px solid #e2e8f0;
 }
 .btn-whatsapp-header:hover {
-  background: #20BA5C;
+  background: #f8fafc;
+  border-color: #25D366;
+  color: #25D366 !important;
   transform: translateY(-1px);
 }
-.btn-whatsapp-header .icon-sm { color: #ffffff; }
+.btn-whatsapp-header .icon-sm { color: #25D366; margin-right: 6px; }
 
 .icon-sm { width: 20px; height: 20px; }
 .btn .icon-sm { vertical-align: middle; margin-right: 8px; margin-top: -2px; }
@@ -938,7 +937,7 @@ input:disabled { opacity: 0.8; cursor: not-allowed; background: #e2e8f0; border-
 /* RESULTS (DASHBOARD) - MINI RELATÓRIO PREMIUM */
 /* ========================================================================= */
 #view-results { padding-top: 120px; }
-.results-container { width: 100%; padding-bottom: 80px; }
+.results-container { width: 100%; max-width: 1400px; padding-bottom: 80px; }
 .results-header { text-align: center; margin-bottom: 48px; }
 .dashboard-grid {
   display: grid;
