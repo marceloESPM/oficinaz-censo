@@ -94,7 +94,7 @@ const questions = [
 const personas = [
   {
     max: 16,
-    title: 'Foco no Operacional',
+    title: 'O Apagador de Incêndios',
     icon: '<i data-lucide="alert-triangle" style="width:80px; height:80px; color:var(--critical)"></i>',
     desc: 'Você manda muito bem na mecânica, mas a correria do dia a dia está sugando o seu lucro. A falta de organização no escritório faz o esforço da sua equipe escorrer pelo ralo. É hora de arrumar a casa e ver a cor do dinheiro.',
     actions: [
@@ -105,7 +105,7 @@ const personas = [
   },
   {
     max: 24,
-    title: 'O Escravo do Controle',
+    title: 'O Polvo das Planilhas',
     icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="80" height="80" fill="currentColor" style="color:var(--attention)"><path d="M12 2a6 6 0 0 0-6 6v3a2 2 0 0 0-1 1.73V18a1 1 0 0 0 2 0v-4h1v5a1 1 0 0 0 2 0v-5h1v6a1 1 0 0 0 2 0v-6h1v6a1 1 0 0 0 2 0v-6h1v5a1 1 0 0 0 2 0v-5h1v4a1 1 0 0 0 2 0v-5.27A2 2 0 0 0 19 11V8a6 6 0 0 0-6-6Zm-2 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2Zm4 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg>',
     desc: 'Você tem controle de tudo, mas trabalha muito lançando coisas em planilhas ou cadernos. O excesso de burocracia está impedindo você de focar em crescer a sua oficina.',
     actions: [
@@ -116,7 +116,7 @@ const personas = [
   },
   {
     max: 30,
-    title: 'Visão de Dono',
+    title: 'O Piloto de Alta Performance',
     icon: '<i data-lucide="pie-chart" style="width:80px; height:80px; color:var(--teal)"></i>',
     desc: 'Parabéns! Sua oficina já roda super bem. O seu próximo desafio é usar ferramentas práticas para fazer o cliente voltar sempre e sua equipe produzir com ainda mais agilidade.',
     actions: [

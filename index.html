@@ -79,8 +79,9 @@
           <div class="report-doc-grid">
             <!-- Bloco 1: Radar -->
             <div class="report-block">
-              <div class="block-header">
+              <div class="block-header" style="margin-bottom: 8px;">
                 <h4><i data-lucide="activity"></i> Raio-X da Oficina</h4>
+                <p style="font-size: 0.8rem; color: var(--text-gray); margin-top: 4px; font-weight: normal; line-height: 1.3;">Este gráfico mostra seus pontos fortes e fracos em 10 áreas da oficina. Quanto mais perto da borda, mais organizado é o processo.</p>
               </div>
               <div class="radar-canvas-wrap">
                 <canvas id="previewRadarCanvas"></canvas>
@@ -89,8 +90,9 @@
 
             <!-- Bloco 2: Bar Chart -->
             <div class="report-block">
-              <div class="block-header">
+              <div class="block-header" style="margin-bottom: 8px;">
                 <h4><i data-lucide="bar-chart-2"></i> Maturidade de Gestão</h4>
+                <p style="font-size: 0.8rem; color: var(--text-gray); margin-top: 4px; font-weight: normal; line-height: 1.3;">Agrupamos suas respostas em 4 áreas principais para mostrar onde estão seus maiores gargalos frente aos seus concorrentes.</p>
               </div>
               <div class="bar-canvas-wrap">
                 <canvas id="previewBarCanvas"></canvas>
@@ -321,14 +323,16 @@
             </div>
             <div style="text-align:right;">
               <div class="mockup-score" style="font-size:1.1rem; color: var(--text-gray); font-weight:600;">Sua Pontuação: <span id="final-score" style="font-size:2rem; font-weight:800; color:var(--teal);"></span>/30</div>
+              <div style="font-size:0.75rem; color:var(--text-gray); max-width:180px; margin-left:auto; margin-top:4px;">Nota que define o seu nível atual de organização (máximo 30 pontos).</div>
             </div>
           </div>
 
           <div class="report-doc-grid">
             <!-- Bloco 1: Radar -->
             <div class="report-block">
-              <div class="block-header">
+              <div class="block-header" style="margin-bottom: 8px;">
                 <h4><i data-lucide="activity"></i> Raio-X da Oficina</h4>
+                <p style="font-size: 0.8rem; color: var(--text-gray); margin-top: 4px; font-weight: normal; line-height: 1.3;">Este gráfico mostra seus pontos fortes e fracos em 10 áreas da oficina. Quanto mais perto da borda, mais organizado é o processo.</p>
               </div>
               <div class="radar-canvas-wrap">
                 <canvas id="benchmarkChart"></canvas>
@@ -337,8 +341,9 @@
 
             <!-- Bloco 2: Bar Chart -->
             <div class="report-block">
-              <div class="block-header">
+              <div class="block-header" style="margin-bottom: 8px;">
                 <h4 id="chart-subtitle"><i data-lucide="bar-chart-2"></i> Maturidade de Gestão</h4>
+                <p style="font-size: 0.8rem; color: var(--text-gray); margin-top: 4px; font-weight: normal; line-height: 1.3;">Agrupamos suas respostas em 4 áreas principais para mostrar onde estão seus maiores gargalos frente aos seus concorrentes.</p>
               </div>
               <div class="bar-canvas-wrap">
                 <canvas id="resultBarCanvas"></canvas>
