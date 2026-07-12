@@ -19,6 +19,15 @@ Como a campanha coleta leads sensíveis e impede preenchimento duplo (unique ema
 5. Vá em **Project Settings > API** e copie a sua `URL` e sua `anon public key`.
 6. No arquivo `app.js`, descomente o código do Supabase e insira essas chaves para que a pesquisa grave as respostas direto no banco.
 
-## Hospedagem (Vercel)
-O projeto está pronto para rodar instantaneamente na Vercel. 
-A conexão do GitHub com a Vercel garante que qualquer push neste repositório atualize o site no ar imediatamente.
+## Hospedagem e Deploy
+
+Este projeto está hospedado oficialmente no **Firebase Hosting**, garantindo alta velocidade e uma URL profissional curta (`.web.app`).
+
+### Como publicar atualizações no Firebase:
+1. Abra o terminal na pasta raiz do projeto.
+2. Caso ainda não esteja logado, faça o login no CLI do Google:
+   `npx firebase-tools login`
+3. Dispare o comando oficial de deploy:
+   `npx firebase-tools deploy`
+
+*Nota: Os arquivos `firebase.json` e `.firebaserc` já estão configurados neste repositório. O projeto também continua 100% compatível com deploy na Vercel ou Netlify, bastando conectá-los a este repositório no GitHub.*
