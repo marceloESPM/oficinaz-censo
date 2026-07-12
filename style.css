@@ -430,7 +430,7 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
 }
 .report-doc-title h3 {
   font-size: 2rem;
-  color: var(--dark-blue);
+  color: var(--teal);
   font-weight: 800;
   margin-bottom: 8px;
 }
