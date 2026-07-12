@@ -504,7 +504,7 @@ document.getElementById('lead-form').addEventListener('submit', async (e) => {
     respostas_detalhadas: userAnswers
   };
 
-  const API_URL = "https://rfbysurcxyakjxkdqhlo.supabase.co/rest/v1/leads_censo";
+  const API_URL = "https://rfbysurcxyakjxkdqhlo.supabase.co/rest/v1/Pesquisa_Oficinaz";
   const API_KEY = "sb_publishable_e_ZzyK6CRpkZ3wz2e8ppRg_ksloSQ53";
 
   switchView(viewLoading);
