@@ -107,7 +107,6 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
 .view {
   display: none;
   min-height: 100vh;
-  padding-bottom: 80px;
 }
 .view.active {
   display: block;
@@ -674,7 +673,7 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
 /* ========================================================================= */
 /* QUIZ & GLASS PANELS */
 /* ========================================================================= */
-#view-quiz { padding-top: 140px; }
+#view-quiz, #view-form { padding-top: 140px; padding-bottom: 80px; }
 .glass-panel {
   background: var(--surface);
   border-radius: var(--radius-xl);
