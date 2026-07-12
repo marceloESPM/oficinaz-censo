@@ -882,6 +882,13 @@ input:disabled { opacity: 0.8; cursor: not-allowed; background: #e2e8f0; border-
   text-align: center;
   position: relative;
 }
+.product-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(17, 24, 39, 0.45); /* Blur suave idêntico ao hero */
+  pointer-events: none;
+}
 .product-container {
   width: 100%;
   max-width: 800px;
