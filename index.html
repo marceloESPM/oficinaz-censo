@@ -65,34 +65,44 @@
               <!-- Mockup Header -->
               <div class="mockup-header">
                 <div class="mockup-score">Sua pontuação: <span>22/30</span></div>
-          <div class="preview-dashboard-wrapper">
-          <div class="mockup-top-bar">
-            <div class="mac-dots">
-              <span class="red"></span><span class="yellow"></span><span class="green"></span>
-            </div>
-            <div class="mockup-title"><i data-lucide="bar-chart-2" class="icon-sm"></i> Oficinaz Intelligence - Relatório da Oficina</div>
+          <div class="consulting-report-wrapper">
+          <div class="report-doc-header">
+            <div class="doc-logo"><img src="assets/logo-oficinaz-color.png" height="24" alt="Oficinaz"></div>
+            <div class="doc-meta">DOCUMENTO CONFIDENCIAL • GERADO EM TEMPO REAL</div>
           </div>
-          <div class="mockup-body mockup-grid">
-            <div class="mockup-col">
-              <div class="mockup-radar-bg">
+          
+          <div class="report-doc-title">
+            <h3>Relatório de Diagnóstico Estratégico</h3>
+            <p>Análise detalhada de maturidade em gestão, operações e finanças.</p>
+          </div>
+
+          <div class="report-doc-body">
+            <div class="doc-col-left">
+              <div class="radar-canvas-wrap">
                 <canvas id="previewRadarCanvas"></canvas>
               </div>
             </div>
-            <div class="mockup-col">
-              <h5>Raio-X da Gestão</h5>
-              <div class="mockup-comparative-bars">
-                <div class="mockup-comp-item">
-                  <div class="mockup-comp-header"><span>Ordens de Serviço</span><span style="color:var(--teal)">Forte</span></div>
-                  <div class="mockup-bar-track"><div class="mockup-bar-fill" style="width: 85%; background: var(--teal);"></div></div>
-                </div>
-                <div class="mockup-comp-item">
-                  <div class="mockup-comp-header"><span>Fidelização</span><span style="color:var(--critical)">Crítico</span></div>
-                  <div class="mockup-bar-track"><div class="mockup-bar-fill" style="width: 30%; background: var(--critical);"></div></div>
-                </div>
-                <div class="mockup-comp-item">
-                  <div class="mockup-comp-header"><span>Financeiro</span><span style="color:var(--attention)">Alerta</span></div>
-                  <div class="mockup-bar-track"><div class="mockup-bar-fill" style="width: 55%; background: var(--attention);"></div></div>
-                </div>
+            <div class="doc-col-right">
+              <h4 class="doc-section-title"><i data-lucide="target"></i> Raio-X da Operação</h4>
+              
+              <div class="doc-bar-item">
+                <div class="doc-bar-header"><span>Ordens de Serviço</span><span style="color:var(--teal)">Forte (85%)</span></div>
+                <div class="doc-bar-track"><div class="doc-bar-fill" style="width: 85%; background: var(--teal);"></div></div>
+              </div>
+              
+              <div class="doc-bar-item">
+                <div class="doc-bar-header"><span>Fidelização</span><span style="color:var(--critical)">Crítico (30%)</span></div>
+                <div class="doc-bar-track"><div class="doc-bar-fill" style="width: 30%; background: var(--critical);"></div></div>
+              </div>
+              
+              <div class="doc-bar-item">
+                <div class="doc-bar-header"><span>Controle Financeiro</span><span style="color:var(--attention)">Alerta (55%)</span></div>
+                <div class="doc-bar-track"><div class="doc-bar-fill" style="width: 55%; background: var(--attention);"></div></div>
+              </div>
+
+              <div class="doc-conclusion">
+                <i data-lucide="alert-triangle" class="icon-sm"></i>
+                <p>O foco excessivo no operacional está limitando o crescimento financeiro.</p>
               </div>
             </div>
           </div>

@@ -270,11 +270,11 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
 }
 
 /* ========================================================================= */
-/* PREVIEW DASHBOARD (O "PRODUTO") */
+/* PREVIEW DASHBOARD (RELATÓRIO DE CONSULTORIA) */
 /* ========================================================================= */
 .preview-dashboard-section {
   padding: 100px 0;
-  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%); /* Fundo suave */
 }
 .preview-header {
   text-align: center;
@@ -292,166 +292,78 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
   font-size: 1.125rem;
   color: var(--text-gray);
 }
-.preview-dashboard-wrapper {
-  background: #0f172a; 
-  border-radius: 12px;
-  box-shadow: 0 40px 80px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255,255,255,0.05);
-  padding: 0; /* Remove padding para a top bar colar */
-  max-width: 1200px;
+
+/* Documento de Relatório */
+.consulting-report-wrapper {
+  background: #ffffff;
+  border-radius: 8px; /* Formato clássico de página/documento */
+  box-shadow: 0 40px 100px -20px rgba(0, 29, 61, 0.15), 0 0 0 1px rgba(0,0,0,0.03);
+  max-width: 1000px;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
 }
-.mockup-top-bar {
-  background: #1e293b;
-  padding: 16px 24px;
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+/* Faixa verde lateral que simula um encadernamento de relatório de consultoria */
+.consulting-report-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 8px;
+  background: var(--teal);
 }
-.mac-dots {
-  display: flex;
-  gap: 8px;
-}
-.mac-dots span {
-  width: 12px; height: 12px; border-radius: 50%;
-}
-.mac-dots .red { background: #ff5f56; }
-.mac-dots .yellow { background: #ffbd2e; }
-.mac-dots .green { background: #27c93f; }
 
-.mockup-title {
-  flex: 1;
-  text-align: center;
+.report-doc-header {
+  padding: 32px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f1f5f9;
+}
+.doc-meta {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
   color: #94a3b8;
-  font-size: 0.9rem;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin-right: 48px; /* Balanceia com as bolinhas da esquerda */
 }
 
-/* Corpo interno da interface mockada */
-.mockup-body {
-  padding: 64px 48px;
+.report-doc-title {
+  padding: 48px 48px 24px 48px;
+}
+.report-doc-title h3 {
+  font-size: 2rem;
+  color: var(--dark-blue);
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.report-doc-title p {
+  color: var(--text-gray);
+  font-size: 1.1rem;
+}
+
+.report-doc-body {
+  padding: 0 48px 64px 48px;
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 64px;
   align-items: center;
 }
-/* Efeito de desfoque sutil na borda inferior para convidar ao clique */
-.preview-dashboard-wrapper::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 80px;
-  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.9));
-  pointer-events: none;
-}
-.mockup-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #e2e8f0;
-  padding-bottom: 24px;
-  margin-bottom: 32px;
-}
-.mockup-score {
-  font-size: 1.2rem;
-  color: var(--text-secondary);
-  font-weight: 500;
-}
-.mockup-score span {
-  font-size: 1.8rem;
-  color: var(--teal);
-  font-weight: 800;
-  margin-left: 8px;
-}
-.mockup-profile {
-  font-size: 1.1rem;
-  color: var(--text-secondary);
-}
-.mockup-profile strong {
-  color: var(--dark-blue);
-  font-size: 1.3rem;
-}
-.mockup-body {
-  display: flex;
-  gap: 80px; /* Mais espaço entre os gráficos */
-  align-items: center; /* Alinha verticalmente no centro */
-  justify-content: center;
-}
-.mockup-col {
-  flex: 1;
-}
-.mockup-col h5 {
-  font-size: 1.2rem;
-  margin-bottom: 24px;
-  margin-top: 0;
-}
-.mockup-radar-bg {
+
+.radar-canvas-wrap {
   width: 100%;
-  aspect-ratio: 1 / 1; 
-  max-width: 500px; 
-  margin: 0 auto;
-  background: radial-gradient(circle, rgba(30,41,59,1) 0%, rgba(15,23,42,1) 100%);
-  border-radius: 50%;
-  padding: 32px;
-  box-shadow: inset 0 0 50px rgba(0,194,169,0.05), 0 10px 30px rgba(0,0,0,0.3);
-  border: 1px solid rgba(0,194,169,0.1);
-  position: relative;
+  aspect-ratio: 1 / 1;
+  background: #f8fafc;
+  border-radius: 50%; /* Um círculo de fundo para destacar o radar de pontas */
+  padding: 40px;
+  border: 1px dashed #cbd5e1;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: inset 0 0 40px rgba(0,0,0,0.02);
 }
-.mockup-radar-bg canvas {
+.radar-canvas-wrap canvas {
   width: 100% !important;
   height: 100% !important;
 }
-.mockup-comparative-bars { display: flex; flex-direction: column; gap: 24px; padding-top: 10px;}
-.mockup-comp-item { display: flex; flex-direction: column; gap: 10px;}
-.mockup-comp-header {
-  display: flex;
-  justify-content: space-between;
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: #f8fafc;
-}
-.mockup-bar-track {
-  width: 100%;
-  height: 20px;
-  background: rgba(255,255,255,0.05);
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
-}
-.mockup-bar-fill {
-  height: 100%;
-  border-radius: 10px;
-  transition: width 1.5s ease;
-}
-.mockup-col h5 {
-  color: #f8fafc;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 40px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.mockup-col h5::before {
-  content: ''; display: block; width: 4px; height: 24px; background: var(--teal); border-radius: 4px;
-}
-.comp-label { font-size: 0.95rem; font-weight: 600; color: var(--dark-blue); }
-.comp-track { height: 12px; background: #f1f5f9; border-radius: 100px; position: relative; }
-.comp-fill { height: 100%; border-radius: 100px; background: var(--teal); position: absolute; left: 0; box-shadow: 0 0 10px rgba(0,194,169,0.3); }
-.comp-marker { width: 4px; height: 16px; background: #64748b; position: absolute; top: -2px; border-radius: 2px; }
-.comp-legend { display: flex; gap: 16px; font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); margin-top: 10px; }
-.comp-legend .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; }
-.comp-legend .you-dot { background: var(--teal); }
-.comp-legend .market-dot { background: #64748b; }
 
 .mockup-bars {
   display: flex;
