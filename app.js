@@ -184,6 +184,57 @@ if (previewCtx) {
   });
 }
 
+// INICIALIZAÇÃO
+document.addEventListener('DOMContentLoaded', () => {
+  switchView('landing');
+  lucide.createIcons();
+  initPreviewRadarChart();
+});
+
+// INIT PREVIEW RADAR CHART
+function initPreviewRadarChart() {
+  const ctx = document.getElementById('previewRadarCanvas');
+  if (!ctx) return;
+  
+  new Chart(ctx, {
+    type: 'radar',
+    data: {
+      labels: ['OS', 'Orçamento', 'Kits', 'Peças/Margem', 'Fechamento', 'Comissão', 'Retorno', 'Cadastro', 'Estoque', 'Checklist'],
+      datasets: [{
+        label: 'Maturidade (Exemplo)',
+        data: [80, 70, 90, 60, 85, 95, 75, 80, 60, 90],
+        backgroundColor: 'rgba(0, 194, 169, 0.2)',
+        borderColor: 'rgba(0, 194, 169, 1)',
+        borderWidth: 2,
+        pointBackgroundColor: 'rgba(0, 194, 169, 1)',
+        pointRadius: 4,
+        pointHoverRadius: 6
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      plugins: {
+        legend: { display: false },
+        tooltip: { enabled: false }
+      },
+      scales: {
+        r: {
+          angleLines: { display: false },
+          suggestedMin: 0,
+          suggestedMax: 100,
+          ticks: { display: false },
+          grid: { circular: true, color: 'rgba(0, 0, 0, 0.05)' },
+          pointLabels: {
+            font: { size: 10, weight: 'bold' },
+            color: 'var(--dark-blue)'
+          }
+        }
+      }
+    }
+  });
+}
+
 document.querySelectorAll('.btn-start-quiz').forEach(btn => {
   btn.addEventListener('click', () => {
     switchView(document.getElementById('view-quiz'));

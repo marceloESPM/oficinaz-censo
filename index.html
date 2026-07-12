@@ -70,40 +70,10 @@
               </div>
               
               <div class="mockup-body">
-                <!-- Coluna Esquerda: Comparativo -->
-                <div class="mockup-col">
+                <div class="mockup-col" style="flex: 1.5;">
                   <h5>Comparativo de Mercado</h5>
-                  <div class="mockup-comparative-bars">
-                    
-                    <div class="mockup-comp-item">
-                      <div class="comp-label">Eficiência (OS)</div>
-                      <div class="comp-track">
-                        <div class="comp-fill you" style="width: 85%;"></div>
-                        <div class="comp-marker market" style="left: 60%;"></div>
-                      </div>
-                    </div>
-                    
-                    <div class="mockup-comp-item">
-                      <div class="comp-label">Saúde Financeira</div>
-                      <div class="comp-track">
-                        <div class="comp-fill you" style="width: 45%;"></div>
-                        <div class="comp-marker market" style="left: 70%;"></div>
-                      </div>
-                    </div>
-                    
-                    <div class="mockup-comp-item">
-                      <div class="comp-label">Retenção de Clientes</div>
-                      <div class="comp-track">
-                        <div class="comp-fill you" style="width: 30%;"></div>
-                        <div class="comp-marker market" style="left: 55%;"></div>
-                      </div>
-                    </div>
-
-                    <div class="comp-legend">
-                      <span><span class="dot you-dot"></span> Sua Oficina</span>
-                      <span><span class="dot market-dot"></span> Concorrentes</span>
-                    </div>
-
+                  <div class="mockup-radar-bg" style="max-width: 300px; margin: 0 auto;">
+                    <canvas id="previewRadarCanvas"></canvas>
                   </div>
                 </div>
                 <!-- Coluna Direita: Barras -->
@@ -139,42 +109,42 @@
               <div class="metric-icon"><i data-lucide="users"></i></div> 
               <div class="metric-content">
                 <h4>Clientes e veículos</h4>
-                <p>Avaliamos como sua oficina armazena e consulta o histórico dos veículos para garantir um atendimento ágil e sem falhas.</p>
+                <p>Armazenamento e consulta rápida do histórico veicular.</p>
               </div>
             </div>
             <div class="metric-card">
               <div class="metric-icon"><i data-lucide="file-text"></i></div> 
               <div class="metric-content">
                 <h4>Ordens de serviço</h4>
-                <p>Analisamos o fluxo de abertura, execução e fechamento de OS para identificar perda de margem de lucro ou serviços não faturados.</p>
+                <p>Análise do fluxo de OS para evitar perda de serviços não faturados.</p>
               </div>
             </div>
             <div class="metric-card">
               <div class="metric-icon"><i data-lucide="line-chart"></i></div> 
               <div class="metric-content">
                 <h4>Financeiro e lucro</h4>
-                <p>Medimos o grau de previsibilidade do seu caixa e se você sabe exatamente qual foi o lucro líquido da oficina no mês.</p>
+                <p>Previsibilidade de caixa e apuração exata do lucro líquido.</p>
               </div>
             </div>
             <div class="metric-card">
               <div class="metric-icon"><i data-lucide="package"></i></div> 
               <div class="metric-content">
                 <h4>Peças e compras</h4>
-                <p>Verificamos como você controla o estoque e a compra de peças para evitar desperdícios e carros parados no elevador.</p>
+                <p>Controle de estoque para evitar desperdícios e carros parados.</p>
               </div>
             </div>
             <div class="metric-card">
               <div class="metric-icon"><i data-lucide="heart-handshake"></i></div> 
               <div class="metric-content">
                 <h4>Fidelização de clientes</h4>
-                <p>Mapeamos os processos de pós-venda e lembretes de revisão para garantir que o cliente retorne à sua oficina.</p>
+                <p>Processos de pós-venda que garantem o retorno do cliente.</p>
               </div>
             </div>
             <div class="metric-card">
               <div class="metric-icon"><i data-lucide="receipt"></i></div> 
               <div class="metric-content">
                 <h4>Emissão de nota fiscal</h4>
-                <p>Avaliamos a organização tributária e a separação correta entre peças e serviços para evitar o pagamento de impostos indevidos.</p>
+                <p>Organização tributária e separação correta de peças e serviços.</p>
               </div>
             </div>
           </div>
@@ -212,21 +182,21 @@
           <div class="personas-grid">
             <div class="persona-card-light">
               <div class="persona-icon-wrapper" style="background: rgba(255, 59, 48, 0.05); border: 2px solid rgba(255, 59, 48, 0.3); color: var(--critical); box-shadow: 0 0 30px rgba(255,59,48,0.15);">
-                <i data-lucide="flame"></i>
+                <i data-lucide="extinguisher" width="80" height="80"></i>
               </div>
               <h4>Apagador de Incêndios</h4>
               <p>O talento técnico sobra, mas o controle financeiro falta. Vive resolvendo urgências e não vê o lucro no fim do mês.</p>
             </div>
             <div class="persona-card-light">
               <div class="persona-icon-wrapper" style="background: rgba(255, 204, 0, 0.05); border: 2px solid rgba(255, 204, 0, 0.3); color: var(--attention); box-shadow: 0 0 30px rgba(255,204,0,0.15);">
-                <i data-lucide="table-properties"></i>
+                <i data-lucide="network" width="80" height="80"></i>
               </div>
               <h4>O Polvo das Planilhas</h4>
               <p>Tem controles, mas manuais e desconectados. Gasta tempo cruzando dados em vez de pensar na estratégia.</p>
             </div>
             <div class="persona-card-light">
               <div class="persona-icon-wrapper" style="background: rgba(0, 194, 169, 0.05); border: 2px solid rgba(0, 194, 169, 0.3); color: var(--teal); box-shadow: 0 0 30px rgba(0,194,169,0.15);">
-                <i data-lucide="rocket"></i>
+                <i data-lucide="gauge" width="80" height="80"></i>
               </div>
               <h4>Piloto de Alta Performance</h4>
               <p>Processos integrados, indicadores claros e previsibilidade. A oficina roda redonda mesmo quando ele não está presente.</p>
