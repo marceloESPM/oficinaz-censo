@@ -399,6 +399,15 @@ function generateResults(bairro) {
   document.getElementById('final-score').innerText = totalScore;
   document.getElementById('persona-desc').innerText = matchedPersona.desc;
 
+  // Set Share Links
+  const shareText = encodeURIComponent(`Fiz o diagnóstico Oficinaz e meu perfil de gestão é: ${matchedPersona.title}! 🚀 Descubra o nível de maturidade da sua oficina em: https://pesquisa-oficinaz.netlify.app`);
+  
+  const btnWhatsapp = document.getElementById('btn-share-whatsapp');
+  if (btnWhatsapp) btnWhatsapp.href = `https://api.whatsapp.com/send/?text=${shareText}`;
+  
+  const btnEmail = document.getElementById('btn-share-email');
+  if (btnEmail) btnEmail.href = `mailto:?subject=Meu diagnóstico de gestão automotiva&body=${shareText}`;
+
   // Action Plan
   const actionList = document.getElementById('action-plan-list');
   actionList.innerHTML = '';
