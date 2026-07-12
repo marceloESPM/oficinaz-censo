@@ -1099,7 +1099,7 @@ input:disabled { opacity: 0.8; cursor: not-allowed; background: #e2e8f0; border-
   min-height: 650px;
   display: flex;
   align-items: center;
-  background: url('assets/bg-alta-performance.png') no-repeat center center;
+  background: url('assets/bg-alta-performance.png?v=2') no-repeat center center;
   background-size: cover;
   color: #ffffff;
   text-align: center;
