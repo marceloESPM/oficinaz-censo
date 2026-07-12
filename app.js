@@ -106,7 +106,7 @@ const personas = [
   {
     max: 24,
     title: 'O Polvo das Planilhas',
-    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--attention)"><path d="M12 2C8.13 2 5 5.13 5 9v3.55c-1.61.48-2.84 1.83-2.99 3.55H2v1h20v-1h-.01c-.15-1.72-1.38-3.07-2.99-3.55V9c0-3.87-3.13-7-7-7z"/><path d="M7 17.1V20c0 1.1.9 2 2 2h.5"/><path d="M17 17.1V20c0 1.1-.9 2-2 2h-.5"/><path d="M10.5 17.1V19c0 1.1-.9 2-2 2"/><path d="M13.5 17.1V19c0 1.1.9 2 2 2"/><circle cx="9" cy="10" r="1.5" fill="currentColor"/><circle cx="15" cy="10" r="1.5" fill="currentColor"/></svg>',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="80" height="80" fill="currentColor" style="color:var(--attention)"><path d="M12 2a6 6 0 0 0-6 6v3a2 2 0 0 0-1 1.73V18a1 1 0 0 0 2 0v-4h1v5a1 1 0 0 0 2 0v-5h1v6a1 1 0 0 0 2 0v-6h1v6a1 1 0 0 0 2 0v-6h1v5a1 1 0 0 0 2 0v-5h1v4a1 1 0 0 0 2 0v-5.27A2 2 0 0 0 19 11V8a6 6 0 0 0-6-6Zm-2 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2Zm4 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg>',
     desc: 'Você controla tudo, mas à custa do seu próprio tempo. Planilhas soltas e retrabalho são freios invisíveis que impedem sua oficina de escalar. Você precisa centralizar a gestão para voltar a pensar no negócio.',
     actions: [
       { title: 'Fim do Retrabalho', desc: 'A mesma OS que você usa para orçar já alimenta o caixa e calcula a comissão do mecânico automaticamente. Tudo em um só lugar.' },

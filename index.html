@@ -65,37 +65,38 @@
               <!-- Mockup Header -->
               <div class="mockup-header">
                 <div class="mockup-score">Sua pontuação: <span>22/30</span></div>
-                <div class="mockup-profile">Perfil Identificado: <strong>O Polvo das Planilhas</strong></div>
+          <div class="preview-dashboard-wrapper">
+          <div class="mockup-top-bar">
+            <div class="mac-dots">
+              <span class="red"></span><span class="yellow"></span><span class="green"></span>
+            </div>
+            <div class="mockup-title"><i data-lucide="bar-chart-2" class="icon-sm"></i> Oficinaz Intelligence - Relatório da Oficina</div>
+          </div>
+          <div class="mockup-body mockup-grid">
+            <div class="mockup-col">
+              <div class="mockup-radar-bg">
+                <canvas id="previewRadarCanvas"></canvas>
               </div>
-              
-              <div class="mockup-body">
-                <div class="mockup-col" style="flex: 1.5;">
-                  <h5>Comparativo de Mercado</h5>
-                  <div class="mockup-radar-bg" style="max-width: 300px; margin: 0 auto;">
-                    <canvas id="previewRadarCanvas"></canvas>
-                  </div>
+            </div>
+            <div class="mockup-col">
+              <h5>Raio-X da Gestão</h5>
+              <div class="mockup-comparative-bars">
+                <div class="mockup-comp-item">
+                  <div class="mockup-comp-header"><span>Ordens de Serviço</span><span style="color:var(--teal)">Forte</span></div>
+                  <div class="mockup-bar-track"><div class="mockup-bar-fill" style="width: 85%; background: var(--teal);"></div></div>
                 </div>
-                <!-- Coluna Direita: Barras -->
-                <div class="mockup-col">
-                  <h5>Raio-X da Gestão</h5>
-                  <div class="mockup-bars">
-                    <div class="mockup-bar-item">
-                      <div class="mockup-bar-labels"><span>Ordens de Serviço</span> <span style="color: var(--ok)">Forte</span></div>
-                      <div class="mockup-bar-track"><div class="mockup-bar-fill" style="width: 90%; background: var(--ok)"></div></div>
-                    </div>
-                    <div class="mockup-bar-item">
-                      <div class="mockup-bar-labels"><span>Fidelização</span> <span style="color: var(--critical)">Crítico</span></div>
-                      <div class="mockup-bar-track"><div class="mockup-bar-fill" style="width: 30%; background: var(--critical)"></div></div>
-                    </div>
-                    <div class="mockup-bar-item">
-                      <div class="mockup-bar-labels"><span>Financeiro</span> <span style="color: var(--attention)">Alerta</span></div>
-                      <div class="mockup-bar-track"><div class="mockup-bar-fill" style="width: 60%; background: var(--attention)"></div></div>
-                    </div>
-                  </div>
+                <div class="mockup-comp-item">
+                  <div class="mockup-comp-header"><span>Fidelização</span><span style="color:var(--critical)">Crítico</span></div>
+                  <div class="mockup-bar-track"><div class="mockup-bar-fill" style="width: 30%; background: var(--critical);"></div></div>
+                </div>
+                <div class="mockup-comp-item">
+                  <div class="mockup-comp-header"><span>Financeiro</span><span style="color:var(--attention)">Alerta</span></div>
+                  <div class="mockup-bar-track"><div class="mockup-bar-fill" style="width: 55%; background: var(--attention);"></div></div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
         </div>
       </section>
 
@@ -190,7 +191,9 @@
             </div>
             <div class="persona-card-light">
               <div class="persona-icon-wrapper" style="background: rgba(255, 204, 0, 0.05); border: 2px solid rgba(255, 204, 0, 0.3); color: var(--attention); box-shadow: 0 0 30px rgba(255,204,0,0.15);">
-                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.13 2 5 5.13 5 9v3.55c-1.61.48-2.84 1.83-2.99 3.55H2v1h20v-1h-.01c-.15-1.72-1.38-3.07-2.99-3.55V9c0-3.87-3.13-7-7-7z"/><path d="M7 17.1V20c0 1.1.9 2 2 2h.5"/><path d="M17 17.1V20c0 1.1-.9 2-2 2h-.5"/><path d="M10.5 17.1V19c0 1.1-.9 2-2 2"/><path d="M13.5 17.1V19c0 1.1.9 2 2 2"/><circle cx="9" cy="10" r="1.5" fill="currentColor"/><circle cx="15" cy="10" r="1.5" fill="currentColor"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60" fill="currentColor">
+                  <path d="M12 2a6 6 0 0 0-6 6v3a2 2 0 0 0-1 1.73V18a1 1 0 0 0 2 0v-4h1v5a1 1 0 0 0 2 0v-5h1v6a1 1 0 0 0 2 0v-6h1v6a1 1 0 0 0 2 0v-6h1v5a1 1 0 0 0 2 0v-5h1v4a1 1 0 0 0 2 0v-5.27A2 2 0 0 0 19 11V8a6 6 0 0 0-6-6Zm-2 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2Zm4 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/>
+                </svg>
               </div>
               <div class="persona-content">
                 <h4>O Polvo das Planilhas</h4>
