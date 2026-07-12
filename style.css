@@ -71,7 +71,7 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
   align-items: center;
 }
 .logo {
-  height: 120px; /* Mantido grande, mas overflowando sutilmente o header */
+  height: 156px; /* Aumentado 30% em relação ao último tamanho (120px) */
   width: auto;
   display: block;
 }
@@ -271,7 +271,7 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
 /* PREVIEW DO DIAGNÓSTICO (DASHBOARD FAKE) */
 /* ========================================================================= */
 .preview-dashboard-section {
-  padding: 80px 0 120px 0;
+  padding: 60px 0; /* Espaçamento muito reduzido */
 }
 .preview-header {
   text-align: center;
@@ -387,12 +387,12 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
 /* O QUE SERÁ AVALIADO (6 CARDS) */
 /* ========================================================================= */
 .metrics-section {
-  padding: 120px 0;
+  padding: 80px 0; /* Espaço reduzido */
   background: #ffffff;
   border-top: 1px solid rgba(0,0,0,0.04);
   border-bottom: 1px solid rgba(0,0,0,0.04);
 }
-.metrics-section h2 { text-align: center; margin-bottom: 80px; }
+.metrics-section h2 { text-align: center; margin-bottom: 56px; }
 .metrics-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -439,7 +439,7 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
 /* APOIO VISUAL */
 /* ========================================================================= */
 .visual-support-section {
-  padding: 120px 0;
+  padding: 80px 0; /* Espaço reduzido */
 }
 .support-grid {
   display: grid;
@@ -481,11 +481,11 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
 /* PERSONAS (TEASER) */
 /* ========================================================================= */
 .personas-section {
-  padding: 120px 0;
+  padding: 80px 0; /* Espaço reduzido */
   background: var(--dark-blue);
   color: #ffffff;
 }
-.personas-section h2 { color: #ffffff; margin-bottom: 80px; text-align: center; }
+.personas-section h2 { color: #ffffff; margin-bottom: 56px; text-align: center; }
 .personas-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -508,16 +508,16 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
   background: rgba(255,255,255,0.05);
 }
 .persona-icon-wrapper {
-  width: 100px; /* Aumentado */
-  height: 100px; /* Aumentado */
-  border-radius: 30px;
+  width: 140px; /* Aumentado */
+  height: 140px; /* Aumentado */
+  border-radius: 40px; /* Arredondado proporcional */
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 40px;
   transition: all 0.3s ease;
 }
-.persona-icon-wrapper i { width: 50px; height: 50px; stroke-width: 1.5; } /* Aumentado */
+.persona-icon-wrapper i { width: 80px; height: 80px; stroke-width: 1.5; } /* Aumentado */
 .persona-card-light h4 {
   font-size: 1.5rem;
   margin-bottom: 16px;
@@ -736,7 +736,7 @@ input:disabled { opacity: 0.8; cursor: not-allowed; background: #e2e8f0; border-
 /* PRODUTO & FOOTER */
 /* ========================================================================= */
 .product-section {
-  padding: 120px 0;
+  padding: 80px 0; /* Reduzido de 120 para 80 */
   background: #ffffff;
   border-top: 1px solid rgba(0,0,0,0.04);
   border-bottom: 1px solid rgba(0,0,0,0.04);
