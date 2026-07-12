@@ -301,11 +301,14 @@ function initPreviewBarChart() {
   });
 }
 
+window.startQuiz = function(e) {
+  if (e) e.preventDefault();
+  switchView(document.getElementById('view-quiz'));
+  loadQuestion();
+};
+
 document.querySelectorAll('.btn-start-quiz').forEach(btn => {
-  btn.addEventListener('click', () => {
-    switchView(document.getElementById('view-quiz'));
-    loadQuestion();
-  });
+  btn.addEventListener('click', window.startQuiz);
 });
 
 const qTitle = document.getElementById('q-title');
