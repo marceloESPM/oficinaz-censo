@@ -96,7 +96,7 @@ const personas = [
     max: 16,
     title: 'O Mecânico Apagador de Incêndios',
     icon: '<i data-lucide="flame" style="width:80px; height:80px; color:var(--critical)"></i>',
-    desc: 'Profissional de excelência técnica, mas com oportunidades na gestão financeira. O foco no operacional resulta na perda de lucratividade devido à ausência de controles e processos estruturados.',
+    desc: 'Você domina a parte técnica, mas perde dinheiro nas lacunas de controle. Sem processos bem amarrados, o esforço da sua equipe vaza pelo ralo financeiro. É hora de tapar esses buracos e blindar seu lucro.',
     actions: [
       { title: 'Agilidade no Balcão', desc: 'Esqueça os longos cadastros de papel. Digitando apenas a placa, o sistema preenche os dados do carro para você.' },
       { title: 'Margem Garantida', desc: 'Ao lançar uma peça na OS, o sistema já calcula o preço final, garantindo que você nunca mais repasse peças sem a margem de lucro correta.' },
@@ -107,7 +107,7 @@ const personas = [
     max: 24,
     title: 'O Polvo das Planilhas',
     icon: '<i data-lucide="table-properties" style="width:80px; height:80px; color:var(--attention)"></i>',
-    desc: 'Gestor organizado, porém dependente de processos manuais. O cruzamento de dados em múltiplas planilhas consome tempo estratégico, limitando o potencial de expansão da oficina.',
+    desc: 'Você controla tudo, mas à custa do seu próprio tempo. Planilhas soltas e retrabalho são freios invisíveis que impedem sua oficina de escalar. Você precisa centralizar a gestão para voltar a pensar no negócio.',
     actions: [
       { title: 'Fim do Retrabalho', desc: 'A mesma OS que você usa para orçar já alimenta o caixa e calcula a comissão do mecânico automaticamente. Tudo em um só lugar.' },
       { title: 'Emissão Inteligente', desc: 'Pare de redigitar dados em sites do governo. O sistema já separa a mão de obra (NFS-e) das peças (NF-e) e emite tudo a partir da OS.' },
@@ -118,7 +118,7 @@ const personas = [
     max: 30,
     title: 'O Piloto de Alta Performance',
     icon: '<i data-lucide="rocket" style="width:80px; height:80px; color:var(--teal)"></i>',
-    desc: 'Gestão baseada em dados e processos automatizados. A integração das operações proporciona previsibilidade financeira e permite o crescimento escalável e sustentável do negócio.',
+    desc: 'Sua oficina já opera como uma verdadeira empresa. Com processos consolidados, o desafio agora é tracionar vendas previsíveis e fazer a tecnologia trabalhar para o seu crescimento contínuo.',
     actions: [
       { title: 'Retorno Preditivo', desc: 'Use nosso painel de histórico para identificar exatamente quais veículos estão próximos de atingir a quilometragem de revisão e chame-os antes de irem para a concorrência.' },
       { title: 'Kits Estratégicos', desc: 'Ganhe velocidade no pátio cadastrando seus próprios "Kits de Serviço". Monte orçamentos em segundos, padronizando o tempo técnico e as margens da sua equipe.' },
@@ -213,7 +213,7 @@ function initPreviewRadarChart() {
     },
     options: {
       responsive: true,
-      maintainAspectRatio: true,
+      maintainAspectRatio: false,
       plugins: {
         legend: { display: false },
         tooltip: { enabled: false }

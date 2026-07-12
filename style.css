@@ -270,23 +270,45 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
 }
 
 /* ========================================================================= */
-/* PREVIEW DO DIAGNÓSTICO (DASHBOARD FAKE) */
+/* PREVIEW DASHBOARD (O "PRODUTO") */
 /* ========================================================================= */
 .preview-dashboard-section {
-  padding: 60px 0; /* Espaçamento muito reduzido */
+  padding: 100px 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
 }
 .preview-header {
   text-align: center;
-  margin-bottom: 48px;
+  max-width: 700px;
+  margin: 0 auto 56px auto;
+}
+.preview-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--dark-blue);
+  margin-bottom: 16px;
+  letter-spacing: -1px;
+}
+.preview-header p {
+  font-size: 1.125rem;
+  color: var(--text-gray);
 }
 .preview-dashboard-wrapper {
-  background: var(--surface);
+  background: #ffffff;
   border-radius: var(--radius-xl);
+  box-shadow: 0 25px 50px -12px rgba(0, 29, 61, 0.15), 0 0 0 1px rgba(0,0,0,0.03); /* Sombra super premium */
   padding: 48px;
-  box-shadow: 0 24px 64px rgba(0,0,0,0.06);
-  border: 1px solid rgba(0,0,0,0.04);
+  max-width: 1000px;
+  margin: 0 auto;
   position: relative;
   overflow: hidden;
+}
+/* Efeito de brilho no topo do card */
+.preview-dashboard-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--teal) 0%, #009986 100%);
 }
 /* Efeito de desfoque sutil na borda inferior para convidar ao clique */
 .preview-dashboard-wrapper::after {
@@ -340,12 +362,19 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
 }
 .mockup-radar-bg {
   width: 100%;
-  max-width: 480px; /* Ainda mais destacado */
+  max-width: 480px; 
+  height: 380px; /* Altura fixa para o gráfico inflar */
   margin: 0 auto;
-  background: rgba(248, 250, 252, 0.6); /* Fundo sutil para destacar do painel principal */
+  background: #ffffff;
   border-radius: var(--radius-xl);
-  padding: 32px;
-  border: 1px solid rgba(0,0,0,0.02);
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.03);
+  position: relative;
+}
+.mockup-radar-bg canvas {
+  width: 100% !important;
+  height: 100% !important;
 }
 .mockup-comparative-bars { display: flex; flex-direction: column; gap: 20px; padding-top: 10px;}
 .mockup-comp-item { display: flex; flex-direction: column; gap: 8px;}
