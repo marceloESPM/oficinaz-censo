@@ -884,11 +884,8 @@ input:disabled { opacity: 0.8; cursor: not-allowed; background: #e2e8f0; border-
 .product-section::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(180deg, #0f172a 0%, rgba(15, 23, 42, 0.4) 30%, rgba(15, 23, 42, 0.7) 100%);
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(180deg, #0f172a 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.4) 100%);
   pointer-events: none;
 }
 .product-container {
