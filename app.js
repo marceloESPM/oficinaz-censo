@@ -201,22 +201,32 @@ function initPreviewRadarChart() {
     type: 'radar',
     data: {
       labels: ['OS', 'Orçamento', 'Kits', 'Peças/Margem', 'Fechamento', 'Comissão', 'Retorno', 'Cadastro', 'Estoque', 'Checklist'],
-      datasets: [{
-        label: 'Maturidade (Exemplo)',
-        data: [80, 70, 90, 60, 85, 95, 75, 80, 60, 90],
-        backgroundColor: 'rgba(0, 194, 169, 0.2)',
-        borderColor: 'rgba(0, 194, 169, 1)',
-        borderWidth: 2,
-        pointBackgroundColor: 'rgba(0, 194, 169, 1)',
-        pointRadius: 4,
-        pointHoverRadius: 6
-      }]
+        {
+          label: 'Sua Oficina',
+          data: [80, 70, 90, 60, 85, 95, 75, 80, 60, 90],
+          backgroundColor: 'rgba(0, 194, 169, 0.2)',
+          borderColor: 'rgba(0, 194, 169, 1)',
+          borderWidth: 2,
+          pointBackgroundColor: 'rgba(0, 194, 169, 1)',
+          pointRadius: 4,
+          pointHoverRadius: 6
+        },
+        {
+          label: `Seus Concorrentes`,
+          data: [67, 67, 33, 67, 33, 33, 33, 67, 33, 33],
+          backgroundColor: 'rgba(226, 232, 240, 0.3)',
+          borderColor: '#cbd5e1',
+          pointBackgroundColor: '#cbd5e1',
+          borderWidth: 2,
+          pointRadius: 0
+        }
+      ]
     },
     options: {
       responsive: true,
       maintainAspectRatio: false,
       plugins: {
-        legend: { display: false },
+        legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 8, font: { family: "'Inter', sans-serif" } } },
         tooltip: { enabled: false }
       },
       scales: {
@@ -436,7 +446,9 @@ function generateResults(bairro) {
           pointLabels: { font: { family: 'Inter', size: 10, weight: 'bold' }, color: 'var(--dark-blue)' }
         }
       },
-      plugins: { legend: { display: false } }
+      plugins: {
+        legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 8, font: { family: "'Inter', sans-serif" } } }
+      }
     }
   });
 
