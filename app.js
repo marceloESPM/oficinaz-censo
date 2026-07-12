@@ -485,16 +485,48 @@ if (mobileMenuBtn && headerLinks) {
 document.getElementById('lead-form').addEventListener('submit', async (e) => {
   e.preventDefault();
   
-  // Here we would normally save to Supabase. 
-  // Simulated success for now.
-  
   const bairroFull = document.getElementById('lead-bairro').value || 'Sua Região';
-  const bairro = bairroFull.split(',')[0]; // Just the neighborhood
+  const bairro = bairroFull.split(',')[0];
   
+  let matchedPersona = personas[2];
+  if (totalScore <= 16) matchedPersona = personas[0];
+  else if (totalScore <= 24) matchedPersona = personas[1];
+
+  const payload = {
+    nome_oficina: document.getElementById('lead-name').value,
+    telefone: document.getElementById('lead-whatsapp').value,
+    email: document.getElementById('lead-email').value,
+    cep: document.getElementById('lead-cep').value,
+    bairro: bairroFull,
+    qtd_carros: document.getElementById('lead-porte').value,
+    pontuacao_total: totalScore,
+    persona: matchedPersona.title,
+    respostas_detalhadas: userAnswers
+  };
+
+  const API_URL = "https://rfbysurcxyakjxkdqhlo.supabase.co/rest/v1/leads_censo";
+  const API_KEY = "sb_publishable_e_ZzyK6CRpkZ3wz2e8ppRg_ksloSQ53";
+
   switchView(viewLoading);
-  
-  // Loading animation sequence
   const loadingText = document.getElementById('loading-text');
+  
+  try {
+    loadingText.innerText = "Salvando suas respostas...";
+    await fetch(API_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': API_KEY,
+        'Authorization': `Bearer ${API_KEY}`,
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify(payload)
+    });
+  } catch (err) {
+    console.error("Erro ao salvar no Supabase", err);
+  }
+
+  // Loading animation sequence
   setTimeout(() => loadingText.innerText = `Cruzando informações com as oficinas de ${bairro}...`, 300);
   setTimeout(() => loadingText.innerText = `Relatório regional liberado!`, 700);
   
