@@ -199,7 +199,7 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
 }
 .hero-section {
   position: relative;
-  background: url('assets/hero-mecanica-mulher.png') no-repeat center center;
+  background: url('assets/hero-mecanica-mulher.png') no-repeat center 20%;
   background-size: cover;
   padding: 200px 0 120px 0; /* Espaço interno para não encostar no header */
   min-height: 80vh;
@@ -340,8 +340,12 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
 }
 .mockup-radar-bg {
   width: 100%;
-  max-width: 400px; /* Aumentado consideravelmente */
+  max-width: 480px; /* Ainda mais destacado */
   margin: 0 auto;
+  background: rgba(248, 250, 252, 0.6); /* Fundo sutil para destacar do painel principal */
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  border: 1px solid rgba(0,0,0,0.02);
 }
 .mockup-comparative-bars { display: flex; flex-direction: column; gap: 20px; padding-top: 10px;}
 .mockup-comp-item { display: flex; flex-direction: column; gap: 8px;}
@@ -411,6 +415,7 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 16px; /* Aumenta o espaçamento entre o ícone e o título */
 }
 .metric-card:hover {
   background: #f8fafc;
