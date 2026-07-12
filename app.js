@@ -106,7 +106,7 @@ const personas = [
   {
     max: 24,
     title: 'O Polvo das Planilhas',
-    icon: '<i data-lucide="table-properties" style="width:80px; height:80px; color:var(--attention)"></i>',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--attention)"><path d="M12 2C8.13 2 5 5.13 5 9v3.55c-1.61.48-2.84 1.83-2.99 3.55H2v1h20v-1h-.01c-.15-1.72-1.38-3.07-2.99-3.55V9c0-3.87-3.13-7-7-7z"/><path d="M7 17.1V20c0 1.1.9 2 2 2h.5"/><path d="M17 17.1V20c0 1.1-.9 2-2 2h-.5"/><path d="M10.5 17.1V19c0 1.1-.9 2-2 2"/><path d="M13.5 17.1V19c0 1.1.9 2 2 2"/><circle cx="9" cy="10" r="1.5" fill="currentColor"/><circle cx="15" cy="10" r="1.5" fill="currentColor"/></svg>',
     desc: 'Você controla tudo, mas à custa do seu próprio tempo. Planilhas soltas e retrabalho são freios invisíveis que impedem sua oficina de escalar. Você precisa centralizar a gestão para voltar a pensar no negócio.',
     actions: [
       { title: 'Fim do Retrabalho', desc: 'A mesma OS que você usa para orçar já alimenta o caixa e calcula a comissão do mecânico automaticamente. Tudo em um só lugar.' },
