@@ -874,7 +874,7 @@ input:disabled { opacity: 0.8; cursor: not-allowed; background: #e2e8f0; border-
 /* ========================================================================= */
 .product-section {
   padding: 120px 0; 
-  background: url('assets/hero-mecanica-mulher.png') no-repeat center center;
+  background: url('assets/bg-alta-performance.png') no-repeat center center;
   background-size: cover;
   color: #ffffff;
   text-align: center;
@@ -888,7 +888,7 @@ input:disabled { opacity: 0.8; cursor: not-allowed; background: #e2e8f0; border-
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(180deg, #0f172a 0%, rgba(15, 23, 42, 0.85) 40%, rgba(15, 23, 42, 0.95) 100%);
+  background: linear-gradient(180deg, #0f172a 0%, rgba(15, 23, 42, 0.4) 30%, rgba(15, 23, 42, 0.7) 100%);
   pointer-events: none;
 }
 .product-container {
