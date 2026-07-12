@@ -560,7 +560,7 @@ function generateResults(bairro, nome = '', telefone = '') {
   
   let msg = `Aqui está o resultado do Diagnóstico de Gestão Oficinaz! Seu perfil é: ${matchedPersona.title}. Acesse o relatório completo aqui: ${recoverUrl}`;
   if (nome) {
-    msg = `Veja o resultado do Diagnóstico Oficinaz da oficina do(a) ${nome} (${bairro})! Perfil: ${matchedPersona.title}. Confira o relatório completo: ${recoverUrl}`;
+    msg = `Veja o resultado do Diagnóstico da oficina do(a) ${nome} (${bairro})! Perfil: ${matchedPersona.title}. Confira o relatório completo: ${recoverUrl}`;
   }
   const shareText = encodeURIComponent(msg);
   
