@@ -872,36 +872,46 @@ input:disabled { opacity: 0.8; cursor: not-allowed; background: #e2e8f0; border-
 /* ========================================================================= */
 /* PRODUTO & FOOTER */
 .product-section {
-  padding: 120px 0; 
+  padding: 0;
+  min-height: 650px;
+  display: flex;
+  align-items: flex-end;
   background: url('assets/bg-alta-performance.png') no-repeat center center;
   background-size: cover;
   color: #ffffff;
   text-align: center;
   position: relative;
 }
+.product-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  /* Top is transparent for a hard cut. Bottom fades to #0f172a to blend with footer */
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0) 0%, rgba(15, 23, 42, 0) 30%, rgba(15, 23, 42, 0.8) 70%, rgba(15, 23, 42, 1) 100%);
+  pointer-events: none;
+}
 .product-container {
+  width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  padding: 64px 40px;
-  background: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-radius: var(--radius-xl);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.4);
+  padding: 40px 24px 80px 24px;
   position: relative;
   z-index: 2;
+  background: transparent;
 }
 @media (max-width: 768px) {
-  .product-container { padding: 48px 24px; margin: 0 16px; }
+  .product-section { min-height: 500px; }
+  .product-container { padding: 40px 16px 60px 16px; }
 }
 .product-container h2 {
   color: #ffffff;
   margin-bottom: 24px;
+  text-shadow: 0 4px 16px rgba(0,0,0,0.8);
 }
 .product-container p {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
   margin-bottom: 40px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.8);
 }
 .product-section h2 { font-size: 2.8rem; margin-bottom: 24px; color: #ffffff; letter-spacing: -1px; }
 .product-section p { font-size: 1.25rem; color: rgba(255, 255, 255, 0.8); margin-bottom: 48px; }
