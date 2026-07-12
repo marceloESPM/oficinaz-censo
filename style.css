@@ -263,10 +263,16 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
   .hero-content {
     margin: 0 auto;
     text-align: center;
-    padding-top: 200px;
+    padding-top: 140px; /* Reduzido o espaço em cima no mobile */
   }
   .trust-chips { justify-content: center; }
   h1 { font-size: 2.8rem; }
+}
+@media (max-width: 600px) {
+  h1 { font-size: 2.2rem; }
+  .hero-content p { font-size: 1.1rem; }
+  .trust-chips { gap: 8px; }
+  .chip { padding: 8px 16px; font-size: 0.85rem; }
 }
 
 /* ========================================================================= */
@@ -440,7 +446,10 @@ p { font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-b
 @media (max-width: 768px) {
   .mockup-body { flex-direction: column; }
   .mockup-header { flex-direction: column; gap: 16px; text-align: center; }
-  .preview-dashboard-wrapper { padding: 32px 24px; }
+  .preview-dashboard-wrapper { padding: 32px 16px; }
+  .report-doc-title { padding: 24px 24px 12px 24px; }
+  .report-doc-title h3 { font-size: 1.5rem; }
+  .report-doc-grid { padding: 0 24px 24px 24px; grid-template-columns: 1fr; gap: 24px; }
 }
 
 
