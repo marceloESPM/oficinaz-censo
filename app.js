@@ -246,7 +246,7 @@ function initPreviewRadarChart() {
       responsive: true,
       maintainAspectRatio: false,
       plugins: {
-        legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 6, font: { family: "'Inter', sans-serif" } } },
+        legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 4, padding: 24, font: { family: "'Inter', sans-serif" } } },
         tooltip: { enabled: false }
       },
       scales: {
@@ -291,7 +291,7 @@ function initPreviewBarChart() {
       responsive: true,
       maintainAspectRatio: false,
       plugins: {
-        legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 8, font: { family: "'Inter', sans-serif" } } }
+        legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 4, padding: 24, font: { family: "'Inter', sans-serif" } } }
       },
       scales: {
         y: { display: false, beginAtZero: true },
@@ -539,7 +539,7 @@ function generateResults(bairro) {
         }
       },
       plugins: {
-        legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 6, font: { family: "'Inter', sans-serif" } } }
+        legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 4, padding: 24, font: { family: "'Inter', sans-serif" } } }
       }
     }
   });
@@ -585,7 +585,7 @@ function generateResults(bairro) {
       responsive: true,
       maintainAspectRatio: false,
       plugins: {
-        legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 8, font: { family: "'Inter', sans-serif" } } }
+        legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 4, padding: 24, font: { family: "'Inter', sans-serif" } } }
       },
       scales: {
         y: { display: false, beginAtZero: true, max: 105 },
