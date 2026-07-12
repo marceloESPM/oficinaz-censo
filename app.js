@@ -186,7 +186,7 @@ if (previewCtx) {
 
 // INICIALIZAÇÃO
 document.addEventListener('DOMContentLoaded', () => {
-  switchView('landing');
+  switchView(document.getElementById('view-landing'));
   lucide.createIcons();
   initPreviewRadarChart();
 });
@@ -440,14 +440,17 @@ function generateResults(bairro) {
 }
 
 // Share
-document.getElementById('btn-share').addEventListener('click', async () => {
-  try {
-    await navigator.share({
-      title: 'Diagnóstico Oficinaz 2026',
-      text: 'Acabei de fazer o Raio-X de Gestão da minha oficina. Descubra o seu perfil!',
-      url: window.location.href
-    });
-  } catch(e) {
-    alert('Copie o link no seu navegador para compartilhar!');
-  }
-});
+const btnShare = document.getElementById('btn-share');
+if (btnShare) {
+  btnShare.addEventListener('click', async () => {
+    try {
+      await navigator.share({
+        title: 'Diagnóstico Oficinaz 2026',
+        text: 'Acabei de fazer o Raio-X de Gestão da minha oficina. Descubra o seu perfil!',
+        url: window.location.href
+      });
+    } catch(e) {
+      alert('Copie o link no seu navegador para compartilhar!');
+    }
+  });
+}
