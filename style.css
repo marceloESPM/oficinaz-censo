@@ -885,8 +885,15 @@ input:disabled { opacity: 0.8; cursor: not-allowed; background: #e2e8f0; border-
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(180deg, #0f172a 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.4) 100%);
+  background: linear-gradient(180deg, rgba(30, 41, 59, 1) 0%, rgba(15, 23, 42, 0.7) 20%, rgba(15, 23, 42, 0.75) 80%, rgba(15, 23, 42, 0.95) 100%);
   pointer-events: none;
+}
+.product-container h2 {
+  color: #ffffff;
+  text-shadow: 0 4px 16px rgba(0,0,0,0.8);
+}
+.product-container p {
+  text-shadow: 0 2px 10px rgba(0,0,0,0.8);
 }
 .product-container {
   max-width: 800px;
