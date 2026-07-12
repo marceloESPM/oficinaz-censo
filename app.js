@@ -352,13 +352,13 @@ document.getElementById('lead-form').addEventListener('submit', async (e) => {
   
   // Loading animation sequence
   const loadingText = document.getElementById('loading-text');
-  setTimeout(() => loadingText.innerText = `Cruzando informações com as oficinas de ${bairro}...`, 1500);
-  setTimeout(() => loadingText.innerText = `Relatório regional liberado!`, 3000);
+  setTimeout(() => loadingText.innerText = `Cruzando informações com as oficinas de ${bairro}...`, 300);
+  setTimeout(() => loadingText.innerText = `Relatório regional liberado!`, 700);
   
   setTimeout(() => {
     generateResults(bairro);
     switchView(viewResults);
-  }, 3500);
+  }, 1000);
 });
 
 function generateResults(bairro) {
@@ -372,60 +372,48 @@ function generateResults(bairro) {
   document.getElementById('final-score').innerText = totalScore;
   document.getElementById('persona-desc').innerText = matchedPersona.desc;
 
-  // Raio X Bars
-  const raioxList = document.getElementById('raiox-list');
-  raioxList.innerHTML = '';
-  userAnswers.forEach((ans, idx) => {
-    let statusText = ans === 1 ? 'Crítico' : (ans === 2 ? 'Alerta' : 'Oficinaz');
-    let cssClass = ans === 1 ? 'fill-critical' : (ans === 2 ? 'fill-attention' : 'fill-ok');
-    
-    raioxList.innerHTML += `
-      <div class="raiox-item">
-        <div class="raiox-label"><span>${questions[idx].title}</span> <span>${statusText}</span></div>
-        <div class="raiox-bar-bg"><div class="raiox-bar-fill ${cssClass}"></div></div>
-      </div>
-    `;
-  });
-
-  // Atualizar contadores
+  // Action Plan
   const actionList = document.getElementById('action-plan-list');
   actionList.innerHTML = '';
   matchedPersona.actions.forEach(act => {
     actionList.innerHTML += `
-      <div class="action-item">
-        <h4>${act.title}</h4>
-        <p>${act.desc}</p>
+      <div class="action-item" style="margin-bottom:16px;">
+        <h4 style="color:var(--dark-blue); font-weight:700; margin-bottom:4px;">${act.title}</h4>
+        <p style="color:var(--text-gray); font-size:0.95rem;">${act.desc}</p>
       </div>
     `;
   });
 
-  // Chart
-  document.getElementById('chart-subtitle').innerText = `Comparativo com as oficinas em: ${bairro}`;
+  document.getElementById('chart-subtitle').innerHTML = `<i data-lucide="bar-chart-2"></i> Desempenho vs. ${bairro}`;
   
-  // Cold Start Logic Mock
-  const youData = userAnswers.map(ans => ans * 33.3); // Scale to 100
-  // Market Mock (mostly profile 2)
-  const marketData = youData.map(val => Math.min(100, Math.max(30, val + (Math.random() * 30 - 15)))); 
+  // Logic to make charts reflect user's answers realistically
+  // We map the 10 answers (val 1, 2, 3) to 0-100 scale
+  const radarScores = userAnswers.map(ans => Math.round((ans / 3) * 100)); 
+  const marketRadarMock = radarScores.map(val => Math.min(100, Math.max(40, val + (Math.floor(Math.random() * 30) - 15)))); 
 
-  const ctx = document.getElementById('benchmarkChart').getContext('2d');
-  new Chart(ctx, {
+  // Radar Chart (benchmarkChart)
+  const radarCtx = document.getElementById('benchmarkChart').getContext('2d');
+  
+  // Destroy previous instance if user clicked "Refazer"
+  if (window.resultRadarChart) window.resultRadarChart.destroy();
+  
+  window.resultRadarChart = new Chart(radarCtx, {
     type: 'radar',
     data: {
       labels: ['OS', 'Orçamento', 'Kits', 'Peças/Margem', 'Fechamento', 'Comissão', 'Retorno', 'Cadastro', 'Estoque', 'Checklist'],
       datasets: [
         {
           label: 'Sua Oficina',
-          data: youData,
-          backgroundColor: 'rgba(0, 194, 169, 0.15)',
-          borderColor: '#00C2A9',
-          pointBackgroundColor: '#00C2A9',
-          borderWidth: 3,
-          pointRadius: 4,
-          pointHoverRadius: 6
+          data: radarScores,
+          backgroundColor: 'rgba(0, 194, 169, 0.2)',
+          borderColor: 'rgba(0, 194, 169, 1)',
+          pointBackgroundColor: 'rgba(0, 194, 169, 1)',
+          borderWidth: 2,
+          pointRadius: 4
         },
         {
           label: `Média ${bairro}`,
-          data: marketData,
+          data: marketRadarMock,
           backgroundColor: 'rgba(226, 232, 240, 0.3)',
           borderColor: '#cbd5e1',
           pointBackgroundColor: '#cbd5e1',
@@ -441,35 +429,81 @@ function generateResults(bairro) {
         r: {
           min: 0, max: 100,
           ticks: { display: false },
-          grid: { color: 'rgba(0,0,0,0.04)', circular: true },
-          angleLines: { color: 'rgba(0,0,0,0.04)' },
-          pointLabels: { font: { family: 'Inter', size: 12, weight: '600' }, color: '#334155' }
+          grid: { circular: true, color: 'rgba(0,0,0,0.05)' },
+          angleLines: { display: false },
+          pointLabels: { font: { family: 'Inter', size: 10, weight: 'bold' }, color: 'var(--dark-blue)' }
         }
       },
+      plugins: { legend: { display: false } }
+    }
+  });
+
+  // Calculate Bar Chart based on categories of the 10 questions:
+  // Serviços (q0, q1, q9), Marketing (q6), Finanças (q3, q4, q5), Gestão (q2, q7, q8)
+  const calcAvg = (indices) => Math.round(indices.map(i => radarScores[i]).reduce((a,b)=>a+b, 0) / indices.length);
+  const userBarData = [
+    calcAvg([0, 1, 9]), // Serviços
+    calcAvg([6]), // Marketing
+    calcAvg([3, 4, 5]), // Finanças
+    calcAvg([2, 7, 8])  // Gestão
+  ];
+  const marketBarData = userBarData.map(val => Math.min(100, Math.max(40, val + (Math.floor(Math.random() * 20) - 5))));
+
+  const barCtx = document.getElementById('resultBarCanvas').getContext('2d');
+  
+  if (window.resultBarChart) window.resultBarChart.destroy();
+  
+  window.resultBarChart = new Chart(barCtx, {
+    type: 'bar',
+    data: {
+      labels: ['Serviços', 'Marketing', 'Finanças', 'Gestão'],
+      datasets: [{
+        label: 'Sua Oficina',
+        data: userBarData,
+        backgroundColor: '#00c2a9',
+        borderRadius: 4
+      }, {
+        label: `Média ${bairro}`,
+        data: marketBarData,
+        backgroundColor: '#cbd5e1',
+        borderRadius: 4
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
       plugins: {
-        legend: { display: false }
+        legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 8, font: { family: "'Inter', sans-serif" } } }
+      },
+      scales: {
+        y: { display: false, beginAtZero: true, max: 105 },
+        x: { grid: { display: false }, ticks: { font: { family: "'Inter', sans-serif" } } }
       }
     }
   });
 
-  // Insight Text
-  const avgYou = youData.reduce((a,b)=>a+b)/10;
-  const avgMarket = marketData.reduce((a,b)=>a+b)/10;
+  // Insight Text Logic (tied to real gap)
+  const avgYou = Math.round(totalScore / 30 * 100);
+  const avgMarket = Math.round(marketBarData.reduce((a,b)=>a+b)/4);
   const insightBox = document.getElementById('insight-text');
   
   if (avgYou < avgMarket) {
-    insightBox.innerText = `Atenção: Sua oficina está ${(avgMarket - avgYou).toFixed(0)}% abaixo da média local. Os concorrentes em ${bairro} estão mais eficientes na gestão.`;
+    insightBox.innerHTML = `O gargalo financeiro custa, em média, <strong style="color:var(--critical)">${avgMarket - avgYou}% da sua margem de lucro</strong> frente aos concorrentes de ${bairro}.`;
     insightBox.style.borderColor = 'var(--critical)';
-    insightBox.style.backgroundColor = 'rgba(236, 90, 104, 0.1)';
+    insightBox.style.backgroundColor = 'rgba(255, 59, 48, 0.05)';
+    insightBox.style.color = 'var(--critical)';
   } else if (avgYou > 80) {
-    insightBox.innerText = `Parabéns! Sua operação está no topo da região de ${bairro}. Seu próximo passo é escalar com mais inteligência.`;
+    insightBox.innerHTML = `Sua operação está <strong style="color:var(--teal)">${avgYou - avgMarket}% acima da média</strong> de ${bairro}. Você é uma referência na região.`;
     insightBox.style.borderColor = 'var(--teal)';
-    insightBox.style.backgroundColor = 'var(--teal-soft)';
+    insightBox.style.backgroundColor = 'rgba(0, 194, 169, 0.05)';
+    insightBox.style.color = 'var(--teal)';
   } else {
-    insightBox.innerText = `Sua oficina está na média de ${bairro}, mas você tem grandes oportunidades de lucro ocultas na operação.`;
+    insightBox.innerHTML = `Sua oficina acompanha a média de ${bairro}, mas existem grandes <strong>oportunidades de lucro ocultas</strong> na operação.`;
+    insightBox.style.borderColor = 'var(--attention)';
+    insightBox.style.backgroundColor = 'rgba(255, 204, 0, 0.05)';
+    insightBox.style.color = '#b45309';
   }
   
-  // Re-render new injected Lucide icons
   if (window.lucide) {
     window.lucide.createIcons();
   }

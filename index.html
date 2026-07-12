@@ -67,13 +67,13 @@
                 <div class="mockup-score">Sua pontuação: <span>22/30</span></div>
           <div class="consulting-report-wrapper">
           <div class="report-doc-header">
-            <div class="doc-logo"><img src="assets/logo-oficinaz-color.png" height="24" alt="Oficinaz"></div>
+            <div class="doc-logo"><img src="assets/logo-oficinaz-color.png" height="36" alt="Oficinaz"></div>
             <div class="doc-meta">DOCUMENTO CONFIDENCIAL • GERADO EM TEMPO REAL</div>
           </div>
           
           <div class="report-doc-title">
             <h3>Diagnóstico de Maturidade e Gestão</h3>
-            <p>Avaliação executiva da performance da sua oficina mecânica, comparada aos benchmarks de mercado.</p>
+            <p>Avaliação da performance da sua oficina comparada aos demais centro automotivos do seu bairro ou região.</p>
           </div>
 
           <div class="report-doc-grid">
@@ -250,8 +250,8 @@
 
     <!-- VIEW 3: FORM (LEAD) -->
     <section id="view-form" class="view">
-      <div class="container form-container">
-        <div class="form-card glass-panel">
+      <div class="container quiz-container">
+        <div class="form-card glass-panel" style="padding: 48px;">
           <div class="form-header">
             <h2>Seu diagnóstico está pronto</h2>
             <p>Preencha seus dados para desbloquear o relatório detalhado e o comparativo regional.</p>
@@ -305,65 +305,77 @@
     </section>
 
     <!-- VIEW 5: RESULTS (DASHBOARD) -->
-    <section id="view-results" class="view">
+    <section id="view-results" class="view" style="padding: 64px 0;">
       <div class="container results-container">
-        <div class="results-header">
-          <span class="badge">RESULTADO DO SEU DIAGNÓSTICO</span>
-          <h1 id="persona-title">O Mecânico Apagador de Incêndios</h1>
-        </div>
-
-        <div class="dashboard-grid">
-          <!-- Bloco 1: Perfil -->
-          <div class="dashboard-card card-persona glass-panel">
-            <div class="persona-image-placeholder">
-              <span id="persona-icon"><i data-lucide="user"></i></span>
+        
+        <div class="consulting-report-wrapper">
+          <div class="report-doc-header">
+            <div class="doc-logo"><img src="assets/logo-oficinaz-color.png" height="36" alt="Oficinaz"></div>
+            <div class="doc-meta">DOCUMENTO CONFIDENCIAL • RESULTADO OFICIAL</div>
+          </div>
+          
+          <div class="report-doc-title" style="display:flex; justify-content: space-between; align-items:flex-end;">
+            <div>
+              <h3>Diagnóstico de Maturidade e Gestão</h3>
+              <p>Avaliação da performance da sua oficina comparada aos demais centro automotivos do seu bairro ou região.</p>
             </div>
-            <div class="persona-text">
-              <h3 class="score-display">Sua pontuação: <span id="final-score">15</span>/30</h3>
-              <p id="persona-desc">Você tem muito talento técnico e os clientes confiam no seu trabalho...</p>
+            <div style="text-align:right;">
+              <div class="mockup-score" style="font-size:1.1rem; color: var(--text-gray); font-weight:600;">Sua Pontuação: <span id="final-score" style="font-size:2rem; font-weight:800; color:var(--teal);"></span>/30</div>
             </div>
           </div>
 
-          <!-- Bloco 2: Benchmarking -->
-          <div class="dashboard-card card-chart glass-panel">
-            <h2>Como você se compara com a concorrência?</h2>
-            <p class="chart-subtitle" id="chart-subtitle">Comparativo na região: Mooca</p>
-            <div class="chart-wrapper">
-              <canvas id="benchmarkChart"></canvas>
+          <div class="report-doc-grid">
+            <!-- Bloco 1: Radar -->
+            <div class="report-block">
+              <div class="block-header">
+                <h4><i data-lucide="activity"></i> Distribuição de Esforço</h4>
+              </div>
+              <div class="radar-canvas-wrap">
+                <canvas id="benchmarkChart"></canvas>
+              </div>
             </div>
-            <div class="chart-legend">
-              <span class="legend-item"><span class="color-box you"></span> Desempenho da sua oficina</span>
-              <span class="legend-item"><span class="color-box market"></span> Média na sua região</span>
-            </div>
-            <div class="insight-box" id="insight-text">
-              Atenção: Sua oficina está abaixo dos seus concorrentes diretos no seu bairro no quesito Fidelização.
-            </div>
-          </div>
 
-          <!-- Bloco 3: Raio-X -->
-          <div class="dashboard-card card-raiox glass-panel">
-            <h2>Pontos de Atenção e Oportunidades</h2>
-            <div id="raiox-list" class="raiox-list">
-              <!-- Injected via JS -->
+            <!-- Bloco 2: Bar Chart -->
+            <div class="report-block">
+              <div class="block-header">
+                <h4 id="chart-subtitle"><i data-lucide="bar-chart-2"></i> Desempenho vs. Mercado</h4>
+              </div>
+              <div class="bar-canvas-wrap">
+                <canvas id="resultBarCanvas"></canvas>
+              </div>
             </div>
-          </div>
 
-          <!-- Bloco 4: Plano de Ação -->
-          <div class="dashboard-card card-action-plan glass-panel">
-            <h2>O próximo passo para a sua gestão</h2>
-            <div id="action-plan-list" class="action-plan-list">
-              <!-- Injected via JS -->
+            <!-- Bloco 3: Resumo Executivo -->
+            <div class="report-block full-width executive-summary">
+              <div class="block-header">
+                <h4><i data-lucide="file-text"></i> Perfil Identificado: <span id="persona-title"></span></h4>
+              </div>
+              <div style="display:flex; gap: 32px; align-items: center;">
+                <div id="persona-icon" style="flex-shrink:0;"></div>
+                <p id="persona-desc" style="flex:1; margin:0;"></p>
+              </div>
+              <div id="insight-text" style="margin-top: 24px; padding: 16px; border-radius: 8px; font-weight: 600; border: 1px solid transparent;"></div>
+            </div>
+
+            <!-- Bloco 4: Plano de Ação -->
+            <div class="report-block full-width">
+              <div class="block-header">
+                <h4><i data-lucide="target"></i> Plano de Ação Recomendado</h4>
+              </div>
+              <div id="action-plan-list" class="action-plan-list">
+                <!-- Injected via JS -->
+              </div>
             </div>
           </div>
         </div>
 
         <!-- SHARE BOX -->
-        <div class="share-box glass-panel">
+        <div class="share-box glass-panel" style="margin-top: 48px; text-align:center; max-width: 1000px; margin-left:auto; margin-right:auto;">
           <h3>Compartilhe ou refaça seu diagnóstico</h3>
-          <div class="share-actions">
-            <a href="#" class="btn btn-outline" id="btn-share-email"><i data-lucide="mail" class="icon-sm"></i> Compartilhar por E-mail</a>
-            <a href="https://api.whatsapp.com/send/?phone=551151073356&text=Fiz%20o%20diagnóstico%20Oficinaz%20e%20recomendo!" target="_blank" class="btn btn-whatsapp-solid"><i data-lucide="message-circle" class="icon-sm"></i> Compartilhar no WhatsApp</a>
-            <button class="btn btn-outline btn-outline-gray" onclick="resetToLanding(event)"><i data-lucide="rotate-ccw" class="icon-sm"></i> Refazer diagnóstico</button>
+          <div class="share-actions" style="justify-content:center;">
+            <a href="#" class="btn btn-outline" id="btn-share-email"><i data-lucide="mail" class="icon-sm"></i> E-mail</a>
+            <a href="https://api.whatsapp.com/send/?phone=551151073356&text=Fiz%20o%20diagnóstico%20Oficinaz%20e%20recomendo!" target="_blank" class="btn btn-whatsapp-solid"><i data-lucide="message-circle" class="icon-sm"></i> WhatsApp</a>
+            <button class="btn btn-outline btn-outline-gray" onclick="resetToLanding(event)"><i data-lucide="rotate-ccw" class="icon-sm"></i> Refazer</button>
           </div>
         </div>
       </div>
